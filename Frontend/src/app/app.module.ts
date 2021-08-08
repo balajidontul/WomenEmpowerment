@@ -8,6 +8,7 @@ import { LoginComponent } from './login/login.component';
 import { AdminComponent } from './admin/admin.component';
 import { StepComponent } from './step/step.component';
 import { NGOComponent } from './ngo/ngo.component';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { NGOComponent } from './ngo/ngo.component';
     LoginComponent,
     AdminComponent,
     StepComponent,
-    NGOComponent
+    NGOComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
