@@ -1,0 +1,36 @@
+.navbar1 {
+  list-style-type: none;
+}
+
+.navbar2,
+.container {
+  list-style-type: none;
+  margin: 2px;
+}
+
+.container {
+  align-items: center;
+  display: flex;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+.navbar2element,
+.navbar1element {
+  display: block;
+  padding: 15px 15px;
+  font-size: 20px;
+  color: #000;
+  text-decoration: none;
+}
+
+.navbar2element {
+  margin: 0 80px;
+}
+
+li {
+  display: inline-block;
+}
+
+.navbar2 {
+  text-align: center;
+}
