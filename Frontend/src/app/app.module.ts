@@ -9,8 +9,18 @@ import { AdminComponent } from './admin/admin.component';
 import { StepComponent } from './step/step.component';
 import { NGOComponent } from './ngo/ngo.component';
 import { RegisterComponent } from './register/register.component';
+
 import { FaqComponent } from './step/faq/faq.component';
 import { StatusComponent } from './step/status/status.component';
+
+import { CriteriaComponent } from './ngo/criteria/criteria.component';
+import { OrganisationComponent } from './ngo/organisation/organisation.component';
+import { FundingnormsComponent } from './ngo/fundingnorms/fundingnorms.component';
+import { RegisterngoComponent } from './ngo/registerngo/registerngo.component';
+import { StatusngoComponent } from './ngo/statusngo/statusngo.component';
+import { FaqngoComponent } from './ngo/faqngo/faqngo.component';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -21,12 +31,24 @@ import { StatusComponent } from './step/status/status.component';
     StepComponent,
     NGOComponent,
     RegisterComponent,
+
     FaqComponent,
     StatusComponent,
+
+
+    CriteriaComponent,
+    OrganisationComponent,
+    FundingnormsComponent,
+    RegisterngoComponent,
+    StatusngoComponent,
+    FaqngoComponent
+
+
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
