@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { StatusstepComponent } from './statusstep.component';
+import { OrganisationComponent } from './organisation.component';
 
-describe('StatusstepComponent', () => {
-  let component: StatusstepComponent;
-  let fixture: ComponentFixture<StatusstepComponent>;
+describe('OrganisationComponent', () => {
+  let component: OrganisationComponent;
+  let fixture: ComponentFixture<OrganisationComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ StatusstepComponent ]
+      declarations: [ OrganisationComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(StatusstepComponent);
+    fixture = TestBed.createComponent(OrganisationComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

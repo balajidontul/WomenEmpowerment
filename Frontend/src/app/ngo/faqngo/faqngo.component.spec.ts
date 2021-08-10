@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { RegistrationstepComponent } from './registrationstep.component';
+import { FaqngoComponent } from './faqngo.component';
 
-describe('RegistrationstepComponent', () => {
-  let component: RegistrationstepComponent;
-  let fixture: ComponentFixture<RegistrationstepComponent>;
+describe('FaqngoComponent', () => {
+  let component: FaqngoComponent;
+  let fixture: ComponentFixture<FaqngoComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ RegistrationstepComponent ]
+      declarations: [ FaqngoComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(RegistrationstepComponent);
+    fixture = TestBed.createComponent(FaqngoComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
