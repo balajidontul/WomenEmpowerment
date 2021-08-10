@@ -10,6 +10,7 @@ const routes: Routes = [
   {path:'', component:HomeComponent },
   {path:'ngopath', component:NGOComponent },
   {path:'adminpath', component:AdminComponent }
+  
 ];
 
 @NgModule({

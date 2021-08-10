@@ -12,6 +12,10 @@ import { RegisterComponent } from './register/register.component';
 import { RegistrationstepComponent } from './registrationstep/registrationstep.component';
 import { StatusstepComponent } from './statusstep/statusstep.component';
 import { FaqstepComponent } from './faqstep/faqstep.component';
+import { AboutusComponent } from './step/aboutus/aboutus.component';
+import { GuidelinesComponent } from './step/guidelines/guidelines.component';
+import { NgoComponent } from './step/ngo/ngo.component';
+import { TrainingsectorsComponent } from './step/trainingsectors/trainingsectors.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +28,11 @@ import { FaqstepComponent } from './faqstep/faqstep.component';
     RegisterComponent,
     RegistrationstepComponent,
     StatusstepComponent,
-    FaqstepComponent
+    FaqstepComponent,
+    AboutusComponent,
+    GuidelinesComponent,
+    NgoComponent,
+    TrainingsectorsComponent
   ],
   imports: [
     BrowserModule,

@@ -1,28 +1,22 @@
-<html>
-    <head>
-        <title>Step component file</title>
-    </head>
-    <body>
-        <nav>
-            <div class = "navbar1">
-                <a href="#" class="navbar1ele">Home</a>
-                <a href="#" class="navbar1ele">Contact Us</a>
-                <a href="#" class="navbar1ele">Logout</a>
-            </div>
-        </nav>
-        <div>
-            <img src="assets\logo.png" alt =logo height=140px >
-            <h2>Support to Training and Employment Programme for Women (STEP)</h2> 
-        </div>    
-        <nav>
-            <div class = "navbar2">
-                <a href="#" class="navbar2ele">ABOUT US</a>
-                <a href="#" class="navbar2ele">GUIDELINES</a>
-                <a href="#" class="navbar2ele">TRAINING SECTORS</a>
-                <a href="#" class="navbar2ele">NGO</a>
-                <a href="#" class="navbar2ele">STATUS</a>
-                <a href="#" class="navbar2ele">FAQ</a>
-            </div>
-        </nav>
-    </body>
-    </html>
+<div style="margin: 4px;">
+    <ul class="navbar1">
+        <li style="float: left;"><a class="navbar1element" href="#">Home</a></li>
+        <li style="float: right;"><a class="navbar1element" href="#">Logout</a></li>
+        <li style="float: right;"><a class="navbar1element" href="#">Contact Us</a></li>
+    </ul>
+    <div style="width: 100%">
+    <ul class="container">
+        <li style="margin-left: 100px"><img src="/assets/logo.png" alt="logo" width="100px"></li>
+        <li style="margin-left: 100px;"><h2>Support to training and Employment Programme for Women</h2></li>
+    </ul>
+    </div>
+    <ul class="navbar2">
+        <li><a routerlink="aboutusstep" class="navbar2element">ABOUT US</a></li>
+        <li><a routerlink="/guidelinesstep" class="navbar2element">GUIDELINES</a></li>
+        <li><a routerLink="/trainingsectorsstep" class="navbar2element">TRAINING SECTORS</a></li>
+        <li><a routerLink="/ngostep" href="#" class="navbar2element">NGO</a></li>
+        <li><a routerLink="/registrationstep" href="#" class="navbar2element">REGISTRATION</a></li>
+        <li><a routerLink="#" href="#" class="navbar2element">STATUS</a></li>
+        <li><a href="#" class="navbar2element">FAQ</a></li>
+    </ul>
+    </div>
