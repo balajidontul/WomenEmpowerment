@@ -9,6 +9,10 @@ import { AdminComponent } from './admin/admin.component';
 import { StepComponent } from './step/step.component';
 import { NGOComponent } from './ngo/ngo.component';
 import { RegisterComponent } from './register/register.component';
+import { RegisterngoComponent } from './ngo/registerngo/registerngo.component';
+import { StatusngoComponent } from './ngo/statusngo/statusngo.component';
+import { FaqngoComponent } from './ngo/faqngo/faqngo.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,11 +22,15 @@ import { RegisterComponent } from './register/register.component';
     AdminComponent,
     StepComponent,
     NGOComponent,
-    RegisterComponent
+    RegisterComponent,
+    RegisterngoComponent,
+    StatusngoComponent,
+    FaqngoComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
