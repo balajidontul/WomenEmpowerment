@@ -9,6 +9,10 @@ import { AdminComponent } from './admin/admin.component';
 import { StepComponent } from './step/step.component';
 import { NGOComponent } from './ngo/ngo.component';
 import { RegisterComponent } from './register/register.component';
+import { CriteriaComponent } from './ngo/criteria/criteria.component';
+import { OrganisationComponent } from './ngo/organisation/organisation.component';
+import { FundingnormsComponent } from './ngo/fundingnorms/fundingnorms.component';
+
 
 @NgModule({
   declarations: [
@@ -18,7 +22,11 @@ import { RegisterComponent } from './register/register.component';
     AdminComponent,
     StepComponent,
     NGOComponent,
-    RegisterComponent
+    RegisterComponent,
+    CriteriaComponent,
+    OrganisationComponent,
+    FundingnormsComponent,
+  
   ],
   imports: [
     BrowserModule,
