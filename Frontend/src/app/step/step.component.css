@@ -1,44 +1,10 @@
-.navbar1
-{
-    display: inline-block;
-    margin-left: 50px;
-    font-size: 30px;
-    text-decoration: none;
+.customContainer{
     
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   margin-left: 100px;
+   margin-right: 100px;
+   
+}
 
-}
-.navbar2
-{
-    display: inline-block;
-    margin-left: 50px;
-    font-size: 30px;
-    text-decoration: none;
-    border: 1px solid black;
-}
-.navbar1 .navbar1ele
-{
-    display: inline-block;
-    margin-left: 50px;
-    text-decoration: none;
-    
-    
-
-}
-.navbar2 .navbar2ele
-{
-    display: inline-block;
-    margin-left: 50px;
-    text-decoration: none;
-    margin-right: 20px;
-    
-    
-
-}
-h2
-{
-    margin-top: 50px;
-    margin-right: 45px;
-    font-size: 35px;
-    float: right;
-}

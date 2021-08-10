@@ -9,6 +9,12 @@ import { AdminComponent } from './admin/admin.component';
 import { StepComponent } from './step/step.component';
 import { NGOComponent } from './ngo/ngo.component';
 import { RegisterComponent } from './register/register.component';
+import { AboutusHomeComponent } from './home/subcomponents/aboutus-home/aboutus-home.component';
+import { AboutushomeComponent } from './home/subcomponents/aboutushome/aboutushome.component';
+import { AboutusstepComponent } from './aboutusstep/aboutusstep.component';
+import { GuidelinesstepComponent } from './guidelinesstep/guidelinesstep.component';
+import { TrainingsectorsstepComponent } from './trainingsectorsstep/trainingsectorsstep.component';
+import { NgostepComponent } from './ngostep/ngostep.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +24,13 @@ import { RegisterComponent } from './register/register.component';
     AdminComponent,
     StepComponent,
     NGOComponent,
-    RegisterComponent
+    RegisterComponent,
+    AboutusHomeComponent,
+    AboutushomeComponent,
+    AboutusstepComponent,
+    GuidelinesstepComponent,
+    TrainingsectorsstepComponent,
+    NgostepComponent
   ],
   imports: [
     BrowserModule,
