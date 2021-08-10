@@ -9,6 +9,9 @@ import { AdminComponent } from './admin/admin.component';
 import { StepComponent } from './step/step.component';
 import { NGOComponent } from './ngo/ngo.component';
 import { RegisterComponent } from './register/register.component';
+import { RegistrationstepComponent } from './registrationstep/registrationstep.component';
+import { StatusstepComponent } from './statusstep/statusstep.component';
+import { FaqstepComponent } from './faqstep/faqstep.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import { RegisterComponent } from './register/register.component';
     AdminComponent,
     StepComponent,
     NGOComponent,
-    RegisterComponent
+    RegisterComponent,
+    RegistrationstepComponent,
+    StatusstepComponent,
+    FaqstepComponent
   ],
   imports: [
     BrowserModule,
