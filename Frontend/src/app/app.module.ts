@@ -21,10 +21,6 @@ import { RegisterngoComponent } from './ngo/registerngo/registerngo.component';
 import { StatusngoComponent } from './ngo/statusngo/statusngo.component';
 import { FaqngoComponent } from './ngo/faqngo/faqngo.component';
 import { FormsModule } from '@angular/forms';
-import { AboutusComponent } from './step/aboutus/aboutus.component';
-import { GuidelinesComponent } from './step/guidelines/guidelines.component';
-import { NgoComponent } from './step/ngo/ngo.component';
-import { TrainingsectorsComponent } from './step/trainingsectors/trainingsectors.component';
 
 
 @NgModule({
