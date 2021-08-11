@@ -2,8 +2,10 @@ package com.team6.model;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table(name="course_detail")
 public class CourseDetail {
 	@Id
 	private int projectId;
@@ -55,6 +57,7 @@ public class CourseDetail {
 	public void setOrgName(String orgName) {
 		this.orgName = orgName;
 	}
+	
 	
 	
 	

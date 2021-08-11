@@ -2,8 +2,10 @@ package com.team6.model;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table(name = "course_enroll_detail")
 public class EnrollmentDetail {
 	@Id
 	private int enrollId;
