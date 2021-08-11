@@ -12,8 +12,6 @@ import { AboutusComponent } from './step/aboutus/aboutus.component';
 import { GuidelinesComponent } from './step/guidelines/guidelines.component';
 import { NgoComponent } from './step/ngo/ngo.component';
 import { TrainingsectorsComponent } from './step/trainingsectors/trainingsectors.component';
-import { FaqComponent } from './step/faq/faq.component';
-import { StatusComponent } from './step/status/status.component';
 import { CriteriaComponent } from './ngo/criteria/criteria.component';
 import { OrganisationComponent } from './ngo/organisation/organisation.component';
 import { FundingnormsComponent } from './ngo/fundingnorms/fundingnorms.component';
@@ -21,6 +19,9 @@ import { RegisterngoComponent } from './ngo/registerngo/registerngo.component';
 import { StatusngoComponent } from './ngo/statusngo/statusngo.component';
 import { FaqngoComponent } from './ngo/faqngo/faqngo.component';
 import { FormsModule } from '@angular/forms';
+import { RegistrationstepComponent } from './step/registrationstep/registrationstep.component';
+import { FaqstepComponent } from './step/faqstep/faqstep.component';
+import { StatusstepComponent } from './step/statusstep/statusstep.component';
 
 
 @NgModule({
@@ -36,9 +37,6 @@ import { FormsModule } from '@angular/forms';
     GuidelinesComponent,
     NgoComponent,
     TrainingsectorsComponent,
-    StatusComponent,
-
-
     CriteriaComponent,
     OrganisationComponent,
     FundingnormsComponent,
@@ -48,7 +46,10 @@ import { FormsModule } from '@angular/forms';
     AboutusComponent,
     GuidelinesComponent,
     NgoComponent,
-    TrainingsectorsComponent
+    TrainingsectorsComponent,
+    FaqstepComponent,
+    StatusstepComponent,
+    RegistrationstepComponent,
 
 
   ],
