@@ -8,6 +8,7 @@ import javax.persistence.Table;
 @Table
 public class ProjectInCharge {
 
+	
 	@Id
 	private int projectID;
 	
