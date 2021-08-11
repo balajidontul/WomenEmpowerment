@@ -1,24 +1,28 @@
 
 <div></div>
 
-<nav class="navbar navbar-light bg-light">
-    <a class="navbar-brand" href="#">Home</a>
-    <a class="navbar-brand" href="#">Contact US</a>
-</nav>
+<ul class="navbar ">
+    <li style="float: left;"><a class="navbar1element" href="#">Home</a></li>
+    <li style="float: right;"><a class="navbar1element" href="#">Logout</a></li>
+    <li style="float: right;"><a class="navbar1element" href="#">Contact Us</a></li>
+</ul>
 
 <div>
     <h2 align="center"> <img src="/assets/logo.png" alt="logo" width="100px"/>  
         Non Government Organisations (NGOs)</h2>
 </div>
 
-<nav class="navbar navbar-light bg-light">
-    <a class="navbar-brand" routerLink="criteriapath">Criteria</a>
-    <a class="navbar-brand" routerLink="registerngo">Organisations</a>
-    <a class="navbar-brand"routerLink="registerngo">Funding norms</a>
-    <a class="navbar-brand" routerLink="registerngo">Register</a>
-    <a class="navbar-brand" routerLink="statusngo">Status</a>
-    <a class="navbar-brand" routerLink="faqngo">FAQ</a>
-</nav>
 
 
 
+<ul class="navbar2">
+    <li><a href="#" class="navbar2element" routerLink="/criteriapath">Criteria</a></li>
+    <li><a href="#" class="navbar2element" routerLink="/organisation">Organisations</a></li>
+    <li><a routerLink="/fundingnorms" class="navbar2element">Funding norms</a></li>
+    <li><a routerLink="/registerngo" href="#" class="navbar2element">Register</a></li>
+    <li><a routerLink="/statusngo" href="#" class="navbar2element">Status</a></li>
+    <li><a href="#" class="navbar2element" routerLink="/faqngo" >FAQ</a></li>
+</ul>
+
+
+<router-outlet name="aux"></router-outlet>
