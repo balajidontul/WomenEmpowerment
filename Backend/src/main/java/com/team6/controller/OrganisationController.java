@@ -30,6 +30,16 @@ public class OrganisationController {
 		return organisationRepository.findAll();
 	}
 	
+	@GetMapping("/pending-ngo")
+	public List<OrganisationsInfo>getPendingNgo() {
+		return organisationRepository.findPendingNgo();
+	}
+	
+	@GetMapping("/approved-ngo")
+	public List<OrganisationsInfo>getApprovedNgo() {
+		return organisationRepository.findApprovedNgo();
+	}
+	
 	@PostMapping("/Organisation")
 	public OrganisationsInfo add(@RequestBody OrganisationsInfo organisationsInfo) {
 		return organisationRepository.save(organisationsInfo);

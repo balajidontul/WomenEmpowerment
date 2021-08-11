@@ -1,0 +1,28 @@
+<h2 class="text-center">Approved NGOs</h2>
+<br><br>
+<div>
+    <table class = "table table-striped">
+        <thead>
+            <tr>
+                <th>NGO ID</th>
+                <th>NGO Name</th>
+                <th>PAN</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Location</th>
+            </tr>  
+        </thead>
+        <tbody>
+            <tr *ngFor="let ngo of ngos">
+                <td>{{ngo.organisationId}}</td>
+                <td>{{ngo.organisationName}}</td>
+                <td>{{ngo.pan}}</td>
+                <td>{{ngo.organisationMail}}</td>
+                <td>{{ngo.organisationPhone}}</td>
+                <td>{{ngo.location}}</td>
+                <td> <button class="btn btn-success">Update</button></td>
+                <td> <button class="btn btn-danger">Delete</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
