@@ -18,4 +18,13 @@ export class NgoService {
   getApprovedNgoList(): Observable<Ngo[]>{
     return this.httpClient.get<Ngo[]>(`${this.baseURL}/approved-ngo`);
   }
+
+  approvePendingNgo(organisationId:number){
+    return this.httpClient.put(`${this.baseURL}pending-ngo/${organisationId}`, organisationId);
+  }
+
+  deleteNgo(organisationId:number){
+    return this.httpClient.delete(`${this.baseURL}approved-ngo/${organisationId}`);
+  }
+
 }

@@ -23,4 +23,11 @@ export class AdminPendingNgoComponent implements OnInit {
     })
   }
 
-}
+  approveNgo(organisationId:number) {
+    this.ngoService.approvePendingNgo(organisationId).subscribe(data => {
+      data = organisationId;
+      window.location.reload();
+    });
+  
+    }
+  }

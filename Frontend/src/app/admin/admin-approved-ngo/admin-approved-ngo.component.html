@@ -21,7 +21,7 @@
                 <td>{{ngo.organisationPhone}}</td>
                 <td>{{ngo.location}}</td>
                 <td> <button class="btn btn-success">Update</button></td>
-                <td> <button class="btn btn-danger">Delete</button></td>
+                <td> <button (click) = "deleteNgo(ngo.organisationId)" class="btn btn-danger">Delete</button></td>
             </tr>
         </tbody>
     </table>
