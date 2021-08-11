@@ -4,12 +4,12 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-@Entity
-@Table(name = "project_incharge_detail")
+//@Entity
+//@Table(name = "project_incharge_detail")
 public class ProjectInCharge {
 
 	
-	@Id
+	//@Id
 	private int projectID;
 	private int organisationID;
 	private String projectName;

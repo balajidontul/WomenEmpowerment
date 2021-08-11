@@ -4,10 +4,10 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-@Entity
-@Table(name = "course_enroll_detail")
+//@Entity
+//@Table(name = "course_enroll_detail")
 public class EnrollmentDetail {
-	@Id
+	//@Id
 	private int enrollId;
 	private int courseId;
 	private int regId;

@@ -4,11 +4,11 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-@Entity
-@Table(name = "ngo_project_detail")
+//@Entity
+//@Table(name = "ngo_project_detail")
 public class NgoProject {
 	
-	@Id
+	//@Id
 	private int ngoProjectID;
 	private ProjectInCharge projectInCharge;
 	private OrganisationsInfo organisationsInfo;

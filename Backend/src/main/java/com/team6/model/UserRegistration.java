@@ -1,18 +1,22 @@
 package com.team6.model;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
-
-import ch.qos.logback.classic.joran.action.ContextNameAction;
 
 @Entity
 @Table(name = "user_registration")
+
 public class UserRegistration {
 
-//	@Id
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "user_generator")
+    @SequenceGenerator(name="user_generator", sequenceName = "user_seq", allocationSize=1)
 	private int userId;
-	private  String firstName ;
+	private String firstName;
 	private String lastName;
 	private String userName;
 	private String dob;
