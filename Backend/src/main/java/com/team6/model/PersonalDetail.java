@@ -4,11 +4,11 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-@Entity
-@Table(name = "personal_detail")
+//@Entity
+//@Table(name = "personal_detail")
 public class PersonalDetail {
 	
-	@Id
+	//@Id
 	int regid;
 	int userid;
 	String maritalstatus;

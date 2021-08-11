@@ -20,7 +20,7 @@ import com.team6.repository.OrganisationRepository;
 
 @RestController
 @CrossOrigin(origins = "http://localhost:4200")
-@RequestMapping("api")
+@RequestMapping("rest/api")
 public class OrganisationController {
 	@Autowired
 	OrganisationRepository organisationRepository;
