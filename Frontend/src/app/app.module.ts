@@ -9,9 +9,8 @@ import { AdminComponent } from './admin/admin.component';
 import { StepComponent } from './step/step.component';
 import { NGOComponent } from './ngo/ngo.component';
 import { RegisterComponent } from './register/register.component';
-import { RegistrationstepComponent } from './registrationstep/registrationstep.component';
-import { StatusstepComponent } from './statusstep/statusstep.component';
-import { FaqstepComponent } from './faqstep/faqstep.component';
+import { FaqComponent } from './step/faq/faq.component';
+import { StatusComponent } from './step/status/status.component';
 
 @NgModule({
   declarations: [
@@ -22,9 +21,8 @@ import { FaqstepComponent } from './faqstep/faqstep.component';
     StepComponent,
     NGOComponent,
     RegisterComponent,
-    RegistrationstepComponent,
-    StatusstepComponent,
-    FaqstepComponent
+    FaqComponent,
+    StatusComponent,
   ],
   imports: [
     BrowserModule,
