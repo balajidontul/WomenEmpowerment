@@ -1,10 +1,17 @@
 package com.team6.model;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
+@Entity
+@Table
 public class ProjectInCharge {
 
-	
+	@Id
 	private int projectID;
+	
+	@Id
 	private int organisationID;
 	private String projectName;
 	private String startDate;
