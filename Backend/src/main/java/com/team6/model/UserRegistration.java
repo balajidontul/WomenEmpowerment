@@ -1,9 +1,16 @@
 package com.team6.model;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
 import ch.qos.logback.classic.joran.action.ContextNameAction;
 
+@Entity
+@Table
 public class UserRegistration {
 
+	@Id
 	private int userId;
 	private  String firstName ;
 	private String lastName;

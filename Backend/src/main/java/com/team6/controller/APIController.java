@@ -1,5 +1,5 @@
 package com.team6.controller;
 
-public class RestController {
+public class APIController {
 
 }
