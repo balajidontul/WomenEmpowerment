@@ -42,7 +42,7 @@ public class PersonalDetailController {
 		
 		@PutMapping("/personaldetail")
 		public String updateProduct(@RequestBody PersonalDetail personalDetail) {
-			PersonalDetail detailsUpd = personalRepo.findById(personalDetail.getRegid()).get();
+			PersonalDetail detailsUpd = personalRepo.findById(personalDetail.getRegId()).get();
 			detailsUpd = personalDetail;
 			personalRepo.save(detailsUpd);
 			return "updated";

@@ -43,7 +43,7 @@ public class FamilyDetailController {
 		
 		@PutMapping("/familydetail")
 		public String updateProduct(@RequestBody FamilyDetail familyDetail) {
-			FamilyDetail familyUpd = familyRepo.findById(familyDetail.getRegid()).get();
+			FamilyDetail familyUpd = familyRepo.findById(familyDetail.getRegId()).get();
 			familyUpd = familyDetail;
 			familyRepo.save(familyUpd);
 			return "updated";
