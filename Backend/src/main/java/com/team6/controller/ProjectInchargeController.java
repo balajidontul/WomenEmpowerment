@@ -16,7 +16,7 @@ import com.team6.model.ProjectInCharge;
 import com.team6.service.ProjectInchargeService;
 
 @RestController
-@CrossOrigin(origins="http://localhost:8084")
+@CrossOrigin(origins="http://localhost:4200")
 @RequestMapping("/Rest/api")
 public class ProjectInchargeController {
 	
