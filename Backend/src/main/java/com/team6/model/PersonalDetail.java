@@ -1,7 +1,9 @@
 package com.team6.model;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -10,29 +12,13 @@ public class PersonalDetail {
 
 	@Id
 	private int regId;
-	private int userId;
 	private String maritalStatus;
 	private String aadharNo;
 	private String pan;
 	private int phone;
 	private String email;
-
-	public PersonalDetail() {
-		super();
-
-	}
-
-	public PersonalDetail(int regId, int userId, String maritalStatus, String aadharNo, String pan, int phone,
-			String email) {
-		super();
-		this.regId = regId;
-		this.userId = userId;
-		this.maritalStatus = maritalStatus;
-		this.aadharNo = aadharNo;
-		this.pan = pan;
-		this.phone = phone;
-		this.email = email;
-	}
+	
+	private UserRegistration userRegistration;
 
 	public int getRegId() {
 		return regId;
@@ -40,14 +26,6 @@ public class PersonalDetail {
 
 	public void setRegId(int regId) {
 		this.regId = regId;
-	}
-
-	public int getUserId() {
-		return userId;
-	}
-
-	public void setUserId(int userId) {
-		this.userId = userId;
 	}
 
 	public String getMaritalStatus() {
@@ -90,10 +68,39 @@ public class PersonalDetail {
 		this.email = email;
 	}
 
-	@Override
-	public String toString() {
-		return "PersonalDetail [regId=" + regId + ", userId=" + userId + ", maritalStatus=" + maritalStatus
-				+ ", aadharNo=" + aadharNo + ", pan=" + pan + ", phone=" + phone + ", email=" + email + "]";
+	public UserRegistration getUserRegistration() {
+		return userRegistration;
 	}
 
+	public void setUserRegistration(UserRegistration userRegistration) {
+		this.userRegistration = userRegistration;
+	}
+
+	public PersonalDetail(int regId, String maritalStatus, String aadharNo, String pan, int phone, String email,
+			UserRegistration userRegistration) {
+		super();
+		this.regId = regId;
+		this.maritalStatus = maritalStatus;
+		this.aadharNo = aadharNo;
+		this.pan = pan;
+		this.phone = phone;
+		this.email = email;
+		this.userRegistration = userRegistration;
+	}
+
+	public PersonalDetail() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public String toString() {
+		return "PersonalDetail [regId=" + regId + ", maritalStatus=" + maritalStatus + ", aadharNo=" + aadharNo
+				+ ", pan=" + pan + ", phone=" + phone + ", email=" + email + ", userRegistration=" + userRegistration
+				+ "]";
+	}
+	
+	
+	
+	
 }

@@ -1,13 +1,16 @@
 package com.team6.model;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
-@Entity
+@Entity    
 @Table(name = "user_registration")
 public class UserRegistration {
 
@@ -22,6 +25,7 @@ public class UserRegistration {
 	private String dob;
 	private String password;
 	private String contactNo;
+
 	public int getUserId() {
 		return userId;
 	}
@@ -64,6 +68,7 @@ public class UserRegistration {
 	public void setContactNo(String contactNo) {
 		this.contactNo = contactNo;
 	}
+	
 	public UserRegistration(int userId, String firstName, String lastName, String userName, String dob, String password,
 			String contactNo) {
 		super();
@@ -74,6 +79,7 @@ public class UserRegistration {
 		this.dob = dob;
 		this.password = password;
 		this.contactNo = contactNo;
+	
 	}
 	public UserRegistration() {
 		super();
@@ -83,8 +89,10 @@ public class UserRegistration {
 	public String toString() {
 		return "UserRegistration [userId=" + userId + ", firstName=" + firstName + ", lastName=" + lastName
 				+ ", userName=" + userName + ", dob=" + dob + ", password=" + password + ", contactNo=" + contactNo
-				+ "]";
+				+  "]";
 	}
+	
+	
 	
 	
 	

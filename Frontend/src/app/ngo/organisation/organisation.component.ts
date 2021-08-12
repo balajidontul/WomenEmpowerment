@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Ngo } from '../ngo';
+import { NgoService } from '../ngo.service';
 
 @Component({
   selector: 'app-organisation',
@@ -7,17 +10,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OrganisationComponent implements OnInit {
 
+  Organisations:Ngo[];
 
- Organisations = [
-    {id: 1, name:'Superman'},
-    {id: 2, name:'Batman'},
-    {id: 5, name:'BatGirl'},
-    {id: 3, name:'Robin'},
-    {id: 4, name:'Flash'}
-];
-  constructor() { }
+  constructor(private ngoService:NgoService, private router:Router) { }
 
   ngOnInit(): void {
+    this.getall();
   }
 
-}
+  
+  private getall() {
+    this.ngoService.getallngo().subscribe(data => {
+      this.Organisations = data;
+    })
+  }
+
+  
+  }
+
+
+

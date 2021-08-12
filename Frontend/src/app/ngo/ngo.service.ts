@@ -27,4 +27,8 @@ export class NgoService {
     return this.httpClient.delete(`${this.baseURL}approved-ngo/${organisationId}`);
   }
 
+  getallngo():Observable<Ngo[]>{
+    return this.httpClient.get<Ngo[]>(`${this.baseURL}Organisation`);
+  }
+
 }
