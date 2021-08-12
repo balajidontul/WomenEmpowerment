@@ -32,20 +32,26 @@ public class ProjectInchargeServiceImpl implements ProjectInchargeService
 		return true;
 	}
 	
-	@Override
-	public boolean updIncharge(ProjectInCharge incharge)
-	{
-		ProjectInCharge updincharge = inchargerepo.findById(incharge.getProjectid()).get();
-		updincharge=incharge;
-		inchargerepo.save(incharge);
-		return true;
-	}
-	
+//	@Override
+//	public boolean updIncharge(ProjectInCharge incharge)
+//	{
+//		ProjectInCharge updincharge = inchargerepo.findById(incharge.getProjectid()).get();
+//		updincharge=incharge;
+//		inchargerepo.save(incharge);
+//		return true;
+//	}
+//	
 	@Override
 	public boolean delIncharge(ProjectInCharge incharge)
 	{
 		inchargerepo.delete(incharge);
 		return true;
+	}
+
+	@Override
+	public boolean updIncharge(ProjectInCharge incharge) {
+		// TODO Auto-generated method stub
+		return false;
 	}
 
 }
