@@ -21,9 +21,28 @@ public class OrganisationsInfo {
 	private String organisationName;
 	private String pan;
 	private String organisationMail;
+	private String password;
 	private long organisationPhone;
 	private String location;
 	private String status;
+	
+	
+	public OrganisationsInfo(int organisationId, String organisationName, String pan, String organisationMail,
+			String password, long organisationPhone, String location, String status) {
+		super();
+		this.organisationId = organisationId;
+		this.organisationName = organisationName;
+		this.pan = pan;
+		this.organisationMail = organisationMail;
+		this.password = password;
+		this.organisationPhone = organisationPhone;
+		this.location = location;
+		this.status = status;
+	}
+	public OrganisationsInfo() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 	public int getOrganisationId() {
 		return organisationId;
 	}
@@ -48,6 +67,12 @@ public class OrganisationsInfo {
 	public void setOrganisationMail(String organisationMail) {
 		this.organisationMail = organisationMail;
 	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
 	public long getOrganisationPhone() {
 		return organisationPhone;
 	}
@@ -66,21 +91,13 @@ public class OrganisationsInfo {
 	public void setStatus(String status) {
 		this.status = status;
 	}
-	public OrganisationsInfo(int organisationId, String organisationName, String pan, String organisationMail,
-			long organisationPhone, String location, String status) {
-		super();
-		this.organisationId = organisationId;
-		this.organisationName = organisationName;
-		this.pan = pan;
-		this.organisationMail = organisationMail;
-		this.organisationPhone = organisationPhone;
-		this.location = location;
-		this.status = status;
+	@Override
+	public String toString() {
+		return "OrganisationsInfo [organisationId=" + organisationId + ", organisationName=" + organisationName
+				+ ", pan=" + pan + ", organisationMail=" + organisationMail + ", password=" + password
+				+ ", organisationPhone=" + organisationPhone + ", location=" + location + ", status=" + status + "]";
 	}
-	public OrganisationsInfo() {
-		super();
-
-	}
+	
 	
 	
 	
