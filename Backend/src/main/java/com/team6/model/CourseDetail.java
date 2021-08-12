@@ -18,12 +18,13 @@ public class CourseDetail {
 	private String courseName;
 	private String courseStartDate;
 	private String courseEndDate;
+	private String status;
 	private String orgName;
 	public CourseDetail() {
 		super();
 	}	
 	
-	public CourseDetail(int courseId, int projectId, String courseName, String courseStartDate, String courseEndDate,
+	public CourseDetail(int courseId, int projectId, String courseName, String courseStartDate, String status, String courseEndDate,
 			String orgName) {
 		super();
 		this.courseId = courseId;
@@ -31,6 +32,7 @@ public class CourseDetail {
 		this.courseName = courseName;
 		this.courseStartDate = courseStartDate;
 		this.courseEndDate = courseEndDate;
+		this.status = status;
 		this.orgName = orgName;
 	}
 
@@ -72,8 +74,13 @@ public class CourseDetail {
 	public void setOrgName(String orgName) {
 		this.orgName = orgName;
 	}
-	
-	
-	
-	
+
+	public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
+	}
+		
 }
