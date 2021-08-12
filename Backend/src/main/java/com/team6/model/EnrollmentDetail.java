@@ -10,13 +10,13 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "course_enroll_detail")
 public class EnrollmentDetail {
-	@Id
-	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "enroll_generator")
-    @SequenceGenerator(name="enroll_generator", sequenceName = "enroll_seq", allocationSize=1)
-	private int enrollId;
-	private int courseId;
-	private int regId;
-	private String courseStatus;
+@Id
+@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "enroll_generator")
+@SequenceGenerator(name="enroll_generator", sequenceName = "enroll_seq", allocationSize=1)
+private int enrollId;
+private int courseId;
+private int regId;
+private String courseStatus;
 	
 	public EnrollmentDetail() {
 		super();

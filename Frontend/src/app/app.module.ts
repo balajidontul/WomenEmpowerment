@@ -4,7 +4,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
-import { AdminComponent } from './admin/admin.component';
 import { StepComponent } from './step/step.component';
 import { NGOComponent } from './ngo/ngo.component';
 import { RegisterComponent } from './register/register.component';
@@ -22,14 +21,16 @@ import { FormsModule } from '@angular/forms';
 import { RegistrationstepComponent } from './step/registrationstep/registrationstep.component';
 import { FaqstepComponent } from './step/faqstep/faqstep.component';
 import { StatusstepComponent } from './step/statusstep/statusstep.component';
-
+import { AdminDashboardComponent } from './admin/admin-dashboard/admin-dashboard.component';
+import {HttpClientModule} from '@angular/common/http';
+import { AdminPendingNgoComponent } from './admin/admin-pending-ngo/admin-pending-ngo.component';
+import { AdminApprovedNgoComponent } from './admin/admin-approved-ngo/admin-approved-ngo.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     LoginComponent,
-    AdminComponent,
     StepComponent,
     NGOComponent,
     RegisterComponent,
@@ -50,13 +51,17 @@ import { StatusstepComponent } from './step/statusstep/statusstep.component';
     FaqstepComponent,
     StatusstepComponent,
     RegistrationstepComponent,
+    AdminDashboardComponent,
+    AdminPendingNgoComponent,
+    AdminApprovedNgoComponent,
 
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

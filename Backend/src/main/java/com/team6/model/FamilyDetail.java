@@ -4,11 +4,11 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-@Entity
-@Table(name = "family_detail")
+//@Entity
+//@Table(name = "family_detail")
 public class FamilyDetail {
 	
-	@Id
+	//@Id
 	int regid;
 	String firstname;
 	String lastname;
