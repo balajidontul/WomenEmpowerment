@@ -43,4 +43,54 @@ public class ProjectInCharge {
 				+ ", startDate=" + startDate + ", endDate=" + endDate + ", projectMentor=" + projectMentor + "]";
 	}
 
+	public int getProjectId() {
+		return projectId;
+	}
+
+	public void setProjectId(int projectId) {
+		this.projectId = projectId;
+	}
+
+	public int getOrgId() {
+		return orgId;
+	}
+
+	public void setOrgId(int orgId) {
+		this.orgId = orgId;
+	}
+
+	public String getProjectName() {
+		return projectName;
+	}
+
+	public void setProjectName(String projectName) {
+		this.projectName = projectName;
+	}
+
+	public String getStartDate() {
+		return startDate;
+	}
+
+	public void setStartDate(String startDate) {
+		this.startDate = startDate;
+	}
+
+	public String getEndDate() {
+		return endDate;
+	}
+
+	public void setEndDate(String endDate) {
+		this.endDate = endDate;
+	}
+
+	public String getProjectMentor() {
+		return projectMentor;
+	}
+
+	public void setProjectMentor(String projectMentor) {
+		this.projectMentor = projectMentor;
+	}
+	
+	
+
 }

@@ -12,42 +12,42 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.team6.model.CourseDetail;
 import com.team6.model.ProjectInCharge;
-import com.team6.service.ProjectInchargeService;
+import com.team6.model.UserRegistration;
+import com.team6.repository.ProjectInchargeRepository;
 
 @RestController
-@CrossOrigin(origins="http://localhost:4200")
-@RequestMapping("/Rest/api")
+@CrossOrigin(origins = "http://localhost:4200")
+@RequestMapping("/rest/api")
 public class ProjectInchargeController {
-	
+
 	@Autowired
-	ProjectInchargeService inchargeService;
-	
-	@GetMapping("/projincharge")
-	public List<ProjectInCharge> getAll()
-	{
-		return inchargeService.getAllIncharge();
+	ProjectInchargeRepository projectInchargeRepository;
+
+	@GetMapping("/project-incharge")
+	public List<ProjectInCharge> getAllProjectIncharge() {
+		return projectInchargeRepository.findAll();
 	}
-	
-	@PostMapping("/projincharge")
-	public boolean addIncharge(@RequestBody ProjectInCharge incharge)
-	{
-		inchargeService.addIncharge(incharge);
-		return true;
+
+	@PostMapping("/project-incharge")
+	public ProjectInCharge addIncharge(@RequestBody ProjectInCharge incharge) {
+		return projectInchargeRepository.save(incharge);
+
 	}
-	
-	@PutMapping("/projincharge")
-	public boolean updIncharge(@RequestBody ProjectInCharge incharge)
-	{
-		inchargeService.updIncharge(incharge);
-		return true;
+
+	@PutMapping("/project-incharge")
+	public String updIncharge(@RequestBody ProjectInCharge incharge) {
+		ProjectInCharge updatedIncharge = projectInchargeRepository.findById(incharge.getProjectId()).get();
+		updatedIncharge = incharge;
+		projectInchargeRepository.save(updatedIncharge);
+		return "Updated.";
 	}
-	
-	@DeleteMapping("/projincharge")
-	public boolean delIncharge(@RequestBody ProjectInCharge incharge)
-	{
-		inchargeService.delIncharge(incharge);
-		return true;
+
+	@DeleteMapping("/project-incharge")
+	public String deleteIncharge(@RequestBody ProjectInCharge incharge) {
+		projectInchargeRepository.delete(incharge);
+		return "Deleted.";
 	}
 
 }
