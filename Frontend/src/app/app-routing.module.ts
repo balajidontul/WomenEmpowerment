@@ -53,6 +53,10 @@ const routes: Routes = [
   {path: 'approved-ngo', component:AdminApprovedNgoComponent},
   {path: 'pending-ngo', component:AdminPendingNgoComponent},
 
+
+
+  {path: 'user-register', component:RegisterComponent}
+
   
 ];
 
