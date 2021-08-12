@@ -20,6 +20,7 @@ import com.team6.repository.CourseRepository;
 @CrossOrigin(origins = "http://localhost:4200")
 @RequestMapping("rest/api")
 public class CourseController {
+	
 	@Autowired
 	CourseRepository courseRepo;
 	
@@ -42,9 +43,11 @@ public class CourseController {
 	
 	@PutMapping("/courses")
 	public String updateProduct(@RequestBody CourseDetail courseDetail) {
-		CourseDetail courseUpd = courseRepo.findById(courseDetail.getProjectId()).get();
+		CourseDetail courseUpd = courseRepo.findById(courseDetail.getCourseId()).get();
 		courseUpd = courseDetail;
+		System.out.println("aa");
 		courseRepo.save(courseUpd);
+		System.out.println("bb");
 		return "updated";
 	}
 }

@@ -4,82 +4,82 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-//@Entity
-//@Table(name = "personal_detail")
+@Entity
+@Table(name = "personal_detail")
 public class PersonalDetail {
-	
-	//@Id
-	int regid;
-	int userid;
-	String maritalstatus;
-	String aadharno;
-	String panno;
-	int phoneno;
-	String email;
-	
+
+	// @Id
+	private int regId;
+	private int userId;
+	private String maritalStatus;
+	private String aadharNo;
+	private String pan;
+	private int phone;
+	private String email;
+
 	public PersonalDetail() {
 		super();
-		// TODO Auto-generated constructor stub
+
 	}
 
-	public PersonalDetail(int regid, int userid, String maritalstatus, String aadharno, String panno, int phoneno,
+	public PersonalDetail(int regId, int userId, String maritalStatus, String aadharNo, String pan, int phone,
 			String email) {
 		super();
-		this.regid = regid;
-		this.userid = userid;
-		this.maritalstatus = maritalstatus;
-		this.aadharno = aadharno;
-		this.panno = panno;
-		this.phoneno = phoneno;
+		this.regId = regId;
+		this.userId = userId;
+		this.maritalStatus = maritalStatus;
+		this.aadharNo = aadharNo;
+		this.pan = pan;
+		this.phone = phone;
 		this.email = email;
 	}
 
-	public int getRegid() {
-		return regid;
+	public int getRegId() {
+		return regId;
 	}
 
-	public void setRegid(int regid) {
-		this.regid = regid;
+	public void setRegId(int regId) {
+		this.regId = regId;
 	}
 
-	public int getUserid() {
-		return userid;
+	public int getUserId() {
+		return userId;
 	}
 
-	public void setUserid(int userid) {
-		this.userid = userid;
+	public void setUserId(int userId) {
+		this.userId = userId;
 	}
 
-	public String getMaritalstatus() {
-		return maritalstatus;
+	public String getMaritalStatus() {
+		return maritalStatus;
 	}
 
-	public void setMaritalstatus(String maritalstatus) {
-		this.maritalstatus = maritalstatus;
+	public void setMaritalStatus(String maritalStatus) {
+		this.maritalStatus = maritalStatus;
 	}
 
-	public String getAadharno() {
-		return aadharno;
+	public String getAadharNo() {
+		return aadharNo;
 	}
 
-	public void setAadharno(String aadharno) {
-		this.aadharno = aadharno;
+	public void setAadharNo(String aadharNo) {
+		this.aadharNo = aadharNo;
 	}
 
-	public String getPanno() {
-		return panno;
+	public String getPan() {
+		return pan;
 	}
 
-	public void setPanno(String panno) {
-		this.panno = panno;
+	public void setPan(String pan) {
+		this.pan = pan;
 	}
 
-	public int getPhoneno() {
-		return phoneno;
+	public int getPhone() {
+		return phone;
 	}
 
-	public void setPhoneno(int phoneno) {
-		this.phoneno = phoneno;
+	public void setPhone(int phone) {
+		this.phone = phone;
 	}
 
 	public String getEmail() {
@@ -92,15 +92,8 @@ public class PersonalDetail {
 
 	@Override
 	public String toString() {
-		return "PersonalDetail [regid=" + regid + ", userid=" + userid + ", maritalstatus=" + maritalstatus
-				+ ", aadharno=" + aadharno + ", panno=" + panno + ", phoneno=" + phoneno + ", email=" + email + "]";
+		return "PersonalDetail [regId=" + regId + ", userId=" + userId + ", maritalStatus=" + maritalStatus
+				+ ", aadharNo=" + aadharNo + ", pan=" + pan + ", phone=" + phone + ", email=" + email + "]";
 	}
-	
-	
-	
-	
-	
-	
-	
 
 }

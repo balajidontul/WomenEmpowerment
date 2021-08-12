@@ -4,56 +4,65 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-//@Entity
-//@Table(name = "family_detail")
+@Entity
+@Table(name = "family_detail")
 public class FamilyDetail {
-	
-	//@Id
-	int regid;
-	String firstname;
-	String lastname;
-	String relationship;
+
+	@Id
+	private int regId;
+	private String firstName;
+	private String lastName;
+	private String relationship;
+
 	public FamilyDetail() {
 		super();
-		// TODO Auto-generated constructor stub
+
 	}
-	public FamilyDetail(int regid, String firstname, String lastname, String relationship) {
+
+	public FamilyDetail(int regId, String firstName, String lastName, String relationship) {
 		super();
-		this.regid = regid;
-		this.firstname = firstname;
-		this.lastname = lastname;
+		this.regId = regId;
+		this.firstName = firstName;
+		this.lastName = lastName;
 		this.relationship = relationship;
 	}
-	public int getRegid() {
-		return regid;
+
+	public int getRegId() {
+		return regId;
 	}
-	public void setRegid(int regid) {
-		this.regid = regid;
+
+	public void setRegId(int regId) {
+		this.regId = regId;
 	}
-	public String getFirstname() {
-		return firstname;
+
+	public String getFirstName() {
+		return firstName;
 	}
-	public void setFirstname(String firstname) {
-		this.firstname = firstname;
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
 	}
-	public String getLastname() {
-		return lastname;
+
+	public String getLastName() {
+		return lastName;
 	}
-	public void setLastname(String lastname) {
-		this.lastname = lastname;
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
 	}
+
 	public String getRelationship() {
 		return relationship;
 	}
+
 	public void setRelationship(String relationship) {
 		this.relationship = relationship;
 	}
+
 	@Override
 	public String toString() {
-		return "FamilyDetail [regid=" + regid + ", firstname=" + firstname + ", lastname=" + lastname
+		return "FamilyDetail [regId=" + regId + ", firstName=" + firstName + ", lastName=" + lastName
 				+ ", relationship=" + relationship + "]";
 	}
-	
-	
 
 }

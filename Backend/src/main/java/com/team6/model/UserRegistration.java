@@ -11,9 +11,10 @@ import javax.persistence.Table;
 @Table(name = "user_registration")
 public class UserRegistration {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "user_generator")
-    @SequenceGenerator(name="user_generator", sequenceName = "user_seq", allocationSize=1)
+
+  @Id
+  @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "user_generator")
+  @SequenceGenerator(name="user_generator", sequenceName = "user_seq", allocationSize=1)
 	private int userId;
 	private  String firstName ;
 	private String lastName;
