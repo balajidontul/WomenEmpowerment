@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NgoComponent } from './ngo.component';
+import { GuidelinestepComponent } from './guidelinestep.component';
 
-describe('NgoComponent', () => {
-  let component: NgoComponent;
-  let fixture: ComponentFixture<NgoComponent>;
+describe('GuidelinestepComponent', () => {
+  let component: GuidelinestepComponent;
+  let fixture: ComponentFixture<GuidelinestepComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ NgoComponent ]
+      declarations: [ GuidelinestepComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(NgoComponent);
+    fixture = TestBed.createComponent(GuidelinestepComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
