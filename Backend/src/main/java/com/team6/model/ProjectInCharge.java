@@ -15,7 +15,7 @@ public class ProjectInCharge {
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "inchargeid_generator")
     @SequenceGenerator(name="inchargeid_generator", sequenceName = "incharge_seq", allocationSize=1)
 	private int projectid;
-	//private int orgid; //(FK)
+	private int orgid; //(FK)
 	private String projectname;
 	private String startdate;
 	private String enddate;
@@ -28,12 +28,12 @@ public class ProjectInCharge {
 	public void setProjectid(int projectid) {
 		this.projectid = projectid;
 	}
-	/*public int getOrgid() {
+	public int getOrgid() {
 		return orgid;
 	}
 	public void setOrgid(int orgid) {
 		this.orgid = orgid;
-	}*/
+	}
 	public String getProjectname() {
 		return projectname;
 	}
@@ -59,15 +59,16 @@ public class ProjectInCharge {
 		this.projectmentor = projectmentor;
 	}
 	
-	public ProjectInCharge(int projectid, String projectname, String startdate, String enddate, String projectmentor) {
+	public ProjectInCharge(int projectid, int orgid, String projectname, String startdate, String enddate,
+			String projectmentor) {
 		super();
 		this.projectid = projectid;
+		this.orgid = orgid;
 		this.projectname = projectname;
 		this.startdate = startdate;
 		this.enddate = enddate;
 		this.projectmentor = projectmentor;
 	}
-	
 	public ProjectInCharge() {
 		super();
 		// TODO Auto-generated constructor stub
