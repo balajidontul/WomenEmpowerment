@@ -10,7 +10,7 @@ import ch.qos.logback.classic.joran.action.ContextNameAction;
 @Table(name = "user_registration")
 public class UserRegistration {
 
-//	@Id
+	@Id
 	private int userId;
 	private  String firstName ;
 	private String lastName;
