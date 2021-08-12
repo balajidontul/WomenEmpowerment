@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AdminComponent } from './admin/admin.component';
+import { AdminApprovedNgoComponent } from './admin/admin-approved-ngo/admin-approved-ngo.component';
+import { AdminDashboardComponent } from './admin/admin-dashboard/admin-dashboard.component';
+import { AdminPendingNgoComponent } from './admin/admin-pending-ngo/admin-pending-ngo.component';
 import { HomeComponent } from './home/home.component';
 import { CriteriaComponent } from './ngo/criteria/criteria.component';
 import { FundingnormsComponent } from './ngo/fundingnorms/fundingnorms.component';
@@ -13,7 +15,9 @@ const routes: Routes = [
   {path:'steppath', component:StepComponent },
   {path:'', component:HomeComponent },
   {path:'ngopath', component:NGOComponent },
-  {path:'adminpath', component:AdminComponent },
+  {path:'adminpath', component:AdminDashboardComponent},
+  {path: 'approved-ngo', component:AdminApprovedNgoComponent},
+  {path: 'pending-ngo', component:AdminPendingNgoComponent},
   {path : 'criteriapath', component : CriteriaComponent ,outlet: 'aux'},
   {path : 'fundingnorms', component : FundingnormsComponent},
   {path : 'organisation', component : OrganisationComponent},

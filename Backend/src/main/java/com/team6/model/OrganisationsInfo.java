@@ -79,7 +79,7 @@ public class OrganisationsInfo {
 	}
 	public OrganisationsInfo() {
 		super();
-		// TODO Auto-generated constructor stub
+
 	}
 	
 	
