@@ -25,6 +25,7 @@ import { AdminDashboardComponent } from './admin/admin-dashboard/admin-dashboard
 import {HttpClientModule} from '@angular/common/http';
 import { AdminPendingNgoComponent } from './admin/admin-pending-ngo/admin-pending-ngo.component';
 import { AdminApprovedNgoComponent } from './admin/admin-approved-ngo/admin-approved-ngo.component';
+import { NgologinComponent } from './ngo/ngologin/ngologin.component';
 
 @NgModule({
   declarations: [
@@ -54,6 +55,7 @@ import { AdminApprovedNgoComponent } from './admin/admin-approved-ngo/admin-appr
     AdminDashboardComponent,
     AdminPendingNgoComponent,
     AdminApprovedNgoComponent,
+    NgologinComponent,
 
 
   ],
