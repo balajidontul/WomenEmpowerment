@@ -3,10 +3,10 @@
 <!-- BALAJI  -->
 <div class="card" style="width: 28rem;" *ngFor="let organisation of Organisations">
 <ul class="list-group">
-    <li class="list-group-item">Organisation ID : {{Organisations.organisationId}}</li>
-    <li class="list-group-item">Organisation Name : {{Organisations.organisationId}}</li>
-    <li class="list-group-item">Phone no : {{Organisations.organisationPhone}} </li>
-    <li class="list-group-item">Mail Id : {{Organisations.organisationMail}}</li>
-    <li class="list-group-item">Location : {{Organisations.location}}</li>
+    <li class="list-group-item">Organisation ID : {{organisation.organisationId}}</li>
+    <li class="list-group-item">Organisation Name : {{organisation.organisationName}}</li>
+    <li class="list-group-item">Phone no : {{organisation.organisationPhone}} </li>
+    <li class="list-group-item">Mail Id : {{organisation.organisationMail}}</li>
+    <li class="list-group-item">Location : {{organisation.location}}</li>
   </ul>
 </div>
