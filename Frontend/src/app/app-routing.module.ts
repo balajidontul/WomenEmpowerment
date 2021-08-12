@@ -14,7 +14,12 @@ import { StepComponent } from './step/step.component';
 const routes: Routes = [
   {path:'steppath', component:StepComponent },
   {path:'', component:HomeComponent },
-  {path:'ngopath', component:NGOComponent },
+
+
+{ path: 'ngopath', component: NGOComponent, children: [
+    { path: 'ngoorganisation', component: OrganisationComponent, outlet: 'ngosub' }
+  ] },
+
   {path:'adminpath', component:AdminDashboardComponent},
   {path: 'approved-ngo', component:AdminApprovedNgoComponent},
   {path: 'pending-ngo', component:AdminPendingNgoComponent},
