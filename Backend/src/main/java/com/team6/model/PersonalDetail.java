@@ -3,37 +3,29 @@ package com.team6.model;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.SequenceGenerator;
 
 @Entity
 @Table(name = "personal_detail")
 public class PersonalDetail {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "enroll_generator")
-	@SequenceGenerator(name="enroll_generator", sequenceName = "enroll_seq", allocationSize=1)
 	private int regId;
 	private String maritalStatus;
 	private String aadharNo;
 	private String pan;
 	private int phone;
 
+
+	@OneToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name="user_id")
+	private UserRegistration userRegistration;
+	
 	public PersonalDetail() {
 		super();
 
-	}
-
-	public PersonalDetail(int regId, String maritalStatus, String aadharNo, String pan, int phone) {
-		super();
-		this.regId = regId;
-		this.maritalStatus = maritalStatus;
-		this.aadharNo = aadharNo;
-		this.pan = pan;
-		this.phone = phone;
 	}
 
 	public int getRegId() {
@@ -74,6 +66,16 @@ public class PersonalDetail {
 
 	public void setPhone(int phone) {
 		this.phone = phone;
+	}
+	
+	
+
+	public UserRegistration getUserRegistration() {
+		return userRegistration;
+	}
+
+	public void setUserRegistration(UserRegistration userRegistration) {
+		this.userRegistration = userRegistration;
 	}
 
 	@Override
