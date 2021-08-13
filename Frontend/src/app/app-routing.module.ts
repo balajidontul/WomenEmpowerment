@@ -8,6 +8,7 @@ import { CriteriaComponent } from './ngo/criteria/criteria.component';
 import { FaqngoComponent } from './ngo/faqngo/faqngo.component';
 import { FundingnormsComponent } from './ngo/fundingnorms/fundingnorms.component';
 import { NGOComponent } from './ngo/ngo.component';
+import { NgologinComponent } from './ngo/ngologin/ngologin.component';
 import { OrganisationComponent } from './ngo/organisation/organisation.component';
 import { RegisterngoComponent } from './ngo/registerngo/registerngo.component';
 import { StatusngoComponent } from './ngo/statusngo/statusngo.component';
@@ -36,6 +37,7 @@ const routes: Routes = [
 
 
   {path:'', component:HomeComponent },
+  {path:'ngologin', component:NgologinComponent },
 
 
 { path: 'ngopath', component: NGOComponent, children: [
