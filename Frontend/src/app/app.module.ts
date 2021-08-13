@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import { LoginComponent } from './login/login.component';
 import { StepComponent } from './step/step.component';
 import { NGOComponent } from './ngo/ngo.component';
 import { RegisterComponent } from './register/register.component';
@@ -25,7 +24,6 @@ import { AboutusstepComponent } from './step/aboutusstep/aboutusstep.component';
 import { GuidelinestepComponent } from './step/guidelinestep/guidelinestep.component';
 import { NgostepComponent } from './step/ngostep/ngostep.component';
 import { TrainingsectorsstepComponent } from './step/trainingsectorsstep/trainingsectorsstep.component';
-import { NgologinComponent } from './ngo/ngologin/ngologin.component';
 import { DashboardstepComponent } from './step/dashboardstep/dashboardstep.component';
 import { AddcourseComponent } from './ngo/addcourse/addcourse.component';
 import { ShowcoursesComponent } from './ngo/showcourses/showcourses.component';
@@ -36,7 +34,6 @@ import { ShowcoursesComponent } from './ngo/showcourses/showcourses.component';
   declarations: [
     AppComponent,
     HomeComponent,
-    LoginComponent,
     StepComponent,
     NGOComponent,
     RegisterComponent,
@@ -56,7 +53,7 @@ import { ShowcoursesComponent } from './ngo/showcourses/showcourses.component';
     GuidelinestepComponent,
     NgostepComponent,
     TrainingsectorsstepComponent,
-    NgologinComponent,
+
     DashboardstepComponent,
     AddcourseComponent,
     ShowcoursesComponent,
