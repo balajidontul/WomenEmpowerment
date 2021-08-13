@@ -1,1 +1,25 @@
-<p>addcourse works!</p>
+<form (ngSubmit) = "onSubmit()">
+
+    <div class="form-group">
+        <label>Course Name</label>
+        <input type="text" class="form-control" id = "ngoCourseName" 
+        [(ngModel)] = "ngocourse.ngoCourseName" name = "ngoCourseName">
+    </div>
+
+    
+    <div class="form-group">
+        <label>Course Start Date</label>
+        <input type="date" class="form-control" id = "startDate" 
+        [(ngModel)] = "ngocourse.startDate" name = "startDate">
+    </div>
+
+    <div class="form-group">
+        <label>Course End Date</label>
+        <input type="date" class="form-control" id = "endDate" 
+        [(ngModel)] = "ngocourse.endDate" name = "endDate">
+    </div>
+
+    
+    <button class = "btn btn-success" type="submit">Add Course</button> 
+    
+</form>
