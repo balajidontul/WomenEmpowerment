@@ -50,9 +50,9 @@ const routes: Routes = [
     { path: 'ngoregister', component: RegisterngoComponent, outlet: 'ngosub' },
     { path: 'ngostatus', component: StatusngoComponent, outlet: 'ngosub' },
     { path: 'ngofaq', component: FaqngoComponent, outlet: 'ngosub' },
-    { path: 'ngocourses', component: AddcourseComponent, outlet: 'ngosub'}
+    { path: 'ngoaddcourse', component: AddcourseComponent, outlet: 'ngosub' }  
   ] },
-//NGO ROUTING DONT DELETE
+//NGO ROUTING DONT
 
 
 
