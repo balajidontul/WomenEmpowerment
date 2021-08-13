@@ -26,6 +26,8 @@ import { GuidelinestepComponent } from './step/guidelinestep/guidelinestep.compo
 import { NgostepComponent } from './step/ngostep/ngostep.component';
 import { TrainingsectorsstepComponent } from './step/trainingsectorsstep/trainingsectorsstep.component';
 import { NgologinComponent } from './ngo/ngologin/ngologin.component';
+import { AddcoursestepComponent } from './step/addcoursestep/addcoursestep.component';
+import { DashboardstepComponent } from './step/dashboardstep/dashboardstep.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +53,9 @@ import { NgologinComponent } from './ngo/ngologin/ngologin.component';
     GuidelinestepComponent,
     NgostepComponent,
     TrainingsectorsstepComponent,
-    NgologinComponent
+    NgologinComponent,
+    AddcoursestepComponent,
+    DashboardstepComponent
 
 
   ],
