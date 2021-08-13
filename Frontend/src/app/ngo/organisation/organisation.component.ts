@@ -21,6 +21,8 @@ export class OrganisationComponent implements OnInit {
   
   private getall() {
     this.ngoService.getallngo().subscribe(data => {
+      console.log(data);
+      
       this.Organisations = data;
     })
   }

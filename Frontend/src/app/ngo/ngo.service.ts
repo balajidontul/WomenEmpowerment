@@ -8,7 +8,7 @@ import { Ngo } from './ngo';
 })
 export class NgoService {
 
-  private baseURL = "http://localhost:8084/rest/api/";
+  private baseURL = "http://localhost:9000/rest/api/";
   constructor(private httpClient:HttpClient) {}
 
   getPendingNgoList(): Observable<Ngo[]>{

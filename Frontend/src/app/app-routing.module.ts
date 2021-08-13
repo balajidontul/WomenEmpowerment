@@ -4,6 +4,7 @@ import { AdminApprovedNgoComponent } from './admin/admin-approved-ngo/admin-appr
 import { AdminDashboardComponent } from './admin/admin-dashboard/admin-dashboard.component';
 import { AdminPendingNgoComponent } from './admin/admin-pending-ngo/admin-pending-ngo.component';
 import { HomeComponent } from './home/home.component';
+import { AddcourseComponent } from './ngo/addcourse/addcourse.component';
 import { CriteriaComponent } from './ngo/criteria/criteria.component';
 import { FaqngoComponent } from './ngo/faqngo/faqngo.component';
 import { FundingnormsComponent } from './ngo/fundingnorms/fundingnorms.component';
@@ -36,18 +37,24 @@ const routes: Routes = [
   ] },
 
 
+
+
+  // NGO ROUTING DONT DELETE
   {path:'', component:HomeComponent },
   {path:'ngologin', component:NgologinComponent },
-
-
+  { path: 'ngoregister', component: RegisterngoComponent},
 { path: 'ngopath', component: NGOComponent, children: [
     { path: 'ngoorganisation', component: OrganisationComponent, outlet: 'ngosub' },
     { path: 'ngocriteria', component: CriteriaComponent, outlet: 'ngosub' },
     { path: 'ngofunding', component: FundingnormsComponent, outlet: 'ngosub' },
     { path: 'ngoregister', component: RegisterngoComponent, outlet: 'ngosub' },
     { path: 'ngostatus', component: StatusngoComponent, outlet: 'ngosub' },
-    { path: 'ngofaq', component: FaqngoComponent, outlet: 'ngosub' }
+    { path: 'ngofaq', component: FaqngoComponent, outlet: 'ngosub' },
+    { path: 'ngoaddcourse', component: AddcourseComponent, outlet: 'ngosub' }  
   ] },
+//NGO ROUTING DONT
+
+
 
   {path:'adminpath', component:AdminDashboardComponent},
   {path: 'approved-ngo', component:AdminApprovedNgoComponent},
