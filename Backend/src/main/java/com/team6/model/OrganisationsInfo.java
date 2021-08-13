@@ -24,6 +24,17 @@ public class OrganisationsInfo {
 	private long organisationPhone;
 	private String location;
 	private String status;
+	private String password;
+	
+	
+	
+	
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
 	public int getOrganisationId() {
 		return organisationId;
 	}
@@ -66,8 +77,12 @@ public class OrganisationsInfo {
 	public void setStatus(String status) {
 		this.status = status;
 	}
+	
+	
+	
+	
 	public OrganisationsInfo(int organisationId, String organisationName, String pan, String organisationMail,
-			long organisationPhone, String location, String status) {
+			long organisationPhone, String location, String status, String password) {
 		super();
 		this.organisationId = organisationId;
 		this.organisationName = organisationName;
@@ -76,6 +91,7 @@ public class OrganisationsInfo {
 		this.organisationPhone = organisationPhone;
 		this.location = location;
 		this.status = status;
+		this.password = password;
 	}
 	public OrganisationsInfo() {
 		super();
