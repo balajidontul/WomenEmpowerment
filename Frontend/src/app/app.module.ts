@@ -27,6 +27,8 @@ import { NgostepComponent } from './step/ngostep/ngostep.component';
 import { TrainingsectorsstepComponent } from './step/trainingsectorsstep/trainingsectorsstep.component';
 import { NgologinComponent } from './ngo/ngologin/ngologin.component';
 import { DashboardstepComponent } from './step/dashboardstep/dashboardstep.component';
+import { NgoAddCourseComponent } from './ngo-add-course/ngo-add-course.component';
+import { NgoShowCourseComponent } from './ngo-show-course/ngo-show-course.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +55,9 @@ import { DashboardstepComponent } from './step/dashboardstep/dashboardstep.compo
     NgostepComponent,
     TrainingsectorsstepComponent,
     NgologinComponent,
-    DashboardstepComponent
+    DashboardstepComponent,
+    NgoAddCourseComponent,
+    NgoShowCourseComponent
 
 
   ],
