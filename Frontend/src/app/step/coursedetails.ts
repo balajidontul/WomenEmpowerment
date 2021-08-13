@@ -1,7 +1,6 @@
 export class Coursedetails {
     
-    courseId:number;
-    projectId:number;
+    userCourseId:number;
     status:String;
 
 }
