@@ -27,6 +27,7 @@ export class AddcourseComponent implements OnInit {
   onSubmit() {
     console.log(this.ngocourse);
     this.saveCourse();
+    window.alert("Coursed added");
   }
 
 }

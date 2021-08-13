@@ -8,7 +8,7 @@ import { Ngocourse } from './ngocourse';
 })
 export class NgocoursesService {
 
-  private baseURL = "http://localhost:9000/rest/api/ngo/ngo-courses";
+  private baseURL = "http://localhost:9000/rest/api/ngopath/(ngosub:ngoaddcourse)";
   constructor(private httpClient:HttpClient) { }
 
   addCourse(ngocourse: Ngocourse):Observable<Object> {
