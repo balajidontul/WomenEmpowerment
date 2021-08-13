@@ -5,12 +5,17 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.SequenceGenerator;
 
 @Entity
 @Table(name = "personal_detail")
 public class PersonalDetail {
 
 	@Id
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "enroll_generator")
+	@SequenceGenerator(name="enroll_generator", sequenceName = "enroll_seq", allocationSize=1)
 	private int regId;
 	private String maritalStatus;
 	private String aadharNo;
