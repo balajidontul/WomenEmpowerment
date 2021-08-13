@@ -4,6 +4,7 @@ import { AdminApprovedNgoComponent } from './admin/admin-approved-ngo/admin-appr
 import { AdminDashboardComponent } from './admin/admin-dashboard/admin-dashboard.component';
 import { AdminPendingNgoComponent } from './admin/admin-pending-ngo/admin-pending-ngo.component';
 import { HomeComponent } from './home/home.component';
+import { AddcourseComponent } from './ngo/addcourse/addcourse.component';
 import { CriteriaComponent } from './ngo/criteria/criteria.component';
 import { FaqngoComponent } from './ngo/faqngo/faqngo.component';
 import { FundingnormsComponent } from './ngo/fundingnorms/fundingnorms.component';
@@ -48,7 +49,8 @@ const routes: Routes = [
     { path: 'ngofunding', component: FundingnormsComponent, outlet: 'ngosub' },
     { path: 'ngoregister', component: RegisterngoComponent, outlet: 'ngosub' },
     { path: 'ngostatus', component: StatusngoComponent, outlet: 'ngosub' },
-    { path: 'ngofaq', component: FaqngoComponent, outlet: 'ngosub' }
+    { path: 'ngofaq', component: FaqngoComponent, outlet: 'ngosub' },
+    { path: 'ngocourses', component: AddcourseComponent, outlet: 'ngosub'}
   ] },
 //NGO ROUTING DONT DELETE
 
