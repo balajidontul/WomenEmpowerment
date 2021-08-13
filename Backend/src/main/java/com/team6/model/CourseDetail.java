@@ -12,36 +12,29 @@ import javax.persistence.Table;
 public class CourseDetail {
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "course_generator")
-    @SequenceGenerator(name="course_generator", sequenceName = "course_seq", allocationSize=1)
-	private int courseId;
-	private int projectId;
+    	@SequenceGenerator(name="course_generator", sequenceName = "course_seq", allocationSize=1)
+	private int userCourseId;
+// 	private int courseId;
 	private String status;
 	public CourseDetail() {
 		super();
 	}	
 	
-	public CourseDetail(int courseId, int projectId, String status) {
+	public CourseDetail(int userCourseId, String status) {
 		super();
 		this.courseId = courseId;
-		this.projectId = projectId;
 		this.status = status;
 		
 	}
 
-	public int getCourseId() {
-		return courseId;
+	public int getUserCourseId() {
+		return userCourseId;
 	}
 
-	public void setCourseId(int courseId) {
-		this.courseId = courseId;
+	public void setUserCourseId(int userCourseId) {
+		this.userCourseId = userCourseId;
 	}
 
-	public int getProjectId() {
-		return projectId;
-	}
-	public void setProjectId(int projectId) {
-		this.projectId = projectId;
-	}
 	
 	public String getStatus() {
 		return status;
