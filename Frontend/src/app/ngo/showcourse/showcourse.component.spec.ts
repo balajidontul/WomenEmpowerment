@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NgoAddCourseComponent } from './ngo-add-course.component';
+import { ShowcourseComponent } from './showcourse.component';
 
-describe('NgoAddCourseComponent', () => {
-  let component: NgoAddCourseComponent;
-  let fixture: ComponentFixture<NgoAddCourseComponent>;
+describe('ShowcourseComponent', () => {
+  let component: ShowcourseComponent;
+  let fixture: ComponentFixture<ShowcourseComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ NgoAddCourseComponent ]
+      declarations: [ ShowcourseComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(NgoAddCourseComponent);
+    fixture = TestBed.createComponent(ShowcourseComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
