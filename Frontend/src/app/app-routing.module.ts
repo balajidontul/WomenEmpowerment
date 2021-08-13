@@ -13,6 +13,7 @@ import { RegisterngoComponent } from './ngo/registerngo/registerngo.component';
 import { StatusngoComponent } from './ngo/statusngo/statusngo.component';
 import { RegisterComponent } from './register/register.component';
 import { AboutusstepComponent } from './step/aboutusstep/aboutusstep.component';
+import { DashboardstepComponent } from './step/dashboardstep/dashboardstep.component';
 import { FaqstepComponent } from './step/faqstep/faqstep.component';
 import { GuidelinestepComponent } from './step/guidelinestep/guidelinestep.component';
 import { NgostepComponent } from './step/ngostep/ngostep.component';
@@ -29,7 +30,8 @@ const routes: Routes = [
     {path: 'stepngo', component: NgostepComponent, outlet: 'stepsub'},
     {path: 'stepregister', component: RegistrationstepComponent, outlet: 'stepsub'},
     {path: 'stepstatus', component: StatusstepComponent, outlet: 'stepsub'},
-    {path: 'steptrainingsectors', component: TrainingsectorsstepComponent, outlet: 'stepsub'}
+    {path: 'steptrainingsectors', component: TrainingsectorsstepComponent, outlet: 'stepsub'},
+    {path: 'stepdashboard', component: DashboardstepComponent, outlet: 'stepsub'}
   ] },
 
 
@@ -48,6 +50,10 @@ const routes: Routes = [
   {path:'adminpath', component:AdminDashboardComponent},
   {path: 'approved-ngo', component:AdminApprovedNgoComponent},
   {path: 'pending-ngo', component:AdminPendingNgoComponent},
+
+
+
+  {path: 'user-register', component:RegisterComponent}
 
   
 ];
