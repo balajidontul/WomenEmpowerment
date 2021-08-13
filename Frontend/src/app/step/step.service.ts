@@ -36,6 +36,10 @@ export class StepService {
     return this.httpClient.get<Coursedetails[]>(`${this.baseURL}courses`);
   }
 
+  // nisha
+  getAllStatus(): Observable<Coursedetails> {
+    return this.httpClient.get<Coursedetails>(`${this.baseURL}courses`);
+  }
 
 
 
