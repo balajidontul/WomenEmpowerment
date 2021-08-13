@@ -53,7 +53,7 @@ import { DashboardstepComponent } from './step/dashboardstep/dashboardstep.compo
     NgostepComponent,
     TrainingsectorsstepComponent,
     NgologinComponent,
-    DashboardstepComponent
+    DashboardstepComponent,
 
 
   ],
