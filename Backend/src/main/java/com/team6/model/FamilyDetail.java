@@ -3,12 +3,18 @@ package com.team6.model;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+
+import javax.persistence.SequenceGenerator;
 
 @Entity
 @Table(name = "family_detail")
 public class FamilyDetail {
 
 	@Id
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "family_generator")
+	@SequenceGenerator(name="family_generator", sequenceName = "family_seq", allocationSize=1)
 	private int regId;
 	private String firstName;
 	private String lastName;
