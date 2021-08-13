@@ -7,10 +7,6 @@ import { LoginComponent } from './login/login.component';
 import { StepComponent } from './step/step.component';
 import { NGOComponent } from './ngo/ngo.component';
 import { RegisterComponent } from './register/register.component';
-import { AboutusComponent } from './step/aboutus/aboutus.component';
-import { GuidelinesComponent } from './step/guidelines/guidelines.component';
-import { NgoComponent } from './step/ngo/ngo.component';
-import { TrainingsectorsComponent } from './step/trainingsectors/trainingsectors.component';
 import { CriteriaComponent } from './ngo/criteria/criteria.component';
 import { OrganisationComponent } from './ngo/organisation/organisation.component';
 import { FundingnormsComponent } from './ngo/fundingnorms/fundingnorms.component';
@@ -25,6 +21,10 @@ import { AdminDashboardComponent } from './admin/admin-dashboard/admin-dashboard
 import {HttpClientModule} from '@angular/common/http';
 import { AdminPendingNgoComponent } from './admin/admin-pending-ngo/admin-pending-ngo.component';
 import { AdminApprovedNgoComponent } from './admin/admin-approved-ngo/admin-approved-ngo.component';
+import { AboutusstepComponent } from './step/aboutusstep/aboutusstep.component';
+import { GuidelinestepComponent } from './step/guidelinestep/guidelinestep.component';
+import { NgostepComponent } from './step/ngostep/ngostep.component';
+import { TrainingsectorsstepComponent } from './step/trainingsectorsstep/trainingsectorsstep.component';
 
 @NgModule({
   declarations: [
@@ -34,26 +34,22 @@ import { AdminApprovedNgoComponent } from './admin/admin-approved-ngo/admin-appr
     StepComponent,
     NGOComponent,
     RegisterComponent,
-    AboutusComponent,
-    GuidelinesComponent,
-    NgoComponent,
-    TrainingsectorsComponent,
     CriteriaComponent,
     OrganisationComponent,
     FundingnormsComponent,
     RegisterngoComponent,
     StatusngoComponent,
     FaqngoComponent,
-    AboutusComponent,
-    GuidelinesComponent,
-    NgoComponent,
-    TrainingsectorsComponent,
     FaqstepComponent,
     StatusstepComponent,
     RegistrationstepComponent,
     AdminDashboardComponent,
     AdminPendingNgoComponent,
     AdminApprovedNgoComponent,
+    AboutusstepComponent,
+    GuidelinestepComponent,
+    NgostepComponent,
+    TrainingsectorsstepComponent,
 
 
   ],

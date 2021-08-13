@@ -12,10 +12,27 @@ import { OrganisationComponent } from './ngo/organisation/organisation.component
 import { RegisterngoComponent } from './ngo/registerngo/registerngo.component';
 import { StatusngoComponent } from './ngo/statusngo/statusngo.component';
 import { RegisterComponent } from './register/register.component';
+import { AboutusstepComponent } from './step/aboutusstep/aboutusstep.component';
+import { FaqstepComponent } from './step/faqstep/faqstep.component';
+import { GuidelinestepComponent } from './step/guidelinestep/guidelinestep.component';
+import { NgostepComponent } from './step/ngostep/ngostep.component';
+import { RegistrationstepComponent } from './step/registrationstep/registrationstep.component';
+import { StatusstepComponent } from './step/statusstep/statusstep.component';
 import { StepComponent } from './step/step.component';
+import { TrainingsectorsstepComponent } from './step/trainingsectorsstep/trainingsectorsstep.component';
 
 const routes: Routes = [
-  {path:'steppath', component:StepComponent },
+  {path:'steppath', component:StepComponent, children: [
+    {path: 'stepaboutus', component: AboutusstepComponent, outlet: 'stepsub'},
+    {path: 'stepfaq', component: FaqstepComponent, outlet: 'stepsub'},
+    {path: 'stepguideline', component: GuidelinestepComponent, outlet: 'stepsub'},
+    {path: 'stepngo', component: NgostepComponent, outlet: 'stepsub'},
+    {path: 'stepregister', component: RegistrationstepComponent, outlet: 'stepsub'},
+    {path: 'stepstatus', component: StatusstepComponent, outlet: 'stepsub'},
+    {path: 'steptrainingsectors', component: TrainingsectorsstepComponent, outlet: 'stepsub'}
+  ] },
+
+
   {path:'', component:HomeComponent },
 
 

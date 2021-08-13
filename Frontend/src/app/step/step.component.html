@@ -11,12 +11,14 @@
     </ul>
     </div>
     <ul class="navbar2">
-        <li><a routerlink="aboutusstep" class="navbar2element">ABOUT US</a></li>
-        <li><a routerlink="/guidelinesstep" class="navbar2element">GUIDELINES</a></li>
-        <li><a routerLink="/trainingsectorsstep" class="navbar2element">TRAINING SECTORS</a></li>
-        <li><a routerLink="/ngostep" href="#" class="navbar2element">NGO</a></li>
-        <li><a routerLink="/registrationstep" href="#" class="navbar2element">REGISTRATION</a></li>
-        <li><a routerLink="#" href="#" class="navbar2element">STATUS</a></li>
-        <li><a href="#" class="navbar2element">FAQ</a></li>
+        <li><a href="#" class="navbar2element" [routerLink]="['/steppath', {outlets: {'stepsub': ['stepaboutus']}}]">ABOUT US</a></li>
+        <li><a href="#" class="navbar2element" [routerLink]="['/steppath', {outlets: {'stepsub': ['stepguideline']}}]">GUIDELINES</a></li>
+        <li><a href="#" class="navbar2element" [routerLink]="['/steppath', {outlets: {'stepsub': ['steptrainingsectors']}}]">TRAINING SECTORS</a></li>
+        <li><a href="#" class="navbar2element" [routerLink]="['/steppath', {outlets: {'stepsub': ['stepngo']}}]">NGO</a></li>
+        <li><a href="#" class="navbar2element" [routerLink]="['/steppath', {outlets: {'stepsub': ['stepregister']}}]">REGISTRATION</a></li>
+        <li><a href="#" class="navbar2element" [routerLink]="['/steppath', {outlets: {'stepsub': ['stepstatus']}}]">STATUS</a></li>
+        <li><a href="#" class="navbar2element" [routerLink]="['/steppath', {outlets: {'stepsub': ['stepfaq']}}]">FAQ</a></li>
     </ul>
-    </div>
+    </div> 
+
+    <router-outlet name="stepsub"></router-outlet>
