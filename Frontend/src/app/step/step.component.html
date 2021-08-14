@@ -1,9 +1,10 @@
-<div style="margin: 4px;">
+<div>
     <ul class="navbar1">
         <li style="float: left;"><a class="navbar1element" href="#">Home</a></li>
         <li style="float: right;"><a class="navbar1element" href="#">Logout</a></li>
         <li style="float: right;"><a class="navbar1element" href="#">Contact Us</a></li>
     </ul>
+</div> 
     <div style="width: 100%">
     <ul class="container">
         <li style="margin-left: 100px"><img src="/assets/logo.png" alt="logo" width="100px"></li>
@@ -20,6 +21,6 @@
         <li><a href="#" class="navbar2element" [routerLink]="['/steppath', {outlets: {'stepsub': ['stepfaq']}}]">FAQ</a></li>
         <li><a href="#" class="navbar2element" [routerLink]="['/steppath', {outlets: {'stepsub': ['stepdashboard']}}]">DASHBOARD</a></li>
     </ul>
-    </div> 
+    
 
     <router-outlet name="stepsub"></router-outlet>
