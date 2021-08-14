@@ -9,7 +9,7 @@ import { StepService } from '../step.service';
   styleUrls: ['./statusstep.component.css']
 })
 export class StatusstepComponent implements OnInit {
-  CourseStatus: Coursedetails;
+  CourseStatus: Coursedetails[];
   constructor(private stepService: StepService, private router: Router) { }
 
   ngOnInit(): void {
