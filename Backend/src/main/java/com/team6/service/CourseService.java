@@ -5,8 +5,10 @@ import org.springframework.stereotype.Service;
 
 import com.team6.model.CourseDetail;
 import com.team6.model.NgoCourses;
+import com.team6.model.PersonalDetail;
 import com.team6.repository.CourseRepository;
 import com.team6.repository.NgoCoursesRepository;
+import com.team6.repository.PersonalDetailRepository;
 
 @Service
 public class CourseService {

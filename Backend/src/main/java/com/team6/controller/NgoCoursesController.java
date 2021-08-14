@@ -24,24 +24,24 @@ public class NgoCoursesController {
 	@Autowired
 	NgoCoursesRepository ngoCoursesRepository;
 	
-	@GetMapping("/ngo-courses")	
+	@GetMapping("/ngopath/(ngosub:ngoaddcourse)")	
 	public List<NgoCourses> getAllNgoCourses() {
 		return ngoCoursesRepository.findAll();
 	}
 	
-	@PostMapping("/ngo-courses")
+	@PostMapping("/ngopath/(ngosub:ngoaddcourse)")
 	public NgoCourses addUser(@RequestBody NgoCourses ngoCourses) {
 		return ngoCoursesRepository.save(ngoCourses);
 	}
 	
-	@DeleteMapping("/ngo-courses")
+	@DeleteMapping("/ngopath/(ngosub:ngoaddcourse)")
 	public String deleteUser(@RequestBody NgoCourses ngoCourses) {
 		ngoCoursesRepository.delete(ngoCourses);
 		return "Course deleted.";
 		
 	}
 	
-	@PutMapping("/ngo-courses")
+	@PutMapping("/ngopath/(ngosub:ngoaddcourse)")
 	public String updateUser(@RequestBody NgoCourses ngoCourses) {
 		NgoCourses updatedCourse = ngoCoursesRepository.findById(ngoCourses.getNgoCourseId()).get();
 		updatedCourse = ngoCourses;
