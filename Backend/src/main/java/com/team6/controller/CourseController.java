@@ -33,11 +33,7 @@ public class CourseController {
 //		return courseService.saveRecords(courseDetail, ngo_course_id);
 //	}
 	
-	@PostMapping("/courses/{reg_id}")
-	public boolean addCours(@RequestBody CourseDetail courseDetail, @PathVariable("reg_id") int reg_id) {
-		return courseService.saveUserCourses(courseDetail, reg_id);
-		
-	}
+	
 	@PostMapping("/courses/{reg_id}")
 	public boolean addCours(@RequestBody CourseDetail courseDetail, @PathVariable("reg_id") int reg_id) {
 		return courseService.saveUserCourses(courseDetail, reg_id);
