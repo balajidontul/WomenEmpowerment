@@ -15,7 +15,7 @@ import javax.persistence.Table;
 public class CourseDetail {
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "course_generator")
-    	@SequenceGenerator(name="course_generator", sequenceName = "course_seq", allocationSize=1)
+    @SequenceGenerator(name="course_generator", sequenceName = "course_seq", allocationSize=1)
 	private int userCourseId;
 	private String status;
 	
@@ -27,6 +27,7 @@ public class CourseDetail {
 	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name="reg_id")
 	private PersonalDetail personalDetail;
+
 	
 	public CourseDetail() {
 		super();
@@ -63,6 +64,15 @@ public class CourseDetail {
 	public void setNgoCourses(NgoCourses ngoCourses) {
 		this.ngoCourses = ngoCourses;
 	}
+
+	public PersonalDetail getPersonalDetail() {
+		return personalDetail;
+	}
+
+	public void setPersonalDetail(PersonalDetail personalDetail) {
+		this.personalDetail = personalDetail;
+	}
+	
 	
 	public PersonalDetail getPersonalDetail() {
 		return personalDetail;

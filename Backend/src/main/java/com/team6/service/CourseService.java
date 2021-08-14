@@ -5,8 +5,10 @@ import org.springframework.stereotype.Service;
 
 import com.team6.model.CourseDetail;
 import com.team6.model.NgoCourses;
+import com.team6.model.PersonalDetail;
 import com.team6.repository.CourseRepository;
 import com.team6.repository.NgoCoursesRepository;
+import com.team6.repository.PersonalDetailRepository;
 
 @Service
 public class CourseService {
@@ -20,16 +22,17 @@ public class CourseService {
 	@Autowired
 	PersonalDetailRepository personalDetailRepository;
 	
-	public boolean saveUserCourses(CourseDetail courseDetail, int reg_id) {
-		PersonalDetail personalDetail = personalDetailRepository.findById(reg_id).get();
-		courseDetail.setPersonalDetail(personalDetail);
+
+	public boolean saveRecords(CourseDetail courseDetail, int ngo_course_id) {
+		NgoCourses ngoCourses = ngoCoursesRepository.findById(ngo_course_id).get();
+		courseDetail.setNgoCourses(ngoCourses);
 		courseRepository.save(courseDetail);
 		return true;
 	}
 	
-	public boolean saveRecords(CourseDetail courseDetail, int ngo_course_id) {
-		NgoCourses ngoCourses = ngoCoursesRepository.findById(ngo_course_id).get();
-		courseDetail.setNgoCourses(ngoCourses);
+	public boolean saveUserCourses(CourseDetail courseDetail, int reg_id) {
+		PersonalDetail personalDetail = personalDetailRepository.findById(reg_id).get();
+		courseDetail.setPersonalDetail(personalDetail);
 		courseRepository.save(courseDetail);
 		return true;
 	}
