@@ -24,7 +24,7 @@ public class NgoCoursesController {
 	@Autowired
 	NgoCoursesRepository ngoCoursesRepository;
 	
-	@GetMapping("/ngopath/(ngosub:ngoaddcourse)")	
+	@GetMapping("/show-ngo-course")	
 	public List<NgoCourses> getAllNgoCourses() {
 		return ngoCoursesRepository.findAll();
 	}

@@ -27,6 +27,7 @@ import { TrainingsectorsstepComponent } from './step/trainingsectorsstep/trainin
 import { DashboardstepComponent } from './step/dashboardstep/dashboardstep.component';
 import { AddcourseComponent } from './ngo/addcourse/addcourse.component';
 import { ShowcoursesComponent } from './ngo/showcourses/showcourses.component';
+import { ShowcourseComponent } from './ngo/showcourse/showcourse.component';
 
 
 
@@ -56,6 +57,7 @@ import { ShowcoursesComponent } from './ngo/showcourses/showcourses.component';
 
     DashboardstepComponent,
     AddcourseComponent,
+    ShowcourseComponent,
     ShowcoursesComponent,
 
 

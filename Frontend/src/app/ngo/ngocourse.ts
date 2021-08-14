@@ -1,5 +1,6 @@
 export class Ngocourse {
-    organisationid:string
+    ngoCourseId:number
+    projectIncharge:string
     ngoCourseName:string
     startDate:string
     endDate:string
