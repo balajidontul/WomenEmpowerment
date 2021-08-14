@@ -74,13 +74,6 @@ public class CourseDetail {
 	}
 	
 	
-	public PersonalDetail getPersonalDetail() {
-		return personalDetail;
-	}
-
-	public void setPersonalDetail(PersonalDetail personalDetail) {
-		this.personalDetail = personalDetail;
-	}
 	
 		
 }
