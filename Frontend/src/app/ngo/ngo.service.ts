@@ -23,6 +23,10 @@ export class NgoService {
     return this.httpClient.put(`${this.baseURL}pending-ngo/${organisationId}`, organisationId);
   }
 
+  deletePendingNgo(organisationId:number){
+    return this.httpClient.delete(`${this.baseURL}pending-ngo/${organisationId}`);
+  }
+
   deleteNgo(organisationId:number){
     return this.httpClient.delete(`${this.baseURL}approved-ngo/${organisationId}`);
   }

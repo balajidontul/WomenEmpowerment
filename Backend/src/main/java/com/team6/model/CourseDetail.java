@@ -27,7 +27,7 @@ public class CourseDetail {
 	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name="reg_id")
 	private PersonalDetail personalDetail;
-	
+
 	
 	public CourseDetail() {
 		super();
@@ -74,6 +74,13 @@ public class CourseDetail {
 	}
 	
 	
+	public PersonalDetail getPersonalDetail() {
+		return personalDetail;
+	}
+
+	public void setPersonalDetail(PersonalDetail personalDetail) {
+		this.personalDetail = personalDetail;
+	}
 	
 		
 }

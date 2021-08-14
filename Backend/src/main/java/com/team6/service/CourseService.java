@@ -22,6 +22,7 @@ public class CourseService {
 	@Autowired
 	PersonalDetailRepository personalDetailRepository;
 	
+
 	public boolean saveRecords(CourseDetail courseDetail, int ngo_course_id) {
 		NgoCourses ngoCourses = ngoCoursesRepository.findById(ngo_course_id).get();
 		courseDetail.setNgoCourses(ngoCourses);

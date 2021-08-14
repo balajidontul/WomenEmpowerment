@@ -10,7 +10,7 @@
                 <th>Email</th>
                 <th>Phone</th>
                 <th>Location</th>
-                <th>Status</th>
+                <th>Statsus</th>
             </tr>  
         </thead>
         <tbody>
@@ -23,7 +23,7 @@
                 <td>{{ngo.location}}</td>
                 <td>{{ngo.status}}</td>
                 <td> <button (click) = "approveNgo(ngo.organisationId)" class="btn btn-success">Approve</button></td>
-                <td> <button class="btn btn-danger">Decline</button></td>
+                <td> <button (click) = "deleteNgo(ngo.organisationId)" class="btn btn-danger">Decline</button></td>
             </tr>
         </tbody>
     </table>

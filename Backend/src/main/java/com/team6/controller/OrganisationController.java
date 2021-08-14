@@ -69,5 +69,13 @@ public class OrganisationController {
 		
 	}
 	
+	@Transactional
+	@DeleteMapping("/pending-ngo/{organisationId}")
+	public void deletePendingNgo(@PathVariable(value = "organisationId") int organisationId) {
+		organisationRepository.deleteNgo(organisationId);
+	
+		
+	}
+	
 	
 }

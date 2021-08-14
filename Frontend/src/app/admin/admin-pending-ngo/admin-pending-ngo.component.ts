@@ -28,6 +28,14 @@ export class AdminPendingNgoComponent implements OnInit {
       data = organisationId;
       window.location.reload();
     });
-  
-    }
   }
+
+  deleteNgo(organisationId:number) {
+    this.ngoService.deletePendingNgo(organisationId).subscribe(data => {
+      data = organisationId;
+      window.location.reload();
+    });
+  }
+
+
+ }

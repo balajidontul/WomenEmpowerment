@@ -19,11 +19,7 @@
   list-style-type: none;
 }
 
-.navbar2,
-.container {
-  list-style-type: none;
-  margin: 2px;
-}
+
 
 .container {
   align-items: center;
@@ -31,7 +27,13 @@
   margin-left: 100px;
   margin-right: 100px;
 }
-.navbar2element,
+.navbar2element{
+  display: block;
+
+  font-size: 20px;
+  color: #000;
+  text-decoration: none;
+}
 
 .navbar1element {
   display: block;
@@ -42,7 +44,7 @@
 }
 
 .navbar2element {
-  margin: 0 50px;
+  margin: 0 30px;
 }
 
 li {

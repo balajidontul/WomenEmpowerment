@@ -38,7 +38,10 @@ public class CourseController {
 		return courseService.saveUserCourses(courseDetail, reg_id);
 		
 	}
-	
+	@PostMapping("/courses/{reg_id}")
+	public boolean addCours(@RequestBody CourseDetail courseDetail, @PathVariable("reg_id") int reg_id) {
+		return courseService.saveUserCourses(courseDetail, reg_id);
+	}
 	@GetMapping("/courses")
 	public List<CourseDetail> getAll() {
 		return courseRepo.findAll();
