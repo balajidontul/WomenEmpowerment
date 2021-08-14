@@ -16,15 +16,13 @@ export class DashboardstepComponent implements OnInit {
 
   ngOnInit(): void {
 
-
+    this.getall();
   }
-  private getall() {
+  getall() {
     this.stepService.getallcourses().subscribe(data => {
+      console.log(data);
       this.courses = data;
-      console.log(data.values);
     })
-
-    this.router.navigate(['stepdashboard']);
   }
 
 }

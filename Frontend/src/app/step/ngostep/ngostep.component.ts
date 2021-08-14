@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { StepService } from '../step.service';
+import { Router } from '@angular/router';
+import {NgoDetails} from '../ngodetails';
+
 
 @Component({
   selector: 'app-ngostep',
@@ -7,9 +11,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NgostepComponent implements OnInit {
 
-  constructor() { }
+  NgoNames: NgoDetails[];
+  constructor(private stepService : StepService, private router : Router) { }
 
   ngOnInit(): void {
+    this.getAllNgos();
+  }
+
+  getAllNgos() {
+     this.stepService.getAllNgos().subscribe(data => {
+      console.log(data);
+      this.NgoNames = data;
+    })
   }
 
 }

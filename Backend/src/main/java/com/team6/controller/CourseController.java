@@ -28,9 +28,15 @@ public class CourseController {
 	@Autowired
 	CourseService courseService;
 	
-	@PostMapping("/courses/{ngo_course_id}" )
-	public boolean addCourse(@RequestBody CourseDetail courseDetail, @PathVariable("ngo_course_id") int ngo_course_id) {
-		return courseService.saveRecords(courseDetail, ngo_course_id);
+//	@PostMapping("/courses/{ngo_course_id}" )
+//	public boolean addCourse(@RequestBody CourseDetail courseDetail, @PathVariable("ngo_course_id") int ngo_course_id) {
+//		return courseService.saveRecords(courseDetail, ngo_course_id);
+//	}
+	
+	@PostMapping("/courses/{reg_id}")
+	public boolean addCours(@RequestBody CourseDetail courseDetail, @PathVariable("reg_id") int reg_id) {
+		return courseService.saveUserCourses(courseDetail, reg_id);
+		
 	}
 	
 	@GetMapping("/courses")
