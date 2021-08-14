@@ -1,0 +1,78 @@
+
+
+<ul class="navbar ">
+    <li style="float: left;"><a class="navbar1element" href="#">Home</a></li>
+    <li style="float: right;"><a class="navbar1element" href="#">Logout</a></li>
+    <li style="float: right;"><a class="navbar1element" href="#">Contact Us</a></li>
+</ul>
+
+<div>
+    <h2 align="center"> <img src="/assets/logo.png" alt="logo" width="100px"/>  
+        Non Government Organisations (NGOs)</h2>
+</div>
+
+
+<ul class="navbar2">
+    <li><a href="#" class="navbar2element" [routerLink]="['/ngopath', {outlets: {'ngosub': ['ngocriteria']}}]">Criteria</a></li>
+    <li><a href="#" class="navbar2element" [routerLink]="['/ngopath', {outlets: {'ngosub': ['ngoorganisation']}}]">Organisations</a></li>
+    <li><a [routerLink]="['/ngopath', {outlets: {'ngosub': ['ngofunding']}}]" class="navbar2element">Funding norms</a></li>
+    <li><a [routerLink]="['/ngopath', {outlets: {'ngosub': ['ngoaddcourse']}}]" href="#" class="navbar2element"  >Add Course</a></li>
+    <li><a   [routerLink]="['/ngopath', {outlets: {'ngosub': ['ngoshowcourse']}}]" href="#" class="navbar2element" >Show Courses</a></li>
+    <li><a   [routerLink]="['/ngopath', {outlets: {'ngosub': ['ngoregister']}}]" href="#" class="navbar2element" >Register</a></li>
+    <li><a [routerLink]="['/ngopath', {outlets: {'ngosub': ['ngostatus']}}]" href="#" class="navbar2element">Status</a></li>
+    <li><a   [routerLink]="['/ngopath', {outlets: {'ngosub': ['ngofaq']}}]" href="#" class="navbar2element" >FAQ</a></li>
+
+    
+</ul>
+
+
+
+
+  
+
+
+ 
+
+
+      <div class="carousel slide" id="slider" data-ride="carousel">
+        <!--indicators-->
+        <ol class="carousel-indicators">
+          <li data-target="#slider" data-slide-to="0" class="active"></li>
+          <li data-target="#slider" data-slide-to="1"></li>
+          <li data-target="#slider" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="center" src="/assets/img2.jpg" >
+            <div class="carousel-caption">
+              <h4>Welcome</h4>
+              <p>Travel! Enjoy!</p>
+            </div>
+          </div>
+      
+          <div class="carousel-item" id="slide2">
+            <img class="center" src="/assets/img1.jpg">
+            <div class="carousel-caption">
+              <h4>Welcome</h4>
+              <p>Travel! Enjoy!</p>
+            </div>
+          </div>
+      
+          <div class="carousel-item" id="slide3">
+            <img class="center" src="/assets/wmi.jpg" >
+            <div class="carousel-caption">
+              <h4>Welcome</h4>
+              <p>Travel! Enjoy!</p>
+            </div>
+          </div>
+      
+        </div>
+        <a class="carousel-control-prev" href="#slider" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#slider" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>

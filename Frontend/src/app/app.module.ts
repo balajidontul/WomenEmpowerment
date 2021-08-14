@@ -29,6 +29,7 @@ import { AddcourseComponent } from './ngo/addcourse/addcourse.component';
 import { ShowcoursesComponent } from './ngo/showcourses/showcourses.component';
 import { ShowcourseComponent } from './ngo/showcourse/showcourse.component';
 import { AdminhomeComponent } from './adminhome/adminhome.component';
+import { NgohomeComponent } from './ngohome/ngohome.component';
 
 
 
@@ -62,6 +63,7 @@ import { AdminhomeComponent } from './adminhome/adminhome.component';
     ShowcourseComponent,
     ShowcoursesComponent,
     AdminhomeComponent,
+    NgohomeComponent,
 
 
 

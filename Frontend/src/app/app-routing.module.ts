@@ -16,6 +16,7 @@ import { OrganisationComponent } from './ngo/organisation/organisation.component
 import { RegisterngoComponent } from './ngo/registerngo/registerngo.component';
 import { ShowcourseComponent } from './ngo/showcourse/showcourse.component';
 import { StatusngoComponent } from './ngo/statusngo/statusngo.component';
+import { NgohomeComponent } from './ngohome/ngohome.component';
 import { RegisterComponent } from './register/register.component';
 import { AboutusstepComponent } from './step/aboutusstep/aboutusstep.component';
 import { DashboardstepComponent } from './step/dashboardstep/dashboardstep.component';
@@ -45,6 +46,7 @@ const routes: Routes = [
   // NGO ROUTING DONT DELETE
 
   {path:'', component:HomeComponent },
+  { path: 'ngohome', component: NgohomeComponent},
   { path: 'ngoregister', component: RegisterngoComponent},
   {path: 'show-ngo-course', component: ShowcourseComponent},
 { path: 'ngopath', component: NGOComponent, children: [
