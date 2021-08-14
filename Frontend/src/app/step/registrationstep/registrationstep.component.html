@@ -4,6 +4,12 @@
     <form (ngSubmit) = "onSubmit()">
 
         <h4>Personal and Document details: </h4>
+
+        <div class="form-group">
+            <label for="regId">Registration Id: </label>
+            <input type="text" class="form-control" id="regId" placeholder="Enter Registration id" name="regId" [(ngModel)]="personaldetail.regId"/>
+        </div>
+
         
         <div class="form-group">
             <label for="firstname">First Name: </label>
@@ -47,12 +53,12 @@
 
             <div class="form-group">
             <label for="aadhar">Aadharcard Number: </label>
-            <input type="number" class="form-control" id="aadhar" placeholder="Enter aadharcard number" name="aadhar" [(ngModel)] = "personaldetail.aadharno"/>
+            <input type="number" class="form-control" id="aadhar" placeholder="Enter aadharcard number" name="aadhar" [(ngModel)] = "personaldetail.aadharNo"/>
             </div>
         
             <div class="form-group">
             <label for="pan">Pan card Number: </label>
-            <input type="text" class="form-control" id="pan" placeholder="Enter pan card number" name="pan" [(ngModel)] = "personaldetail.panno"/>
+            <input type="text" class="form-control" id="pan" placeholder="Enter pan card number" name="pan" [(ngModel)] = "personaldetail.pan"/>
             </div>
         
             <div class="form-group">
@@ -85,7 +91,7 @@
 
         <div class="form-group">
             <label for="phone">Mobile number:</label>
-            <input type="number" class="form-control" id="phone" placeholder="Enter mobile number" name="phone">
+            <input type="number" class="form-control" id="phone" placeholder="Enter mobile number" name="phone" [(ngModel)]="personaldetail.phone">
         </div>
 
         <button type="submit" class="btn btn-primary">Submit</button>
