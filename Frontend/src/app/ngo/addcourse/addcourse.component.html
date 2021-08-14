@@ -2,6 +2,12 @@
 <form (ngSubmit) = "onSubmit()">
 
     <div class="form-group">
+        <label>Organisation Id</label>
+        <input type="text" class="form-control" id = "organisationid" 
+        [(ngModel)] = "ngocourse.organisationid" name = "organisationid">
+    </div>
+
+    <div class="form-group">
         <label>Course Name</label>
         <input type="text" class="form-control" id = "ngoCourseName" 
         [(ngModel)] = "ngocourse.ngoCourseName" name = "ngoCourseName">
