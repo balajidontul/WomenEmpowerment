@@ -8,27 +8,27 @@ import { Ngo } from './ngo';
 })
 export class NgoService {
 
-  private baseURL = "http://localhost:9000/rest/api/";
+  private baseURL = "http://localhost:9000/rest/api/adminhome";
   constructor(private httpClient:HttpClient) {}
 
   getPendingNgoList(): Observable<Ngo[]>{
-    return this.httpClient.get<Ngo[]>(`${this.baseURL}/pending-ngo`);
+    return this.httpClient.get<Ngo[]>(`${this.baseURL}/(adminsub:adminpending)`);
   }
 
   getApprovedNgoList(): Observable<Ngo[]>{
-    return this.httpClient.get<Ngo[]>(`${this.baseURL}/approved-ngo`);
+    return this.httpClient.get<Ngo[]>(`${this.baseURL}/(adminsub:adminapproved)`);
   }
 
   approvePendingNgo(organisationId:number){
-    return this.httpClient.put(`${this.baseURL}pending-ngo/${organisationId}`, organisationId);
+    return this.httpClient.put(`${this.baseURL}/(adminsub:adminpending)/${organisationId}`, organisationId);
   }
 
   deletePendingNgo(organisationId:number){
-    return this.httpClient.delete(`${this.baseURL}pending-ngo/${organisationId}`);
+    return this.httpClient.delete(`${this.baseURL}/(adminsub:adminpending)/${organisationId}`);
   }
 
   deleteNgo(organisationId:number){
-    return this.httpClient.delete(`${this.baseURL}approved-ngo/${organisationId}`);
+    return this.httpClient.delete(`${this.baseURL}/(adminsub:adminapproved)/${organisationId}`);
   }
 
   getallngo():Observable<Ngo[]>{
