@@ -35,7 +35,7 @@ import { LoginComponent } from './login/login.component';
 import { AboutushomeComponent } from './home/aboutushome/aboutushome.component';
 import { PolicyhomeComponent } from './home/policyhome/policyhome.component';
 import { FaqhomeComponent } from './home/faqhome/faqhome.component';
-
+import { ChartsModule } from 'ng2-charts';
 
 
 
@@ -83,7 +83,8 @@ import { FaqhomeComponent } from './home/faqhome/faqhome.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
