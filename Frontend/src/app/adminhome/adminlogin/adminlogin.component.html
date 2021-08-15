@@ -1,34 +1,3 @@
-<!--<div>
-  <form class="text-center border border-light p-5" #loginForm=ngForm>
-
-    <p class="h4 mb-4">Sign in</p>
-  
-  
-    <input type="text" id="username" #un="ngModel" class="form-control mb-4" placeholder="Username"
-    minlength="5" required [(ngModel)] = "userName">
-    <div *ngIf = "un.invalid && (un.dirty||un.touched)" style="color: red;">
-      <div *ngIf="un.errors?.required">Username is required.</div>
-      <div *ngIf="un.errors?.minlength">Invalid username or password.</div>
-  </div>
-  
-  
-    <input type="password" #up="ngModel" id="password" class="form-control mb-4" placeholder="Password"
-    pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" required [(ngModel)] = "password">
-    <div *ngIf = "up.invalid && (up.dirty||up.touched)" style="color: red;">
-      <div *ngIf="up.errors?.required">Password is required.</div>
-      <div *ngIf="up.errors?.pattern">Invalud username or password.</div>
-    
-  </div>
-  
-  
-  <button (click) ="checkLogin()" [disabled] = "loginForm.invalid" type="submit">Login</button>
-  
-    
-  </form>
-  
-
-</div>-->
-
 <div>
   <form class="text-center border border-light p-5" #loginForm = ngForm>
     <p class="h4 mb-4">Sign in</p>

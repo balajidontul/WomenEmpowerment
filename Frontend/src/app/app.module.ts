@@ -31,6 +31,7 @@ import { ShowcourseComponent } from './ngo/showcourse/showcourse.component';
 import { AdminhomeComponent } from './adminhome/adminhome.component';
 import { NgohomeComponent } from './ngohome/ngohome.component';
 import { AdminloginComponent } from './adminhome/adminlogin/adminlogin.component';
+import { LoginComponent } from './login/login.component';
 
 
 
@@ -66,6 +67,7 @@ import { AdminloginComponent } from './adminhome/adminlogin/adminlogin.component
     AdminhomeComponent,
     AdminloginComponent,
     NgohomeComponent,
+    LoginComponent,
 
 
 

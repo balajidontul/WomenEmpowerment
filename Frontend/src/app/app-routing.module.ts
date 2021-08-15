@@ -7,6 +7,7 @@ import { AdminhomeComponent } from './adminhome/adminhome.component';
 import { AdminloginComponent } from './adminhome/adminlogin/adminlogin.component';
 
 import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './login/login.component';
 import { AddcourseComponent } from './ngo/addcourse/addcourse.component';
 import { CriteriaComponent } from './ngo/criteria/criteria.component';
 import { FaqngoComponent } from './ngo/faqngo/faqngo.component';
@@ -72,8 +73,8 @@ const routes: Routes = [
 ]},
 
 
-
-  {path: 'user-register', component:RegisterComponent}
+  {path: 'userlogin', component:LoginComponent},
+  {path: 'userregister', component:RegisterComponent}
 
   
 ];
