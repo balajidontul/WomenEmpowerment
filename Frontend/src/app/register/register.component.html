@@ -1,24 +1,40 @@
 <h3 class="text-center">User Registration Form</h3>
 <div class="row justify-content-center">
-    <form (ngSubmit) = "onSubmit()" class="col-lg-6 offset-lg-3">
+    <form (ngSubmit) = "onSubmit()" class="col-lg-6 offset-lg-3" #registerForm = ngForm>
 
     
         <div class="form-group">
             <label>First Name</label>
-            <input type="text" class="form-control" id = "firstName" 
-            [(ngModel)] = "userRegistration.firstName" name = "firstName">
+            <input type="text" #fn ="ngModel" class="form-control" id = "firstName" 
+            pattern="[a-zA-Z ]*" required minlength="3" [(ngModel)] = "userRegistration.firstName" name = "firstName">
+            <div *ngIf = "fn.invalid && (fn.dirty||fn.touched)" style="color: red;">
+                <div *ngIf="fn.errors?.required">Name is required.</div>
+                <div *ngIf="fn.errors?.minlength">First name should be minimum 3 characters.</div>
+                <div *ngIf="fn.errors?.pattern">First name should only contain alphabetical characters.</div>
+            </div>
         </div>
     
         <div class="form-group">
             <label>Last Name</label>
-            <input type="text" class="form-control" id = "lastName" 
+            <input type="text" #ln = "ngModel" class="form-control" id = "lastName"  pattern="[a-zA-Z ]*" 
             [(ngModel)] = "userRegistration.lastName" name = "lastName">
+            <div *ngIf = "ln.invalid && (ln.dirty||ln.touched)" style="color: red;">
+                <div *ngIf="ln.errors?.pattern">Last name should only contain alphabetical characters.</div>
+            </div>
+           
         </div>
     
         <div class="form-group">
             <label>Email</label>
-            <input type="text" class="form-control" id = "email" 
-            [(ngModel)] = "userRegistration.email" name = "email">
+            <input type="email" #ue ="ngModel" class="form-control" id = "email" 
+            [(ngModel)] = "userRegistration.email" name = "email"
+            pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" required>
+            <div *ngIf = "ue.invalid && (ue.dirty||ue.touched)" style="color: red;">
+                <div *ngIf="ue.errors?.required">Email is required.</div>
+                <div *ngIf="ue.errors?.pattern">Invalid email address.</div>
+            </div>
+           
+            
         </div>
     
         <div class="form-group">
@@ -29,25 +45,52 @@
     
         <div class="form-group">
             <label>Password</label>
-            <input type="password" class="form-control" id = "password" 
+            <input type="password" #up = "ngModel" class="form-control" id = "password" 
+            pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" required 
             [(ngModel)] = "userRegistration.password" name = "password">
+            <div *ngIf = "up.invalid && (up.dirty||up.touched)" style="color: red;">
+                <div *ngIf="up.errors?.required">Password is required.</div>
+                <div *ngIf="up.errors?.pattern">Password should be minimum 8 characters and contain at least one uppercase, one lowercase, one digit and one special characters.</div>
+            </div>
         </div>
     
         <div class="form-group">
             <label>Confirm Password</label>
-            <input type="password" class="form-control" id = "confirmPassword" 
+            <input type="password" #cp = "ngModel" class="form-control" id = "confirmPassword" 
+            pattern="{{ userRegistration.password}}" required
             [(ngModel)] = "userRegistration.confirmPassword" name = "confirmPassword">
+            <div *ngIf = "cp.invalid && (cp.dirty||cp.touched)" style="color: red;">
+                <div *ngIf="cp.errors?.required">Confirm your password.</div>
+                <div *ngIf="cp.errors?.pattern">Passwords do not match.</div>
+            </div>
         </div>
     
         <div class="form-group">
-            <label>Contact No</label>
-            <input type="tel" class="form-control" id = "contactNo" 
+            <label>Contact No (+91-)</label>
+            <input type="tel" #ph = "ngModel" class="form-control" id = "contactNo" required
+            pattern = "^[6-9][0-9]{9}$"
             [(ngModel)] = "userRegistration.contactNo" name = "contactNo">
+            <div *ngIf = "ph.invalid && (ph.dirty||ph.touched)" style="color: red;">
+                <div *ngIf="ph.errors?.required">Mobile number is required.</div>
+                <div *ngIf="ph.errors?.pattern">Invalid mobile number.</div>
+            </div>
         </div>
     
     
-        <button class = "btn btn-success" type="submit">Register</button> 
+        <button [disabled] = "registerForm.invalid" class = "btn btn-success" type="submit">Register</button> 
         
+        <br><br>
+      <div>
+       Already have an account? Login.
+      </div>
+      <button (click) ="login()" type="submit">Login</button>
     </form>
-</div>
+  </div>
+   
 
+
+
+
+
+      
+      
