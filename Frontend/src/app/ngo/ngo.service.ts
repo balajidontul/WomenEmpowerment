@@ -32,7 +32,7 @@ export class NgoService {
   }
 
   getallngo():Observable<Ngo[]>{
-    return this.httpClient.get<Ngo[]>(`${this.baseURL}Organisation`);
+    return this.httpClient.get<Ngo[]>(`http://localhost:9000/rest/api/Organisation`);
   }
 
 }

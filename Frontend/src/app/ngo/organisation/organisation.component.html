@@ -4,13 +4,13 @@
 
 
 <div class="container">
-  <h2 class="">List of Organisations</h2>
+  <h2 style="display: flex; justify-content: center;" >List of Organisations</h2>
 
-<div class="cstm ">
-  <div class="card " style="width: 28rem;" *ngFor="let organisation of Organisations">
+<div class="cstm "  >
+  <div class="card " style="width: 28rem; margin: 10px;" *ngFor="let organisation of Organisations">
     <ul class="list-group">
+        <li class="list-group-item active">Organisation Name : {{organisation.organisationName}} </li>
         <li class="list-group-item">Organisation ID : {{organisation.organisationId}}</li>
-        <li class="list-group-item">Organisation Name : {{organisation.organisationName}}</li>
         <li class="list-group-item">Phone no : {{organisation.organisationPhone}} </li>
         <li class="list-group-item">Mail Id : {{organisation.organisationMail}}</li>
         <li class="list-group-item">Location : {{organisation.location}}</li>
