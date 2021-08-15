@@ -1,44 +1,52 @@
-<p>registerngo works!</p>
+<!--<p>registerngo works!</p>-->
 <form #regForm="ngForm" (ngSubmit)="formSubmit(regForm)">
     <table align=center>
         <tr>
             <td><label for="orgname">Enter Organisation Name</label></td>
-            <td><input type="text" id="orgname" name="oname" reqired ngModel></td>
+            <td><input type="text" name="oname" [(ngModel)]="OrganisationReg.organisationName" reqired ngModel></td>
             <td></td>
         </tr>
         <tr>
             <td><label for="orgloc">Enter Location</label></td>
-            <td><input type="text" id="orgloc" name="olocation" ngModel></td>
+            <td><input type="text" name="olocation" [(ngModel)]="OrganisationReg.location" required ngModel></td>
             <td></td>
         </tr>
         <tr>
             <td><label for="orgemail">E-mail</label></td>
-            <td><input type="email" id="orgemail" name="oemail" required email ngModel></td>
+            <td><input type="email" name="oemail" placeholder="example@mail.com"
+                [(ngModel)]="OrganisationReg.organisationMail" required email ngModel></td>
             <td></td>
         </tr>
         <tr>
             <td><label for="orgphnum">Phone number (+91)</label></td>
-            <td><input type="tel" id="orgphnum" name="ophone" required minlength="10" maxlength="10" ngModel></td>
+            <td><input type="tel" type="number" name="ophone" placeholder="10 digits only"
+                [(ngModel)]="OrganisationReg.organisationPhone" required minlength="10" maxlength="10" ngModel></td>
             <td></td>
         </tr>
         <tr>
             <td><label for="orgpan"></label>PAN</td>
-            <td><input type="text" id="orgpan" name="opan" required minlength="10" maxlength="10" ngModel></td>
+            <td><input type="text" name="opan" placeholder="10 characters only"
+                [(ngModel)]="OrganisationReg.pan" required minlength="10" maxlength="10" ngModel></td>
             <td></td>
         </tr>
 
         <tr>
             <td><label for="orgproj"></label>Enter Project Name</td>
-            <td><input type="text" id="orgproj" name="oproject" required ngModel></td>
+            <td><input type="text" name="oproject" [(ngModel)]="ProjectDet.projectName" required ngModel></td>
             <td></td>
         </tr>
 
         <tr>
             <td><label for="orgprojmen"></label>Enter Project Mentor</td>
-            <td><input type="text" id="orgprojmen" name="oprojmentor" required ngModel></td>
+            <td><input type="text" name="oprojmentor" [(ngModel)]="ProjectDet.projectMentor" required ngModel></td>
             <td></td>
         </tr>
-        
+
+        <tr>
+            <td></td>
+            <td style="font-size: small; text-align:end; color: red;">Note: All fields mandatory!</td>
+        </tr>
+        <br>
         <tr>
             <td><button type="reset">Reset</button></td>
             <td><button type="submit" [disabled]="!regForm.valid">Register</button></td>
