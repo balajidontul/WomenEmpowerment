@@ -62,7 +62,8 @@ const routes: Routes = [
   ] },
 //NGO ROUTING DONT
  
-{ path: 'adminhome', component: AdminhomeComponent, children: [
+  {path: 'adminlogin', component:AdminloginComponent},
+  { path: 'adminhome', component: AdminhomeComponent, children: [
   {path : 'admindashboard', component : AdminDashboardComponent, outlet: 'adminsub'},
   {path : 'adminapproved', component : AdminApprovedNgoComponent, outlet: 'adminsub'},
   {path : 'adminpending', component : AdminPendingNgoComponent, outlet: 'adminsub'}
