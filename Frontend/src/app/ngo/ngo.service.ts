@@ -44,12 +44,4 @@ export class NgoService {
     return this.httpClient.post(`${this.baseURL}project-incharge/${orgId}`,newProj);
   }
 
-  addNgo(newOrg:Ngo){
-    return this.httpClient.post(`${this.baseURL}Organisation`,newOrg);
-  }
-
-  addProj(newProj:Project, orgId:number){
-    return this.httpClient.post(`${this.baseURL}project-incharge/${orgId}`,newProj);
-  }
-
 }
