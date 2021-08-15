@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Ngo } from 'src/app/ngo/ngo';
+import { NgoService } from 'src/app/ngo/ngo.service';
 
 @Component({
   selector: 'app-admin-dashboard',
