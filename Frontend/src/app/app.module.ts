@@ -32,6 +32,9 @@ import { AdminhomeComponent } from './adminhome/adminhome.component';
 import { NgohomeComponent } from './ngohome/ngohome.component';
 import { AdminloginComponent } from './adminhome/adminlogin/adminlogin.component';
 import { LoginComponent } from './login/login.component';
+import { AboutushomeComponent } from './home/aboutushome/aboutushome.component';
+import { PolicyhomeComponent } from './home/policyhome/policyhome.component';
+import { FaqhomeComponent } from './home/faqhome/faqhome.component';
 
 
 
@@ -68,6 +71,9 @@ import { LoginComponent } from './login/login.component';
     AdminloginComponent,
     NgohomeComponent,
     LoginComponent,
+    AboutushomeComponent,
+    PolicyhomeComponent,
+    FaqhomeComponent,
 
 
 
