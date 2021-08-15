@@ -1,31 +1,64 @@
-
-
-<ul class="navbar ">
-    <li style="float: left;"><a class="navbar1element" href="#">Home</a></li>
-    <li style="float: right;"><a class="navbar1element" href="#">Logout</a></li>
-    <li style="float: right;"><a class="navbar1element" href="#">Contact Us</a></li>
-</ul>
-
-<div>
-    <h2 align="center"> <img src="/assets/logo.png" alt="logo" width="100px"/>  
-        Non Government Organisations (NGOs)</h2>
-</div>
-
-
-<ul class="navbar2">
-    <li><a href="#" class="navbar2element" [routerLink]="['/ngopath', {outlets: {'ngosub': ['ngocriteria']}}]">Criteria</a></li>
-    <li><a href="#" class="navbar2element" [routerLink]="['/ngopath', {outlets: {'ngosub': ['ngoorganisation']}}]">Organisations</a></li>
-    <li><a [routerLink]="['/ngopath', {outlets: {'ngosub': ['ngofunding']}}]" class="navbar2element">Funding norms</a></li>
-    <li><a [routerLink]="['/ngopath', {outlets: {'ngosub': ['ngoaddcourse']}}]" href="#" class="navbar2element"  >Add Course</a></li>
-    <li><a   [routerLink]="['/ngopath', {outlets: {'ngosub': ['ngoshowcourse']}}]" href="#" class="navbar2element" >Show Courses</a></li>
-    <li><a   [routerLink]="['/ngopath', {outlets: {'ngosub': ['ngoregister']}}]" href="#" class="navbar2element" >Register</a></li>
-    <li><a [routerLink]="['/ngopath', {outlets: {'ngosub': ['ngostatus']}}]" href="#" class="navbar2element">Status</a></li>
-    <li><a   [routerLink]="['/ngopath', {outlets: {'ngosub': ['ngofaq']}}]" href="#" class="navbar2element" >FAQ</a></li>
-
+<nav class="navbar navbar-expand-md navbar-dark" style="background-color: #0D0401">
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item text-md">
+          <a class="nav-link text-white" href="#">Home</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav ml-auto" style="align-items: center;">
+        <li class="nav-item">
+            <a class="nav-link text-white" href="#">Contact Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" >Logout</a>
+          </li> 
+        <li class="nav-item text-white mx-2"><i class="fa fa-instagram" style="font-size:24px;color: white;"></i></li>
+        <li class="nav-item text-white mx-2"><i class="fa fa-facebook" style="font-size:24px;color: white;"></i></li>
+        <li class="nav-item text-white mx-2"><i class="fa fa-twitter" style="font-size:24px;color: white;"></i></li>
+        <li class="nav-item text-white mx-2"><i class="fa fa-linkedin" style="font-size:24px;color: white;"></i></li>
+    </ul>
+    </div>  
+  </nav>
+  
+  <nav class="navbar navbar-expand-md" style="align-items: center; background-color: #F5F5F5;">
+    <ul>
+        <li style="margin-left: 100px"><img src="/assets/logo.png" alt="logo" width="100px"></li>
+        <li class="text-dark" style="margin-left: 100px;"><h2>MINISTRY OF WOMEN & CHILD DEVELOPMENT</h2></li>
+        <li style="margin-left: 100px"><img src="/assets/logo2.png" alt="logo" width="100px"></li>
+    </ul>
     
-</ul>
+  </nav>
+  
+  
+  
+  
+  
+  
+  
+  <nav class="navbar navbar-expand-md navbar-dark sticky-top" style="background-color: #0D0401" >
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse justify-content-around" id="collapsibleNavbar">
+    <ul class="navbar-nav ">
+      <li class="nav-item mx-5">
+        <a class="nav-link text-white" [routerLink]="['/ngopath', {outlets: {'ngosub': ['ngocriteria']}}]">Criteria</a></li>
+        <li class="nav-item mx-5">
+          <a class="nav-link text-white"  [routerLink]="['/ngopath', {outlets: {'ngosub': ['ngoorganisation']}}]">Organisations</a></li>
+      <li class="nav-item mx-5"><a [routerLink]="['/ngopath', {outlets: {'ngosub': ['ngofunding']}}]" class="nav-link text-white">Funding norms</a></li>
+      <li class="nav-item mx-5"><a [routerLink]="['/ngopath', {outlets: {'ngosub': ['ngoaddcourse']}}]" href="#" class="nav-link text-white"  >Add Course</a></li>
+      <li class="nav-item mx-5"><a   [routerLink]="['/ngopath', {outlets: {'ngosub': ['ngoshowcourse']}}]" href="#" class="nav-link text-white" >Show Courses</a></li>
+      <li class="nav-item mx-5"><a   [routerLink]="['/ngopath', {outlets: {'ngosub': ['ngoregister']}}]" href="#" class="nav-link text-white" >Register</a></li>
+      <li class="nav-item mx-5"><a [routerLink]="['/ngopath', {outlets: {'ngosub': ['ngostatus']}}]" href="#" class="nav-link text-white">Status</a></li>
+      <li class="nav-item mx-5"><a   [routerLink]="['/ngopath', {outlets: {'ngosub': ['ngofaq']}}]" href="#" class="nav-link text-white">FAQ</a></li>
+  
+    </ul>
+  </div>
+  </nav>
+  
+  
 
 
 
-<router-outlet name="ngosub">
+<router-outlet name="ngosub" style="margin: 20px;">
 </router-outlet>

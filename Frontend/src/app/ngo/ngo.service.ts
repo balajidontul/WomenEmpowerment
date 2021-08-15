@@ -33,7 +33,15 @@ export class NgoService {
   }
 
   getallngo():Observable<Ngo[]>{
-    return this.httpClient.get<Ngo[]>(`${this.baseURL}Organisation`);
+    return this.httpClient.get<Ngo[]>(`http://localhost:9000/rest/api/Organisation`);
+  }
+
+  addNgo(newOrg:Ngo){
+    return this.httpClient.post(`${this.baseURL}Organisation`,newOrg);
+  }
+
+  addProj(newProj:Project, orgId:number){
+    return this.httpClient.post(`${this.baseURL}project-incharge/${orgId}`,newProj);
   }
 
   addNgo(newOrg:Ngo){
