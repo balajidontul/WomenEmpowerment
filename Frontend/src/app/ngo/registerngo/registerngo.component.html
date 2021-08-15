@@ -1,54 +1,50 @@
-<!--<p>registerngo works!</p>-->
-<form #regForm="ngForm" (ngSubmit)="formSubmit(regForm)">
-    <table align=center>
-        <tr>
-            <td><label for="orgname">Enter Organisation Name</label></td>
-            <td><input type="text" name="oname" [(ngModel)]="OrganisationReg.organisationName" reqired ngModel></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td><label for="orgloc">Enter Location</label></td>
-            <td><input type="text" name="olocation" [(ngModel)]="OrganisationReg.location" required ngModel></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td><label for="orgemail">E-mail</label></td>
-            <td><input type="email" name="oemail" [(ngModel)]="OrganisationReg.organisationMail"required email ngModel></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td><label for="orgphnum">Phone number (+91)</label></td>
-            <td><input type="tel" type="number" name="ophone" [(ngModel)]="OrganisationReg.organisationPhone" required minlength="10" maxlength="10" ngModel></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td><label for="orgpan"></label>PAN</td>
-            <td><input type="text" name="opan" [(ngModel)]="OrganisationReg.pan" required minlength="10" maxlength="10" ngModel></td>
-            <td></td>
-        </tr>
+<div class="container" >
 
-        <tr>
-            <td><label for="orgproj"></label>Enter Project Name</td>
-            <td><input type="text" name="oproject" [(ngModel)]="ProjectDet.projectName" required ngModel></td>
-            <td></td>
-        </tr>
+<form #regForm="ngForm" (ngSubmit)="formSubmit(regForm)" class="form-group" >
+   
+        <div class="form-group">
+            <label for="orgname">Enter Organisation Name</label>
+            <input type="text" name="oname" [(ngModel)]="OrganisationReg.organisationName" reqired ngModel class="form-control" >
 
-        <tr>
-            <td><label for="orgprojmen"></label>Enter Project Mentor</td>
-            <td><input type="text" name="oprojmentor" [(ngModel)]="ProjectDet.projectMentor" required ngModel></td>
-            <td></td>
-        </tr>
+        </div>
+        <div class="form-group">
+            <label for="orgloc">Enter Location</label>
+            <input type="text" name="olocation" [(ngModel)]="OrganisationReg.location" required ngModel class="form-control" >
+            
+        </div>
+        <div class="form-group">
+            <label for="orgemail">E-mail</label>
+            <input type="email" name="oemail" [(ngModel)]="OrganisationReg.organisationMail"required email ngModel class="form-control">
+            
+        </div>
+        <div class="form-group">
+            <label for="orgphnum">Phone number (+91)</label>
+            <input type="tel" type="number" name="ophone" [(ngModel)]="OrganisationReg.organisationPhone" required minlength="10" maxlength="10" ngModel class="form-control">
+           
+        </div>
+        <div class="form-group">
+            <label for="orgpan">PAN</label>
+            <input type="text" name="opan" [(ngModel)]="OrganisationReg.pan" required minlength="10" maxlength="10" ngModel class="form-control">
+            
+        </div>
 
-        <tr>
-            <td></td>
-            <td style="font-size: small; text-align:end; color: red;">Note: All fields mandatory!</td>
-        </tr>
-        <br>
-        <tr>
-            <td><button type="reset">Reset</button></td>
-            <td><button type="submit" [disabled]="!regForm.valid">Register</button></td>
-        </tr>
-    </table>
+        <div class="form-group">
+            <label for="orgproj">Enter Project Name</label>
+            <input type="text" name="oproject" [(ngModel)]="ProjectDet.projectName" required ngModel class="form-control">
+
+        </div>
+
+        <div class="form-group">
+            <label for="orgprojmen">Enter Project Mentor</label>
+            <input type="text" name="oprojmentor" [(ngModel)]="ProjectDet.projectMentor" required ngModel class="form-control">
+            
+        </div>
+        
+        <div class="form-group" style="align-items: center;">
+           <button type="reset" class="btn btn-danger" style="margin: 10px;">Reset</button>
+            <button type="submit" [disabled]="!regForm.valid" class="btn btn-primary">Register</button>
+        </div>
+  
     <!--
     <pre>Values: {{regForm.value | json}}</pre>
     <pre>Is valid: {{regForm.valid}}</pre>
@@ -56,3 +52,4 @@
     <pre>Is Submitted: {{regForm.submitted}}</pre>
     -->
 </form>
+</div>
