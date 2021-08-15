@@ -73,8 +73,8 @@ const routes: Routes = [
 ]},
 
 
-  {path: 'userlogin', component:LoginComponent},
-  {path: 'userregister', component:RegisterComponent}
+{path: 'userlogin', component:LoginComponent},
+{path: 'userregister', component:RegisterComponent}
 
   
 ];
