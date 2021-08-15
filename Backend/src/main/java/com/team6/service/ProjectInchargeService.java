@@ -8,8 +8,8 @@ public interface ProjectInchargeService
 {
 	
 	public List<ProjectInCharge> getAllIncharge();
-	public boolean addIncharge(ProjectInCharge newincharge);
-	public boolean updIncharge(ProjectInCharge incharge);
+	public boolean addIncharge(ProjectInCharge newincharge, int orgId);
+	//public boolean updIncharge(ProjectInCharge incharge);
 	public boolean delIncharge(ProjectInCharge incharge);
 
 }
