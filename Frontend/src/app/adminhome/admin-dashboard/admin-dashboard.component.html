@@ -1,0 +1,7 @@
+<div class="text-center">
+    No. of approved NGO: {{noOfApprovedNgo}}<br><br>
+    No. of pending NGO: {{noOfPendingNgo}}
+    <div *ngFor="let ngo of ngos">
+        {{ngo.location}}
+    </div>
+</div>
