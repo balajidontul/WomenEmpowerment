@@ -16,10 +16,10 @@ import { FormsModule } from '@angular/forms';
 import { RegistrationstepComponent } from './step/registrationstep/registrationstep.component';
 import { FaqstepComponent } from './step/faqstep/faqstep.component';
 import { StatusstepComponent } from './step/statusstep/statusstep.component';
-import { AdminDashboardComponent } from './admin/admin-dashboard/admin-dashboard.component';
+import { AdminDashboardComponent } from './adminhome/admin-dashboard/admin-dashboard.component';
 import {HttpClientModule} from '@angular/common/http';
-import { AdminPendingNgoComponent } from './admin/admin-pending-ngo/admin-pending-ngo.component';
-import { AdminApprovedNgoComponent } from './admin/admin-approved-ngo/admin-approved-ngo.component';
+import { AdminPendingNgoComponent } from './adminhome/admin-pending-ngo/admin-pending-ngo.component'; 
+import { AdminApprovedNgoComponent } from './adminhome/admin-approved-ngo/admin-approved-ngo.component'; 
 import { AboutusstepComponent } from './step/aboutusstep/aboutusstep.component';
 import { GuidelinestepComponent } from './step/guidelinestep/guidelinestep.component';
 import { NgostepComponent } from './step/ngostep/ngostep.component';
@@ -28,6 +28,9 @@ import { DashboardstepComponent } from './step/dashboardstep/dashboardstep.compo
 import { AddcourseComponent } from './ngo/addcourse/addcourse.component';
 import { ShowcoursesComponent } from './ngo/showcourses/showcourses.component';
 import { ShowcourseComponent } from './ngo/showcourse/showcourse.component';
+import { AdminhomeComponent } from './adminhome/adminhome.component';
+import { NgohomeComponent } from './ngohome/ngohome.component';
+
 
 
 
@@ -59,6 +62,9 @@ import { ShowcourseComponent } from './ngo/showcourse/showcourse.component';
     AddcourseComponent,
     ShowcourseComponent,
     ShowcoursesComponent,
+    AdminhomeComponent,
+    NgohomeComponent,
+
 
 
 
