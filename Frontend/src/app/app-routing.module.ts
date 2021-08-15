@@ -4,6 +4,7 @@ import { AdminApprovedNgoComponent } from './adminhome/admin-approved-ngo/admin-
 import { AdminDashboardComponent } from './adminhome/admin-dashboard/admin-dashboard.component';
 import { AdminPendingNgoComponent } from './adminhome/admin-pending-ngo/admin-pending-ngo.component';
 import { AdminhomeComponent } from './adminhome/adminhome.component';
+import { AdminloginComponent } from './adminhome/adminlogin/adminlogin.component';
 
 import { HomeComponent } from './home/home.component';
 import { AddcourseComponent } from './ngo/addcourse/addcourse.component';
