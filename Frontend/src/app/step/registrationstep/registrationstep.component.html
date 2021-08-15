@@ -7,18 +7,25 @@
         <div class="form-group">
             <label for="firstname">First Name: </label>
             <input type="text" class="form-control" id="firstname" placeholder="Enter first name" name="firstname" required minlength="4" />
+            <small class="form-text text-muted">
+                Your first name must be 4-20 characters long, contain letters, but must not contain spaces and special characters.
+            </small>
         </div>
 
 
         <div class="form-group">
             <label for="lastname">Last Name: </label>
             <input type="text" class="form-control" id="lastname" placeholder="Enter last name" name="lastname" required minlength="4" />
+            <small class="form-text text-muted">
+                Your last name must be 4-20 characters long, contain letters, but must not contain spaces and special characters.
+            </small>
         </div>
 
 
         <div class="form-group">
             <label for="dob">Date of birth: </label>
             <input type="date" class="form-control" id="dob" placeholder="Enter date of birth" name="dob" max="2005-12-31"  />
+
         </div>
 
         <div class="form-group">
@@ -41,22 +48,34 @@
                 <input type="radio" class="form-check-input" id="widow" name="maritalstatus" value="widow" [(ngModel)]="personaldetail.maritalstatus">Widow
                 </label>
             </div>
+            <small class="form-text text-muted">
+                Select the marital status
+            </small>
 
         </div>
 
             <div class="form-group">
             <label for="aadhar">Aadharcard Number: </label>
             <input type="text" class="form-control" id="aadhar" placeholder="Enter aadharcard number" name="aadhar" pattern="\d*" minlength="12" maxlength="12" required [(ngModel)] = "personaldetail.aadharNo"/>
+            <small class="form-text text-muted">
+                Your Aadhar no must be 12 characters long, contain numbers, but must not contain spaces, letters and special characters.
+            </small>
             </div>
         
             <div class="form-group">
             <label for="pan">Pan card Number: </label>
             <input type="text" class="form-control" id="pan" placeholder="Enter pan card number" name="pan" required minlength="8" maxlength ="8" [(ngModel)] = "personaldetail.pan"/>
+            <small class="form-text text-muted">
+                Your Pan no must be 8 characters long, contain letters and numbers but must not contain spaces and special characters.
+            </small>
             </div>
         
             <div class="form-group">
             <label for="age">Age: </label>
-            <input type="number" class="form-control" id="age" placeholder="Enter age" name="age" required/>        
+            <input type="number" class="form-control" id="age" placeholder="Enter age" name="age" required/>   
+            <small class="form-text text-muted">
+                The age must not be blank
+            </small>     
             </div>
         
             <h4>Family Details: </h4>
@@ -64,27 +83,42 @@
             <div class="form-group">
             <label for="familyfname">First Name:</label> 
             <input type="text" class="form-control" id="familyfname" placeholder="Enter first name" name="familyfname" required minlength = "4" [(ngModel)]="familydetail.firstName">
+            <small class="form-text text-muted">
+                Your first name must be 4-20 characters long, contain letters, but must not contain spaces and special characters.
+            </small>
             </div>
 
         <div class="form-group">
             <label for="familylname">Last Name:</label>
             <input type="text" class="form-control" id="familylname" placeholder="Enter last name" name="familylname" required minlength ="4" [(ngModel)]="familydetail.lastName">
+            <small class="form-text text-muted">
+                Your Last name must be 4-20 characters long, contain letters, but must not contain spaces and special characters.
+            </small>
          </div>
 
     <div class="form-group">
             <label for="relation">Relationship:</label>
             <input type="text" class="form-control" id="relation" placeholder="Enter relation" name="relation" required [(ngModel)]="familydetail.relationship">
+            <small class="form-text text-muted">
+                The field must not be blank
+            </small>
         </div>
     
         <h4>Contact Details: </h4>
         <div class="form-group">
             <label for="email">Email:</label>
             <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" [pattern]="emailPattern">
+            <small class="form-text text-muted">
+                The email id can contain letters, numbers and special characters
+            </small>
         </div>
 
         <div class="form-group">
             <label for="phone">Mobile number:</label>
             <input type="text" class="form-control" id="phone" placeholder="Enter mobile number" name="phone" pattern="\d*" minlength="10" maxlength="10" required    [(ngModel)]="personaldetail.phone">
+            <small class="form-text text-muted">
+                Your phone number must be 10 characters long  and contain numbers but must not contain letters, spaces and special characters.
+            </small>
         </div>
 
         <button type="submit" [disabled] = "!stepregform.valid" class="btn btn-primary">Submit</button>
