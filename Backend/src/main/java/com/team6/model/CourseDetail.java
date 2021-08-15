@@ -17,7 +17,6 @@ public class CourseDetail {
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "course_generator")
     @SequenceGenerator(name="course_generator", sequenceName = "course_seq", allocationSize=1)
 	private int userCourseId;
-// 	private int courseId;
 	private String status;
 	
 	
