@@ -8,6 +8,10 @@
 
 }
 
+.carousel-inner {
+  max-height: 400px;
+}
+
 .scheamCard{
     width: fit-content;
     height: fit-content;
