@@ -7,7 +7,9 @@ import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.team6.model.OrganisationsInfo;
 import com.team6.model.ProjectInCharge;
+import com.team6.repository.OrganisationRepository;
 import com.team6.repository.ProjectInchargeRepository;
 
 
@@ -19,6 +21,9 @@ public class ProjectInchargeServiceImpl implements ProjectInchargeService
 	@Autowired
 	ProjectInchargeRepository inchargerepo;
 	
+	@Autowired
+	OrganisationRepository orgrepo;
+	
 	@Override
 	public List<ProjectInCharge> getAllIncharge()
 	{
@@ -26,8 +31,10 @@ public class ProjectInchargeServiceImpl implements ProjectInchargeService
 	}
 	
 	@Override
-	public boolean addIncharge(ProjectInCharge newincharge)
+	public boolean addIncharge(ProjectInCharge newincharge, int orgId)
 	{
+		OrganisationsInfo org= orgrepo.findById(orgId).get();
+		newincharge.setOrganisationsInfo(org);
 		inchargerepo.save(newincharge);
 		return true;
 	}
@@ -47,11 +54,12 @@ public class ProjectInchargeServiceImpl implements ProjectInchargeService
 		inchargerepo.delete(incharge);
 		return true;
 	}
-
+	
+	/*
 	@Override
 	public boolean updIncharge(ProjectInCharge incharge) {
 		// TODO Auto-generated method stub
 		return false;
-	}
+	}*/
 
 }
