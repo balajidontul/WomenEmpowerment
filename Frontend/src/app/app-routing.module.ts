@@ -12,6 +12,7 @@ import { NGOComponent } from './ngo/ngo.component';
 
 import { OrganisationComponent } from './ngo/organisation/organisation.component';
 import { RegisterngoComponent } from './ngo/registerngo/registerngo.component';
+import { ShowcourseComponent } from './ngo/showcourse/showcourse.component';
 import { StatusngoComponent } from './ngo/statusngo/statusngo.component';
 import { RegisterComponent } from './register/register.component';
 import { AboutusstepComponent } from './step/aboutusstep/aboutusstep.component';
@@ -43,6 +44,7 @@ const routes: Routes = [
 
   {path:'', component:HomeComponent },
   { path: 'ngoregister', component: RegisterngoComponent},
+  {path: 'show-ngo-course', component: ShowcourseComponent},
 { path: 'ngopath', component: NGOComponent, children: [
     { path: 'ngoorganisation', component: OrganisationComponent, outlet: 'ngosub' },
     { path: 'ngocriteria', component: CriteriaComponent, outlet: 'ngosub' },

@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Ngocourse } from '../ngocourse';
+import { NgocoursesService } from '../ngocourses.service';
 
 @Component({
   selector: 'app-showcourse',
@@ -7,9 +10,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ShowcourseComponent implements OnInit {
 
-  constructor() { }
+  ngoCourses:Ngocourse[];
+  constructor(private ngoCoursesService:NgocoursesService, 
+    private router:Router) { }
 
   ngOnInit(): void {
+    this.showCourse();
+  }
+
+  private showCourse() {
+    this.ngoCoursesService.showNgoCourse().subscribe(data => {
+      this.ngoCourses = data;
+    })
   }
 
 }
