@@ -1,4 +1,3 @@
-import { ValueConverter } from '@angular/compiler/src/render3/view/template';
 import { Component, OnInit } from '@angular/core';
 import { Ngo } from '../ngo';
 import { NgoService } from '../ngo.service';
@@ -19,7 +18,6 @@ export class RegisterngoComponent implements OnInit {
   constructor (private ngoService:NgoService) 
   {
     this.OrganisationReg=new Ngo();
-    this.OrgIdObj=new Ngo();
     this.ProjectDet=new Project();
    }
 
