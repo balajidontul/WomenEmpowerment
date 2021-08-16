@@ -28,11 +28,7 @@ export class StatusngoComponent implements OnInit {
         
   } ,error=> console.error(error));
     }
-    
-
-
   
-
   }
 
   constructor(private ngoserv:NgoService) { }

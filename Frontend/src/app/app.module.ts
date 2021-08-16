@@ -43,6 +43,7 @@ import { ChartsModule } from 'ng2-charts';
 import { BasehomeComponent } from './basehome/basehome.component';
 import { ContacthomeComponent } from './contacthome/contacthome.component';
 import { NgologinComponent } from './ngo/ngologin/ngologin.component';
+import { LogoutngoComponent } from './ngo/logoutngo/logoutngo.component';
 
 
 
@@ -86,7 +87,8 @@ import { NgologinComponent } from './ngo/ngologin/ngologin.component';
     BasehomeComponent,
     ContacthomeComponent,
     StephomeComponent,
-    NgologinComponent
+    NgologinComponent,
+    LogoutngoComponent
 
 
 
