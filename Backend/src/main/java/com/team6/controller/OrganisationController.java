@@ -45,14 +45,14 @@ public class OrganisationController {
 		return organisationRepository.save(organisationsInfo);
 	}
 	
-	
+	/*
 	@PutMapping("/Organisation")
 	public String update(@RequestBody OrganisationsInfo organisationsInfo) {
 		OrganisationsInfo organisationsTemp = organisationRepository.findById(organisationsInfo.getOrganisationId()).get();
 		organisationsTemp = organisationsInfo;
 		organisationRepository.save(organisationsTemp);
 		return "updated";
-	}
+	}*/
 	
 	@Transactional
 	@PutMapping("/adminhome/(adminsub:adminpending)/{organisationId}")

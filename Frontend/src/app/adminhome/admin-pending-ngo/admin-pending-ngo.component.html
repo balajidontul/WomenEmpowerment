@@ -1,8 +1,8 @@
 <h2 class="text-center">New NGO Requests</h2>
 <br><br>
 <div>
-    <table class = "table table-striped">
-        <thead>
+    <table class = "table">
+        <thead class = "thead-dark">
             <tr>
                 <th>NGO ID</th>
                 <th>NGO Name</th>
@@ -10,7 +10,8 @@
                 <th>Email</th>
                 <th>Phone</th>
                 <th>Location</th>
-                <th>Statsus</th>
+                <th>Status</th>
+                <th colspan="2">Action</th>
             </tr>  
         </thead>
         <tbody>
@@ -22,8 +23,10 @@
                 <td>{{ngo.organisationPhone}}</td>
                 <td>{{ngo.location}}</td>
                 <td>{{ngo.status}}</td>
-                <td> <button (click) = "approveNgo(ngo.organisationId)" class="btn btn-success">Approve</button></td>
-                <td> <button (click) = "deleteNgo(ngo.organisationId)" class="btn btn-danger">Decline</button></td>
+                <td colspan="2">
+                    <button (click) = "approveNgo(ngo.organisationId)" class="btn btn-success">Approve</button>&nbsp;&nbsp;&nbsp;
+                    <button (click) = "deleteNgo(ngo.organisationId)" class="btn btn-danger">Decline</button>
+                </td>
             </tr>
         </tbody>
     </table>
