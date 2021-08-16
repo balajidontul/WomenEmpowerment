@@ -35,13 +35,15 @@ import { LoginComponent } from './login/login.component';
 import { AboutushomeComponent } from './home/aboutushome/aboutushome.component';
 import { PolicyhomeComponent } from './home/policyhome/policyhome.component';
 import { FaqhomeComponent } from './home/faqhome/faqhome.component';
+import { StephomeComponent } from './stephome/stephome.component';
 
 
 
 import { ChartsModule } from 'ng2-charts';
 import { BasehomeComponent } from './basehome/basehome.component';
 import { ContacthomeComponent } from './contacthome/contacthome.component';
-import { StephomeComponent } from './stephome/stephome.component';
+import { NgologinComponent } from './ngo/ngologin/ngologin.component';
+
 
 
 
@@ -69,7 +71,7 @@ import { StephomeComponent } from './stephome/stephome.component';
     GuidelinestepComponent,
     NgostepComponent,
     TrainingsectorsstepComponent,
-
+    StephomeComponent,
     DashboardstepComponent,
     AddcourseComponent,
     ShowcourseComponent,
@@ -83,7 +85,8 @@ import { StephomeComponent } from './stephome/stephome.component';
     FaqhomeComponent,
     BasehomeComponent,
     ContacthomeComponent,
-    StephomeComponent
+    StephomeComponent,
+    NgologinComponent
 
 
 
