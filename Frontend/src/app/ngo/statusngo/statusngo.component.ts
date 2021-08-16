@@ -19,23 +19,22 @@ export class StatusngoComponent implements OnInit {
       alert('PAN ID cant be Null');
     } else {
       console.log(id);
+      this.output = "unknown organisation";
       this.ngoserv.getStatusofNGO(id).subscribe(data=>{
         console.log(data);
         this.organisation=data;
+        
         this.output = this.organisation.status;
         
   } ,error=> console.error(error));
     }
-    
-
-
   
-
   }
 
   constructor(private ngoserv:NgoService) { }
 
   ngOnInit(): void {
+  
   }
 
 }

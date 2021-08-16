@@ -10,7 +10,7 @@
           <a class="nav-link text-white" href="#">Contact Us</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white" href="#" routerLink="/userlogin">Logout</a>
+          <a class="nav-link text-white" href="#" routerLink="/logoutngo">Logout</a>
         </li> 
       <li class="nav-item text-white mx-2"><i class="fa fa-instagram" style="font-size:24px;color: white;"></i></li>
       <li class="nav-item text-white mx-2"><i class="fa fa-facebook" style="font-size:24px;color: white;"></i></li>
@@ -45,11 +45,12 @@
       <a class="nav-link text-white" [routerLink]="['/ngopath', {outlets: {'ngosub': ['ngocriteria']}}]">Criteria</a></li>
       <li class="nav-item mx-5">
         <a class="nav-link text-white"  [routerLink]="['/ngopath', {outlets: {'ngosub': ['ngoorganisation']}}]">Organisations</a></li>
-    <li class="nav-item mx-5"><a [routerLink]="['/ngopath', {outlets: {'ngosub': ['ngofunding']}}]" class="nav-link text-white">Funding norms</a></li>
+        <li class="nav-item mx-5"><a [routerLink]="['/ngopath', {outlets: {'ngosub': ['ngostatus']}}]" href="#" class="nav-link text-white">Status</a></li>
     <li class="nav-item mx-5"><a [routerLink]="['/ngopath', {outlets: {'ngosub': ['ngoaddcourse']}}]" href="#" class="nav-link text-white"  >Add Course</a></li>
     <li class="nav-item mx-5"><a   [routerLink]="['/ngopath', {outlets: {'ngosub': ['ngoshowcourse']}}]" href="#" class="nav-link text-white" >Show Courses</a></li>
 
-    <li class="nav-item mx-5"><a [routerLink]="['/ngopath', {outlets: {'ngosub': ['ngostatus']}}]" href="#" class="nav-link text-white">Status</a></li>
+    <li class="nav-item mx-5"><a [routerLink]="['/ngopath', {outlets: {'ngosub': ['ngofunding']}}]" class="nav-link text-white">Funding norms</a></li>
+    
     <li class="nav-item mx-5"><a   [routerLink]="['/ngopath', {outlets: {'ngosub': ['ngofaq']}}]" href="#" class="nav-link text-white">FAQ</a></li>
 
   </ul>

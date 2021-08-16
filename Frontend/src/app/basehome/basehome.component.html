@@ -1,67 +1,67 @@
 <!-- Navbar1 -->
 <nav class="navbar navbar-expand-md navbar-dark" style="background-color: #0D0401">
-    <div class="collapse navbar-collapse" id="collapsibleNavbar">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item text-md">
-          <a class="nav-link text-white" href="#">Home</a>
-        </li>
-      </ul>
-      <ul class="navbar-nav ml-auto" style="align-items: center;">
-        <li class="nav-item">
-            <a class="nav-link text-white" href="#">Contact Us</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white" href="#" routerLink="/userlogin">Login</a>
-          </li> 
-        <li class="nav-item text-white mx-2"><i class="fa fa-instagram" style="font-size:24px;color: white;"></i></li>
-        <li class="nav-item text-white mx-2"><i class="fa fa-facebook" style="font-size:24px;color: white;"></i></li>
-        <li class="nav-item text-white mx-2"><i class="fa fa-twitter" style="font-size:24px;color: white;"></i></li>
-        <li class="nav-item text-white mx-2"><i class="fa fa-linkedin" style="font-size:24px;color: white;"></i></li>
-    </ul>
-    </div>  
-</nav>
-
-<!-- Logo and Project Name -->
-<nav class="navbar navbar-expand-md" style="align-items: center; background-color: #F5F5F5;">
-    <ul>
-        <li style="margin-left: 100px"><img src="/assets/logo.png" alt="logo" width="100px"></li>
-        <li class="text-dark" style="margin-left: 100px;"><h2>MINISTRY OF WOMEN & CHILD DEVELOPMENT</h2></li>
-        <li style="margin-left: 100px"><img src="/assets/logo2.png" alt="logo" width="100px"></li>
-    </ul>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item text-md">
+              <a class="nav-link text-white" href="#">Home</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav ml-auto" style="align-items: center;">
+            <li class="nav-item">
+                <a class="nav-link text-white" [routerLink]="['/basehome', {outlets: {'homesub': ['contactushome']}}]">Contact Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#" routerLink="/userlogin">Login</a>
+              </li> 
+            <li class="nav-item text-white mx-2"><i class="fa fa-instagram" style="font-size:24px;color: white;"></i></li>
+            <li class="nav-item text-white mx-2"><i class="fa fa-facebook" style="font-size:24px;color: white;"></i></li>
+            <li class="nav-item text-white mx-2"><i class="fa fa-twitter" style="font-size:24px;color: white;"></i></li>
+            <li class="nav-item text-white mx-2"><i class="fa fa-linkedin" style="font-size:24px;color: white;"></i></li>
+        </ul>
+        </div>  
+    </nav>
     
-</nav>
-
-<!-- Navbar2 -->
-<nav class="navbar navbar-expand-md navbar-dark sticky-top" style="background-color: #0D0401">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse justify-content-around" id="collapsibleNavbar">
-      <ul class="navbar-nav ">
-        <li class="nav-item mx-5">
-          <a class="nav-link text-white" href="#">About Us</a>
-        </li>
-        <li class="nav-item mx-5">
-          <a class="nav-link text-white" href="#">Legislations & Policy</a>
-        </li>
-        <li class="nav-item mx-5">
-          <a class="nav-link text-white" href="#" routerLink="/steppath">Step</a>
-        </li> 
-        <li class="nav-item mx-5">
-            <a class="nav-link text-white" href="#" routerLink="/ngologin">NGO</a>
-        </li> 
-        <li class="nav-item mx-5">
-            <a class="nav-link text-white" href="#" routerLink="/adminlogin">Admin</a>
-        </li>  
-        <li class="nav-item mx-5">
-            <a class="nav-link text-white" href="#">FAQ</a>
-        </li>   
+    <!-- Logo and Project Name -->
+    <nav class="navbar navbar-expand-md" style="align-items: center; background-color: #F5F5F5;">
+        <ul>
+            <li style="margin-left: 100px"><img src="/assets/logo.png" alt="logo" width="100px"></li>
+            <li class="text-dark" style="margin-left: 100px;"><h2>MINISTRY OF WOMEN & CHILD DEVELOPMENT</h2></li>
+            <li style="margin-left: 100px"><img src="/assets/logo2.png" alt="logo" width="100px"></li>
+        </ul>
         
-      </ul>
-    </div>  
-</nav>
-
-<div class="carousel slide" id="slider" data-ride="carousel" data-interval="3000" style="background-color: #F5F5F5;">
+    </nav>
+    
+    <!-- Navbar2 -->
+    <nav class="navbar navbar-expand-md navbar-dark sticky-top" style="background-color: #0D0401">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-around" id="collapsibleNavbar">
+          <ul class="navbar-nav ">
+            <li class="nav-item mx-5">
+              <a class="nav-link text-white" href="#" [routerLink]="['/basehome', {outlets: {'homesub': ['homeaboutus']}}]" routerLinkActive="router-link-active" >About Us</a>
+            </li>
+            <li class="nav-item mx-5">
+              <a class="nav-link text-white" [routerLink]="['/basehome', {outlets: {'homesub': ['policy']}}]"  href="#">Legislations & Policy</a>
+            </li>
+            <li class="nav-item mx-5">
+              <a class="nav-link text-white" href="#" routerLink="/steppath">Step</a>
+            </li> 
+            <li class="nav-item mx-5">
+                <a class="nav-link text-white" href="#" routerLink="/ngologin">NGO</a>
+            </li> 
+            <li class="nav-item mx-5">
+                <a class="nav-link text-white" href="#" routerLink="/adminlogin">Admin</a>
+            </li>  
+            <li class="nav-item mx-5">
+                <a class="nav-link text-white"  [routerLink]="['/basehome', {outlets: {'homesub': ['faqhome']}}]">FAQ</a> 
+            </li>   
+            
+          </ul>
+        </div>  
+    </nav>
+   
+    <div class="carousel slide" id="slider" data-ride="carousel" data-interval="3000" style="background-color: #F5F5F5;">
         <!--indicators-->
         <ol class="carousel-indicators">
           <li data-target="#slider" data-slide-to="0" class="active"></li>
@@ -89,169 +89,180 @@
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="sr-only">Next</span>
         </a>
-</div>
 
-<br>
-<br>
-<div class="center">
-        <h2 style="text-align: center; margin-bottom: 40px;" >SCHEMES</h2>
-
-
-<div class="row" style="margin-left: 80px;" >
-        <div class="col-md-4">
-                <div class="card bg-light text-dark mb-4 text-center" style="width: 21rem; " >
-                        <div class="card-body center">
-                              <h5 class="card-title text-center">Women Working Hostel</h5>
-                              <br>
-                              <div class="card-content text-center"><a href="https://wcd.nic.in/bbbp-schemes/" class="btn btn-primary px-4">Visit</a></div>
-                        </div>
-                </div>
-        </div>
-        <div class="col-md-4">
-                <div class="card bg-light text-dark mb-4 text-center" style="width: 21rem; " >
-                        <div class="card-body center">
-                              <h5 class="card-title text-center">One Stop Center Scheme</h5>
-                              <br>
-                              <div class="card-content text-center"><a href="https://wcd.nic.in/bbbp-schemes/" class="btn btn-primary px-4">Visit</a></div>
-                        </div>
-                </div>
-        </div>
-        <div class="col-md-4">
-                <div class="card bg-light text-dark mb-4 text-center" style="width: 21rem; " >
-                        <div class="card-body center">
-                              <h5 class="card-title text-center">Mahila Shakti Kendras (MSK)</h5>
-                              <br>
-                              <div class="card-content text-center"><a href="https://wcd.nic.in/bbbp-schemes/" class="btn btn-primary px-4">Visit</a></div>
-                        </div>
-                </div>
-        </div>
-        <div class="col-md-4">
-                <div class="card bg-light text-dark mb-4 text-center" style="width: 21rem; " >
-                        <div class="card-body center">
-                              <h5 class="card-title text-center">Women Helpline Scheme</h5>
-                              <br>
-                              <div class="card-content text-center"><a href="https://wcd.nic.in/bbbp-schemes/" class="btn btn-primary px-4">Visit</a></div>
-                        </div>
-                </div>
-        </div>
-        <div class="col-md-4">
-                <div class="card bg-light text-dark mb-4 text-center" style="width: 21rem; " >
-                        <div class="card-body center">
-                              <h5 class="card-title text-center">NIRBHAYA </h5>
-                              <br>
-                              <div class="card-content text-center"><a href="https://wcd.nic.in/bbbp-schemes/" class="btn btn-primary px-4">Visit</a></div>
-                        </div>
-                </div>
-        </div>
-        <div class="col-md-4">
-                <div class="card bg-light text-dark mb-4 text-center" style="width: 21rem; " >
-                        <div class="card-body center">
-                              <h5 class="card-title text-center">Mahila police Volunteers</h5>
-                              <br>
-                              <div class="card-content text-center"><a href="https://wcd.nic.in/bbbp-schemes/" class="btn btn-primary px-4">Visit</a></div>
-                        </div>
-                </div>
-        </div>
-        <div class="col-md-4">
-                <div class="card bg-light text-dark mb-4 text-center" style="width: 21rem; " >
-                        <div class="card-body center">
-                              <h5 class="card-title text-center">Awardees of Rajya Mahila Samman & Zila Mahila Samman</h5>
-                              <br>
-                              <div class="card-content text-center"><a href="https://wcd.nic.in/bbbp-schemes/" class="btn btn-primary px-4">Visit</a></div>
-                        </div>
-                </div>
-        </div>
-        <div class="col-md-4">
-                <div class="card bg-light text-dark mb-4 text-center" style="width: 21rem; " >
-                        <div class="card-body center">
-                              <h5 class="card-title text-center">SWADHAR Greh (For Women in Difficult Circumstances)</h5>
-                              <br>
-                              <div class="card-content text-center"><a href="https://wcd.nic.in/bbbp-schemes/" class="btn btn-primary px-4">Visit</a></div>
-                        </div>
-                </div>
-        </div>
-        <div class="col-md-4">
-                <div class="card bg-light text-dark mb-4 text-center" style="width: 21rem; " >
-                        <div class="card-body center">
-                              <h5 class="card-title text-center">Beti Bachao Beti Padhao</h5>
-                              <br>
-                              <div class="card-content text-center"><a href="https://wcd.nic.in/bbbp-schemes/" class="btn btn-primary px-4">Visit</a></div>
-                        </div>
-                </div>
-        </div>
-
-</div>
-
-</div>
-
-
-
-<footer id="footer_id" class="bg-dark px-5">
-<div class="container-fluid">
         
-        <div class="row text-light py-4">
-        <div class="col-lg-3 col-sm-6">
-        <h5 class=" text-bold">About the Goverment</h5>
-        <ul class="list-unstyled">
-        <li style="display: block;">
-                <a href="#" class="footer-link text-info">Constitution of India</a>
-        </li>
-        <li style="display: block;">
-                <a href="#" class="footer-link text-info">Goverment Web Directory</a>
-        </li>
-        <li style="display: block;">
-                <a href="#" class="footer-link text-info">Indian Parliament</a>
-        </li>
-        <li style="display: block;">
-                <a href="#" class="footer-link text-info">Publications</a>
-        </li>
-        <li style="display: block;">
-                <a href="#" class="footer-link text-info">Who's Who</a>
-        </li>
-        </ul>
-        </div>
-        <div class="col-lg-3 col-sm-6">
-        <h5 class="pb-3"></h5>
-        <ul class="list-unstyled">
-        <li style="display: block;">
-                <a href="#" class="footer-link text-info">President of India</a>
-        </li>
-        <li style="display: block;">
-                <a href="#" class="footer-link text-info">Vice-President of India</a>
-        </li>
-        <li style="display: block;">
-                <a href="#" class="footer-link text-info">Prime Minister of India</a>
-        </li>
-        <li style="display: block;">
-                <a href="#" class="text-info">Cabinet Ministers</a>
-        </li>
-        <li style="display: block;">
-                <a href="#" class="text-info">Members of Parliament</a>
-        </li>
-        </ul>
-        </div>
-        <div class="col-lg-4 col-sm-6">
-        <h5 class="pb-3">Stay Connected</h5>
-        <form class="mb-3">
-        <div class="input-group">
-                <input type="text" class="form-control" placeholder="Email Address">
-                <div class="input-group-append">
-                <button type="button" class="btn bg-danger text-white text-uppercase font-weight-bold">Sign Up</button>
-                </div>
-        </div>
-        </form>
-        <ul class="list-inline">
-        <li class="list-inline-item"><i class="fa fa-facebook fa-2x text-primary"></i></li>
-        <li class="list-inline-item"><i class="fa fa-instagram fa-2x text-danger"></i></li>
-        <li class="list-inline-item"><i class="fa fa-twitter fa-2x text-info"></i></li>
-        <li class="list-inline-item"><i class="fa fa-linkedin fa-2x text-danger"></i></li>
-        </ul>
-        </div>
-        </div>
-        <div class="row">
-        <div class="col text-center text-light border-top pt-3">
-        <p>&copy; 2021 Copyright, All Rights Reserved</p>
-        </div>
-        </div>
 </div>
-</footer>
+    
+   
+    
+  
+    
+    
+    
+    
+    
+    <br>
+    <br>
+    <div class="center">
+            <h2 style="text-align: center; margin-bottom: 40px;" >SCHEMES</h2>
+    
+    
+    <div class="row" style="margin-left: 80px;" >
+            <div class="col-md-4">
+                    <div class="card bg-light text-dark mb-4 text-center" style="width: 21rem; " >
+                            <div class="card-body center">
+                                  <h5 class="card-title text-center">Women Working Hostel</h5>
+                                  <br>
+                                  <div class="card-content text-center"><a href="https://wcd.nic.in/schemes/working-women-hostel"  target="_blank" class="btn btn-primary px-4">Visit</a></div>
+                            </div>
+                    </div>
+            </div>
+            <div class="col-md-4">
+                    <div class="card bg-light text-dark mb-4 text-center" style="width: 21rem; " >
+                            <div class="card-body center">
+                                  <h5 class="card-title text-center">One Stop Center Scheme</h5>
+                                  <br>
+                                  <div class="card-content text-center"><a href="https://wcd.nic.in/schemes/one-stop-centre-scheme-1"  target="_blank" class="btn btn-primary px-4">Visit</a></div>
+                            </div>
+                    </div>
+            </div>
+            <div class="col-md-4">
+                    <div class="card bg-light text-dark mb-4 text-center" style="width: 21rem; " >
+                            <div class="card-body center">
+                                  <h5 class="card-title text-center">Mahila Shakti Kendras (MSK)</h5>
+                                  <br>
+                                  <div class="card-content text-center"><a href="https://wcd.nic.in/schemes/mahila-shakti-kendras-msk"  target="_blank" class="btn btn-primary px-4">Visit</a></div>
+                            </div>
+                    </div>
+            </div>
+            <div class="col-md-4">
+                    <div class="card bg-light text-dark mb-4 text-center" style="width: 21rem; " >
+                            <div class="card-body center">
+                                  <h5 class="card-title text-center">Women Helpline Scheme</h5>
+                                  <br>
+                                  <div class="card-content text-center"><a href="https://wcd.nic.in/schemes/women-helpline-scheme-2"  target="_blank" class="btn btn-primary px-4">Visit</a></div>
+                            </div>
+                    </div>
+            </div>
+            <div class="col-md-4">
+                    <div class="card bg-light text-dark mb-4 text-center" style="width: 21rem; " >
+                            <div class="card-body center">
+                                  <h5 class="card-title text-center">NIRBHAYA </h5>
+                                  <br>
+                                  <div class="card-content text-center"><a href="https://wcd.nic.in/schemes/nirbhaya"  target="_blank" class="btn btn-primary px-4">Visit</a></div>
+                            </div>
+                    </div>
+            </div>
+            <div class="col-md-4">
+                    <div class="card bg-light text-dark mb-4 text-center" style="width: 21rem; " >
+                            <div class="card-body center">
+                                  <h5 class="card-title text-center">Mahila police Volunteers</h5>
+                                  <br>
+                                  <div class="card-content text-center"><a href="https://wcd.nic.in/schemes/mahila-police-volunteers"  target="_blank" class="btn btn-primary px-4">Visit</a></div>
+                            </div>
+                    </div>
+            </div>
+            <div class="col-md-4">
+                    <div class="card bg-light text-dark mb-4 text-center" style="width: 21rem; " >
+                            <div class="card-body center">
+                                  <h5 class="card-title text-center">Awardees of Rajya Mahila Samman & Zila Mahila Samman</h5>
+                                  <br>
+                                  <div class="card-content text-center"><a href="https://wcd.nic.in/schemes/awardees-rajya-mahila-samman-zila-mahila-samman"  target="_blank" class="btn btn-primary px-4">Visit</a></div>
+                            </div>
+                    </div>
+            </div>
+            <div class="col-md-4">
+                    <div class="card bg-light text-dark mb-4 text-center" style="width: 21rem; " >
+                            <div class="card-body center">
+                                  <h5 class="card-title text-center">SWADHAR Greh (For Women in Difficult Circumstances)</h5>
+                                  <br>
+                                  <div class="card-content text-center"><a href="https://wcd.nic.in/schemes/swadhar-greh-scheme-women-difficult-circumstances"  target="_blank" class="btn btn-primary px-4">Visit</a></div>
+                            </div>
+                    </div>
+            </div>
+            <div class="col-md-4">
+                    <div class="card bg-light text-dark mb-4 text-center" style="width: 21rem; " >
+                            <div class="card-body center">
+                                  <h5 class="card-title text-center">Beti Bachao Beti Padhao</h5>
+                                  <br>
+                                  <div class="card-content text-center"><a href="https://wcd.nic.in/schemes/beti-bachao-beti-padhao-scheme"  target="_blank" class="btn btn-primary px-4">Visit</a></div>
+                            </div>
+                    </div>
+            </div>
+    
+    </div>
+    
+    </div>
+    
+    
+    
+    <footer id="footer_id" class="bg-dark px-5">
+    <div class="container-fluid">
+            
+            <div class="row text-light py-4">
+            <div class="col-lg-3 col-sm-6">
+            <h5 class=" text-bold">About the Goverment</h5>
+            <ul class="list-unstyled">
+            <li style="display: block;">
+                    <a href="https://www.india.gov.in/my-government/constitution-india"  target="_blank" class="footer-link text-info">Constitution of India</a>
+            </li>
+            <li style="display: block;">
+                    <a href="https://www.india.gov.in/my-government/government-directory"  target="_blank" class="footer-link text-info">Goverment Web Directory</a>
+            </li>
+            <li style="display: block;">
+                    <a href="https://www.india.gov.in/my-government/indian-parliament"  target="_blank" class="footer-link text-info">Indian Parliament</a>
+            </li>
+            <li style="display: block;">
+                    <a href="https://www.india.gov.in/my-government/publications"  target="_blank" class="footer-link text-info">Publications</a>
+            </li>
+            <li style="display: block;">
+                    <a href="https://www.india.gov.in/my-government/whos-who"  target="_blank" class="footer-link text-info">Who's Who</a>
+            </li>
+            </ul>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+            <h5 class="pb-3"></h5>
+            <ul class="list-unstyled">
+            <li style="display: block;">
+                    <a href="https://www.india.gov.in/my-government/whos-who/president"  target="_blank" class="footer-link text-info">President of India</a>
+            </li>
+            <li style="display: block;">
+                    <a href="https://www.india.gov.in/my-government/whos-who/vice-president" target="_blank" class="footer-link text-info">Vice-President of India</a>
+            </li>
+            <li style="display: block;">
+                    <a href="https://www.india.gov.in/my-government/whos-who/prime-minister" target="_blank" class="footer-link text-info">Prime Minister of India</a>
+            </li>
+            <li style="display: block;">
+                    <a href="https://www.india.gov.in/my-government/whos-who/council-ministers" target="_blank" class="text-info">Cabinet Ministers</a>
+            </li>
+            <li style="display: block;">
+                    <a href="https://www.india.gov.in/my-government/whos-who/members-parliament" target="_blank" class="text-info">Members of Parliament</a>
+            </li>
+            </ul>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+            <h5 class="pb-3">Stay Connected</h5>
+            <form class="mb-3">
+            <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Email Address">
+                    <div class="input-group-append">
+                    <button type="button" class="btn bg-danger text-white text-uppercase font-weight-bold">Sign Up</button>
+                    </div>
+            </div>
+            </form>
+            <ul class="list-inline">
+            <li class="list-inline-item"><i class="fa fa-facebook fa-2x text-primary"></i></li>
+            <li class="list-inline-item"><i class="fa fa-instagram fa-2x text-danger"></i></li>
+            <li class="list-inline-item"><i class="fa fa-twitter fa-2x text-info"></i></li>
+            <li class="list-inline-item"><i class="fa fa-linkedin fa-2x text-danger"></i></li>
+            </ul>
+            </div>
+            </div>
+            <div class="row">
+            <div class="col text-center text-light border-top pt-3">
+            <p>&copy; 2021 Copyright, All Rights Reserved</p>
+            </div>
+            </div>
+    </div>
+    </footer>
+    

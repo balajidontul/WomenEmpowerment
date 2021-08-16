@@ -31,6 +31,12 @@ import { StatusstepComponent } from './step/statusstep/statusstep.component';
 import { StepComponent } from './step/step.component';
 import { StephomeComponent } from './stephome/stephome.component'; 
 import { TrainingsectorsstepComponent } from './step/trainingsectorsstep/trainingsectorsstep.component';
+import { BasehomeComponent } from './basehome/basehome.component';
+import { AboutushomeComponent } from './home/aboutushome/aboutushome.component';
+import { PolicyhomeComponent } from './home/policyhome/policyhome.component';
+import { LogoutngoComponent } from './ngo/logoutngo/logoutngo.component';
+import { FaqhomeComponent } from './home/faqhome/faqhome.component';
+import { ContacthomeComponent } from './contacthome/contacthome.component';
 
 const routes: Routes = [
   {path:'steppath', component:StepComponent, children: [
@@ -45,15 +51,27 @@ const routes: Routes = [
   ] },
 
 
+  {path:'', component:BasehomeComponent },
+
+  {path:'basehome',component:HomeComponent, children :[
+    {path : 'homeaboutus', component :AboutushomeComponent, outlet: 'homesub'},
+    {path :'policy', component :PolicyhomeComponent,outlet:'homesub'},
+    {path :'faqhome', component :FaqhomeComponent,outlet:'homesub'},
+    {path :'contactushome', component :ContacthomeComponent,outlet:'homesub'}
+  ] },
+  
+
 
 
   // NGO ROUTING DONT DELETE
 
-  {path:'', component:HomeComponent },
+
+
   { path: 'ngohome', component: NgohomeComponent},
   { path: 'ngoregister', component: RegisterngoComponent},
   {path: 'show-ngo-course', component: ShowcourseComponent},
   {path:'ngologin',component:NgologinComponent},
+  { path: 'logoutngo', component: LogoutngoComponent},
 { path: 'ngopath', component: NGOComponent, children: [
     { path: 'ngoorganisation', component: OrganisationComponent, outlet: 'ngosub' },
     { path: 'ngocriteria', component: CriteriaComponent, outlet: 'ngosub' },
@@ -62,8 +80,8 @@ const routes: Routes = [
     { path: 'ngostatus', component: StatusngoComponent, outlet: 'ngosub' },
     { path: 'ngofaq', component: FaqngoComponent, outlet: 'ngosub' },
     { path: 'ngoaddcourse', component: AddcourseComponent, outlet:'ngosub'},
-    { path: 'ngoshowcourse', component: ShowcourseComponent, outlet:'ngosub'}  
-     
+    { path: 'ngoshowcourse', component: ShowcourseComponent, outlet:'ngosub'}
+   
   ] },
 //NGO ROUTING DONT
  

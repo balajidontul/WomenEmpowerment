@@ -12,45 +12,51 @@ export class NgologinComponent implements OnInit {
 
   panid:string='';
   password:string='';
-  backendpanid:String='ABC1234567';
+  backendpanid:String='temp';
   backendpassword:String='1234';
   organisation:Ngo;
-  ngoserv:NgoService;
+
   
 
 
-  constructor(private router: Router, private route: ActivatedRoute) { }
+  constructor(private router: Router, private route: ActivatedRoute,private ngoService:NgoService) { }
 
   ngOnInit(): void {
   }
 
 
-  check( ){
-  //   if (id=='') {
-  //     alert('PAN ID cant be Null');
-  //   } else {
-  //     console.log(id);
-  //     this.ngoserv.getStatusofNGO(id).subscribe(data=>{
-  //       console.log(data);
-  //       this.organisation=data;
-  //       this.backendpanid = this.organisation.pan;
-  //       this.backendpassword = this.organisation.password;
-        
-  // } ,error=> console.error(error));
-  //   }
 
-    if (this.panid ==this.backendpanid) {
-      if (this.password == this.backendpassword) {
-        this.router.navigate(['ngohome']); 
-        alert("Logged in")
-      } else {
-        alert("Wrong Password");
-      }
+
+
+
+
+
+  check(){
+    console.log("started");
+    
+    if (this.panid=='') {
+      alert('PAN ID cant be Null');
     } else {
-      alert("Wrong PAN ID");
+      
+      this.ngoService.getStatusofNGO(this.panid).subscribe(data=>{
+        console.log(data);
+        this.organisation=data;
+        this.backendpanid = this.organisation.pan;
+        this.backendpassword = this.organisation.password;
+        
+  } ,error=> console.error(error));
+    }
+
+    if (this.panid ==this.backendpanid && this.password == this.backendpassword) {
+      alert("Logged in");
+      this.router.navigate(['ngohome']);
+      
+    } else {
+      alert("Wrong Crediential");
     }
       
-    
 
 }
+
+
 }
