@@ -10,7 +10,7 @@ import { Ngocourse } from '../ngocourse';
 })
 export class StatusngoComponent implements OnInit {
 
-
+ organisation:Ngo;
   output:String='waiting for input';
   panid:String='';
 
@@ -20,10 +20,10 @@ export class StatusngoComponent implements OnInit {
     } else {
       console.log(id);
       this.ngoserv.getStatusofNGO(id).subscribe(data=>{
-    
-      this.output = data;
-      console.log(data);
-  
+        console.log(data);
+        this.organisation=data;
+        this.output = this.organisation.status;
+        
   } ,error=> console.error(error));
     }
     
