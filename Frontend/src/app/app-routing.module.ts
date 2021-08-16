@@ -29,7 +29,9 @@ import { NgostepComponent } from './step/ngostep/ngostep.component';
 import { RegistrationstepComponent } from './step/registrationstep/registrationstep.component';
 import { StatusstepComponent } from './step/statusstep/statusstep.component';
 import { StepComponent } from './step/step.component';
+import { StephomeComponent } from './stephome/stephome.component'; 
 import { TrainingsectorsstepComponent } from './step/trainingsectorsstep/trainingsectorsstep.component';
+import { BasehomeComponent } from './basehome/basehome.component';
 
 const routes: Routes = [
   {path:'steppath', component:StepComponent, children: [
@@ -76,7 +78,8 @@ const routes: Routes = [
 
 
 {path: 'userlogin', component:LoginComponent},
-{path: 'userregister', component:RegisterComponent}
+{path: 'userregister', component:RegisterComponent},
+{path: 'stephome',component:StephomeComponent}
 
   
 ];

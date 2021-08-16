@@ -25,7 +25,7 @@ public interface OrganisationRepository extends JpaRepository<OrganisationsInfo,
 	@Query("DELETE FROM OrganisationsInfo org WHERE org.organisationId=:organisationId")
 	void deleteNgo(int organisationId);
 	
-	@Query("SELECT org.status from OrganisationsInfo org WHERE org.pan=:pan")
-	public String findNgoStatusById(@Param(value = "pan")String pan);
+	@Query("from OrganisationsInfo org WHERE org.pan=:pan")
+	public OrganisationsInfo findNgoStatusById(@Param(value = "pan")String pan);
 	
 }

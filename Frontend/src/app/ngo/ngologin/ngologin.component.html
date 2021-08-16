@@ -14,15 +14,15 @@
 				<form action="" method="post">
 					<div class="form-group">
 						<i class="fa fa-user"></i>
-						<input type="text" class="form-control" placeholder="Organisation ID" required="required">
+						<input type="text" class="form-control" placeholder="Organisation ID" required="required" [(ngModel)]="panid" name="panid">
 					</div>
 					<div class="form-group">
 						<i class="fa fa-lock"></i>
-						<input type="password" class="form-control" placeholder="Password" required="required">					
+						<input type="password" class="form-control" placeholder="Password" required="required" [(ngModel)]="password" name="password">					
 					</div>
 					<div class="form-group">
 						
-                        <button class="btn btn-primary btn-block btn-lg" [routerLink]="['/ngohome']" routerLinkActive="router-link-active" >Login</button>
+                        <button class="btn btn-primary btn-block btn-lg" [routerLink]="['/ngologin']" routerLinkActive="router-link-active" (click)="check()" >Login</button>
 					</div>
 				</form>
 			</div>
