@@ -1,6 +1,8 @@
-<h2 class="text-center">Approved NGOs</h2>
-<br><br>
-<div>
+
+<div class="p-3 bg-light">
+    <div class="p-3 bg-white">
+    <h2 class="text-center">Approved NGOs</h2>
+    <br>
     <table class = "table">
         <thead class="thead-dark">
             <tr>
@@ -21,11 +23,11 @@
                 <td>{{ngo.organisationMail}}</td>
                 <td>{{ngo.organisationPhone}}</td>
                 <td>{{ngo.location}}</td>
-                <td colspan="2"> 
-                    <button class="btn btn-success">Update</button>&nbsp;&nbsp;&nbsp;
+                <td>
                     <button (click) = "deleteNgo(ngo.organisationId)" class="btn btn-danger">Delete</button>
                 </td>
             </tr>
         </tbody>
     </table>
+</div>
 </div>
