@@ -1,7 +1,43 @@
-<div class="text-center">
+<!--<div class="text-center">
     No. of approved NGO: {{noOfApprovedNgo}}<br><br>
     No. of pending NGO: {{noOfPendingNgo}}
     <div *ngFor="let ngo of ngos">
         {{ngo.location}}
     </div>
+</div>-->
+
+<div>
+    <h3 class="text-center">Approved and Pending NGOs.</h3>
+</div>
+
+<div>
+    <div class="chart-wrapper" *ngIf="chartReady">
+        <canvas baseChart
+        height="20vh" width="80vw"
+        [data]="doughnutChartData"
+        [labels]="doughnutChartLabels"
+        [chartType]="doughnutChartType">
+      </canvas>
+    </div>
+
+</div>
+
+
+
+<br>
+<div>
+    <h3 class="text-center">Location-wise currently running NGOs.</h3>
+</div>
+
+
+<div class="chart-wrapper" *ngIf="chartReady">
+    <canvas baseChart
+    height="10vh" width="40vw" 
+    [datasets]="barChartData"
+    [labels]="barChartLabels"
+    [options]="barChartOptions"
+    [plugins]="barChartPlugins"
+    [legend]="barChartLegend"
+    [chartType]="barChartType">
+  </canvas>
 </div>
