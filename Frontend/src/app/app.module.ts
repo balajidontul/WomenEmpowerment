@@ -36,6 +36,7 @@ import { AboutushomeComponent } from './home/aboutushome/aboutushome.component';
 import { PolicyhomeComponent } from './home/policyhome/policyhome.component';
 import { FaqhomeComponent } from './home/faqhome/faqhome.component';
 import { ChartsModule } from 'ng2-charts';
+import { BasehomeComponent } from './basehome/basehome.component';
 
 
 
@@ -74,6 +75,7 @@ import { ChartsModule } from 'ng2-charts';
     AboutushomeComponent,
     PolicyhomeComponent,
     FaqhomeComponent,
+    BasehomeComponent,
 
 
 
