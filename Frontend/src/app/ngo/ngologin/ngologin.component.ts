@@ -47,16 +47,12 @@ export class NgologinComponent implements OnInit {
   } ,error=> console.error(error));
     }
 
-    if (this.panid ==this.backendpanid) {
-      if (this.password == this.backendpassword) {
-        
-        this.router.navigate(['ngohome']); 
-        alert("Logged in")
-      } else {
-        alert("Wrong Password");
-      }
+    if (this.panid ==this.backendpanid && this.password == this.backendpassword) {
+      alert("Logged in");
+      this.router.navigate(['ngohome']);
+      
     } else {
-      alert("Wrong PanID");
+      alert("Wrong Crediential");
     }
       
 
