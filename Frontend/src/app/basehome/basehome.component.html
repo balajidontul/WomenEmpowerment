@@ -8,7 +8,7 @@
           </ul>
           <ul class="navbar-nav ml-auto" style="align-items: center;">
             <li class="nav-item">
-                <a class="nav-link text-white" href="#">Contact Us</a>
+                <a class="nav-link text-white" [routerLink]="['/basehome', {outlets: {'homesub': ['contactushome']}}]">Contact Us</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link text-white" href="#" routerLink="/userlogin">Login</a>
@@ -54,7 +54,7 @@
                 <a class="nav-link text-white" href="#" routerLink="/adminlogin">Admin</a>
             </li>  
             <li class="nav-item mx-5">
-                <a class="nav-link text-white" href="#">FAQ</a>
+                <a class="nav-link text-white"  [routerLink]="['/basehome', {outlets: {'homesub': ['faqhome']}}]">FAQ</a> 
             </li>   
             
           </ul>

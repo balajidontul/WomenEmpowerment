@@ -35,6 +35,8 @@ import { BasehomeComponent } from './basehome/basehome.component';
 import { AboutushomeComponent } from './home/aboutushome/aboutushome.component';
 import { PolicyhomeComponent } from './home/policyhome/policyhome.component';
 import { LogoutngoComponent } from './ngo/logoutngo/logoutngo.component';
+import { FaqhomeComponent } from './home/faqhome/faqhome.component';
+import { ContacthomeComponent } from './contacthome/contacthome.component';
 
 const routes: Routes = [
   {path:'steppath', component:StepComponent, children: [
@@ -53,9 +55,11 @@ const routes: Routes = [
 
   {path:'basehome',component:HomeComponent, children :[
     {path : 'homeaboutus', component :AboutushomeComponent, outlet: 'homesub'},
-    {path :'policy', component :PolicyhomeComponent,outlet:'homesub'}
+    {path :'policy', component :PolicyhomeComponent,outlet:'homesub'},
+    {path :'faqhome', component :FaqhomeComponent,outlet:'homesub'},
+    {path :'contactushome', component :ContacthomeComponent,outlet:'homesub'}
   ] },
-
+  
 
 
 

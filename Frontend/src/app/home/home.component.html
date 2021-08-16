@@ -8,7 +8,7 @@
       </ul>
       <ul class="navbar-nav ml-auto" style="align-items: center;">
         <li class="nav-item">
-            <a class="nav-link text-white" href="#">Contact Us</a>
+            <a class="nav-link text-white" [routerLink]="['/basehome', {outlets: {'homesub': ['contactushome']}}]" >Contact Us</a>
           </li>
           <li class="nav-item">
             <a class="nav-link text-white" href="#" routerLink="/userlogin">Login</a>
@@ -39,10 +39,10 @@
     <div class="collapse navbar-collapse justify-content-around" id="collapsibleNavbar">
       <ul class="navbar-nav ">
         <li class="nav-item mx-5">
-          <a class="nav-link text-white" href="#" [routerLink]="['', {outlets: {'homesub': ['homeaboutus']}}]" routerLinkActive="router-link-active" >About Us</a>
+          <a class="nav-link text-white" href="#" [routerLink]="['/basehome', {outlets: {'homesub': ['homeaboutus']}}]" routerLinkActive="router-link-active" >About Us</a>
         </li>
         <li class="nav-item mx-5">
-          <a class="nav-link text-white" [routerLink]="['', {outlets: {'homesub': ['policy']}}]" >Legislations & Policy</a>
+          <a class="nav-link text-white" [routerLink]="['/basehome', {outlets: {'homesub': ['policy']}}]" >Legislations & Policy</a>
         </li>
         <li class="nav-item mx-5">
           <a class="nav-link text-white" href="#" routerLink="/steppath">Step</a>
@@ -54,7 +54,7 @@
             <a class="nav-link text-white" href="#" routerLink="/adminlogin">Admin</a>
         </li>  
         <li class="nav-item mx-5">
-            <a class="nav-link text-white" href="#">FAQ</a>
+            <a class="nav-link text-white" [routerLink]="['/basehome', {outlets: {'homesub': ['faqhome']}}]">FAQ</a>
         </li>   
         
       </ul>
