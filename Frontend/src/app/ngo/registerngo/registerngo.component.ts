@@ -40,7 +40,7 @@ export class RegisterngoComponent implements OnInit {
         console.log("Return Value from REST"+data);
         this.OrganisationReg=data as Ngo;
         this.orgkey=this.OrganisationReg.organisationId;
-        alert("Please note your Organisation ID: "+this.orgkey+"\nPlease use it for future login!")
+        //alert("Please note your Organisation ID: "+this.orgkey+"\nPlease use it for future login!")
         this.ngoService.addProj(this.ProjectDet,this.orgkey).subscribe(
           (data2) => {console.log("Proj data: "+data2)}
         );
