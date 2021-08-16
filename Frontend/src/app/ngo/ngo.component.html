@@ -45,11 +45,12 @@
         <a class="nav-link text-white" [routerLink]="['/ngopath', {outlets: {'ngosub': ['ngocriteria']}}]">Criteria</a></li>
         <li class="nav-item mx-5">
           <a class="nav-link text-white"  [routerLink]="['/ngopath', {outlets: {'ngosub': ['ngoorganisation']}}]">Organisations</a></li>
-      <li class="nav-item mx-5"><a [routerLink]="['/ngopath', {outlets: {'ngosub': ['ngofunding']}}]" class="nav-link text-white">Funding norms</a></li>
+    
+      <li class="nav-item mx-5"><a [routerLink]="['/ngopath', {outlets: {'ngosub': ['ngostatus']}}]" href="#" class="nav-link text-white">Status</a></li>
       <li class="nav-item mx-5"><a [routerLink]="['/ngopath', {outlets: {'ngosub': ['ngoaddcourse']}}]" href="#" class="nav-link text-white"  >Add Course</a></li>
       <li class="nav-item mx-5"><a   [routerLink]="['/ngopath', {outlets: {'ngosub': ['ngoshowcourse']}}]" href="#" class="nav-link text-white" >Show Courses</a></li>
       <li class="nav-item mx-5"><a   [routerLink]="['/ngopath', {outlets: {'ngosub': ['ngoregister']}}]" href="#" class="nav-link text-white" >Register</a></li>
-      <li class="nav-item mx-5"><a [routerLink]="['/ngopath', {outlets: {'ngosub': ['ngostatus']}}]" href="#" class="nav-link text-white">Status</a></li>
+      <li class="nav-item mx-5"><a [routerLink]="['/ngopath', {outlets: {'ngosub': ['ngofunding']}}]" class="nav-link text-white">Funding norms</a></li>
       <li class="nav-item mx-5"><a   [routerLink]="['/ngopath', {outlets: {'ngosub': ['ngofaq']}}]" href="#" class="nav-link text-white">FAQ</a></li>
   
     </ul>
@@ -62,3 +63,77 @@
 
 <router-outlet name="ngosub" style="margin: 20px;">
 </router-outlet>
+
+
+
+
+<footer id="footer_id" class="bg-dark px-5" style="margin-top: 20px;">
+  <div class="container-fluid">
+          
+          <div class="row text-light py-4">
+          <div class="col-lg-3 col-sm-6">
+          <h5 class=" text-bold">About the Goverment</h5>
+          <ul class="list-unstyled">
+          <li style="display: block;">
+                  <a href="#" class="footer-link text-info">Constitution of India</a>
+          </li>
+          <li style="display: block;">
+                  <a href="#" class="footer-link text-info">Goverment Web Directory</a>
+          </li>
+          <li style="display: block;">
+                  <a href="#" class="footer-link text-info">Indian Parliament</a>
+          </li>
+          <li style="display: block;">
+                  <a href="#" class="footer-link text-info">Publications</a>
+          </li>
+          <li style="display: block;">
+                  <a href="#" class="footer-link text-info">Who's Who</a>
+          </li>
+          </ul>
+          </div>
+          <div class="col-lg-3 col-sm-6">
+          <h5 class="pb-3"></h5>
+          <ul class="list-unstyled">
+          <li style="display: block;">
+                  <a href="#" class="footer-link text-info">President of India</a>
+          </li>
+          <li style="display: block;">
+                  <a href="#" class="footer-link text-info">Vice-President of India</a>
+          </li>
+          <li style="display: block;">
+                  <a href="#" class="footer-link text-info">Prime Minister of India</a>
+          </li>
+          <li style="display: block;">
+                  <a href="#" class="text-info">Cabinet Ministers</a>
+          </li>
+          <li style="display: block;">
+                  <a href="#" class="text-info">Members of Parliament</a>
+          </li>
+          </ul>
+          </div>
+          <div class="col-lg-4 col-sm-6">
+          <h5 class="pb-3">Stay Connected</h5>
+          <form class="mb-3">
+          <div class="input-group">
+                  <input type="text" class="form-control" placeholder="Email Address">
+                  <div class="input-group-append">
+                  <button type="button" class="btn bg-danger text-white text-uppercase font-weight-bold">Sign Up</button>
+                  </div>
+          </div>
+          </form>
+          <ul class="list-inline">
+          <li class="list-inline-item"><i class="fa fa-facebook fa-2x text-primary"></i></li>
+          <li class="list-inline-item"><i class="fa fa-instagram fa-2x text-danger"></i></li>
+          <li class="list-inline-item"><i class="fa fa-twitter fa-2x text-info"></i></li>
+          <li class="list-inline-item"><i class="fa fa-linkedin fa-2x text-danger"></i></li>
+          </ul>
+          </div>
+          </div>
+          <div class="row">
+          <div class="col text-center text-light border-top pt-3">
+          <p>&copy; 2021 Copyright, All Rights Reserved</p>
+          </div>
+          </div>
+  </div>
+  </footer>
+  

@@ -11,6 +11,7 @@ import { NgocoursesService } from '../ngocourses.service';
 export class AddcourseComponent implements OnInit {
 
   ngocourse:Ngocourse = new Ngocourse();
+
   constructor(private ngoCoursesService:NgocoursesService, 
     private router:Router) { }
 
