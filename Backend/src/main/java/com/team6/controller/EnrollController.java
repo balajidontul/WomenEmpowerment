@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.team6.model.EnrollmentDetail;
 import com.team6.repository.EnrollRepository;
+import com.team6.service.EnrollService;
 
 
 @RestController
@@ -23,6 +24,9 @@ public class EnrollController {
 	
 	@Autowired
 	EnrollRepository enrollRepo;
+	
+	@Autowired
+	EnrollService enrollService;
 	
 	@GetMapping("/enroll")
 	public List<EnrollmentDetail> getAllEnrolls() {
@@ -39,8 +43,8 @@ public class EnrollController {
 	
 	
 	@PostMapping("/enroll")
-	public EnrollmentDetail addEnroll(@RequestBody EnrollmentDetail enrollmentDetail) {
-		return enrollRepo.save(enrollmentDetail);
+	public boolean addEnroll(@RequestBody EnrollmentDetail enrollmentDetail) {
+		return enrollService.addenroll(enrollmentDetail);
 	}
 	
 	@DeleteMapping("/enroll")

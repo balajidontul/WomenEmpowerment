@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.team6.model.OrganisationsInfo;
 import com.team6.repository.OrganisationRepository;
+import com.team6.service.OrganisationService;
 
 @RestController
 @CrossOrigin(origins = "http://localhost:4200")
@@ -24,6 +25,9 @@ import com.team6.repository.OrganisationRepository;
 public class OrganisationController {
 	@Autowired
 	OrganisationRepository organisationRepository;
+	
+	@Autowired
+	OrganisationService organisationService;
 	
 	@GetMapping("/Organisation")
 	public List<OrganisationsInfo> getAll() {
@@ -41,8 +45,8 @@ public class OrganisationController {
 	}
 	
 	@PostMapping("/Organisation")
-	public OrganisationsInfo add(@RequestBody OrganisationsInfo organisationsInfo) {
-		return organisationRepository.save(organisationsInfo);
+	public boolean add(@RequestBody OrganisationsInfo organisationsInfo) {
+		return organisationService.addOrg(organisationsInfo);
 	}
 	
 	@GetMapping("/Organisation/{pan}")
