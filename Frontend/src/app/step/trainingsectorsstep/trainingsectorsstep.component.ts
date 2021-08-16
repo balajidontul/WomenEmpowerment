@@ -10,6 +10,7 @@ import {NgoCourseDetails} from '../ngocoursedetails'
 })
 export class TrainingsectorsstepComponent implements OnInit {
 
+  courseName: NgoCourseDetails = new NgoCourseDetails();
   CourseNames: NgoCourseDetails[];
   constructor(private stepService: StepService, private router: Router) { }
 
@@ -24,8 +25,13 @@ export class TrainingsectorsstepComponent implements OnInit {
     })
   }
 
-  public enrollCourse(){
-    window.alert("Course enrolled, please wait for approval from NGO.");
+  public changeValue() {
+    localStorage.setItem('courseName', this.courseName.ngoCourseName);
+    console.log(this.courseName.ngoCourseName);
+  }
+
+  public enroll() {
+    window.alert("Course enrolled.");
   }
 
 }

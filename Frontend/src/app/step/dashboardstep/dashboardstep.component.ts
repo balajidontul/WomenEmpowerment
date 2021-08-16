@@ -11,11 +11,12 @@ import { Coursedetails } from '../coursedetails';
 export class DashboardstepComponent implements OnInit {
 
   courses : Coursedetails[]
-
+  courseEnrolled:string;
   constructor(private stepService : StepService, private router : Router) { }
 
   ngOnInit(): void {
-
+    this.courseEnrolled = localStorage.getItem('courseName');
+    console.log(this.courseEnrolled);
     this.getall();
   }
   getall() {

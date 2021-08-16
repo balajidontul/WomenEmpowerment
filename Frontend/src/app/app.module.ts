@@ -15,7 +15,6 @@ import { FaqngoComponent } from './ngo/faqngo/faqngo.component';
 import { FormsModule } from '@angular/forms';
 import { RegistrationstepComponent } from './step/registrationstep/registrationstep.component';
 import { FaqstepComponent } from './step/faqstep/faqstep.component';
-import { StatusstepComponent } from './step/statusstep/statusstep.component';
 import { AdminDashboardComponent } from './adminhome/admin-dashboard/admin-dashboard.component';
 import {HttpClientModule} from '@angular/common/http';
 import { AdminPendingNgoComponent } from './adminhome/admin-pending-ngo/admin-pending-ngo.component'; 
@@ -63,7 +62,6 @@ import { LogoutngoComponent } from './ngo/logoutngo/logoutngo.component';
     StatusngoComponent,
     FaqngoComponent,
     FaqstepComponent,
-    StatusstepComponent,
     RegistrationstepComponent,
     AdminDashboardComponent,
     AdminPendingNgoComponent,

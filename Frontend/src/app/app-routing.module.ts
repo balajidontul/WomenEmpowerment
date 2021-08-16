@@ -27,7 +27,6 @@ import { FaqstepComponent } from './step/faqstep/faqstep.component';
 import { GuidelinestepComponent } from './step/guidelinestep/guidelinestep.component';
 import { NgostepComponent } from './step/ngostep/ngostep.component';
 import { RegistrationstepComponent } from './step/registrationstep/registrationstep.component';
-import { StatusstepComponent } from './step/statusstep/statusstep.component';
 import { StepComponent } from './step/step.component';
 import { StephomeComponent } from './stephome/stephome.component'; 
 import { TrainingsectorsstepComponent } from './step/trainingsectorsstep/trainingsectorsstep.component';
@@ -45,7 +44,6 @@ const routes: Routes = [
     {path: 'stepguideline', component: GuidelinestepComponent, outlet: 'stepsub'},
     {path: 'stepngo', component: NgostepComponent, outlet: 'stepsub'},
     {path: 'stepregister', component: RegistrationstepComponent, outlet: 'stepsub'},
-    {path: 'stepstatus', component: StatusstepComponent, outlet: 'stepsub'},
     {path: 'steptrainingsectors', component: TrainingsectorsstepComponent, outlet: 'stepsub'},
     {path: 'stepdashboard', component: DashboardstepComponent, outlet: 'stepsub'}
   ] },

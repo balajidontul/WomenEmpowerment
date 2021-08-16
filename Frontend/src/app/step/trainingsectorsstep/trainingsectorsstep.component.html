@@ -1,60 +1,33 @@
-
-<body class="hm-gradient">
+<h3 class="text-center">Available courses to enroll</h3>
+<table class="table">
     
-  <main>
-      
-      <!--MDB Tables-->
-      <div class="container mt-4">
+    <thead class="thead-dark">
+        <tr>
 
-          <div class="text-center darken-grey-text mb-4">
-            <h5 style="font-size: 30px; font-family: 'Times New Roman', Times, serif">List of Courses</h5>
-          </div>
+            <th>Course Name</th>
+            <th>Course Start date</th>
+            <th>Course End date</th>
+        </tr>
+    </thead >
+  
+    <tbody>
+        <tr *ngFor="let course of CourseNames">
+            <td>{{course.ngoCourseName}}</td>
+            <td>{{course.startDate}}</td>
+            <td>{{course.endDate}}</td>
+        </tr>
+    </tbody>
+ 
+</table>
 
-          <div class="card mb-4">
-              <div class="card-body">
-                  <!-- Grid row -->
-                  <div class="row">
-                      <!-- Grid column -->
-                      <div class="col-md-12">
-                          <h2 class="pt-3 pb-4 text-center font-bold font-up deep-purple-text">Search within courses</h2>
-                          <div class="input-group md-form form-sm form-2 pl-0">
-                              <input class="form-control my-0 py-1 pl-3 purple-border" type="text" placeholder="Search something here..." aria-label="Search">
-                              <span class="input-group-addon waves-effect purple lighten-2" id="basic-addon1"><a><i class="fa fa-search white-text" aria-hidden="true"></i></a></span>
-                          </div>
-                      </div>
-                      <!-- Grid column -->
-                  </div>
-                  <!-- Grid row -->
-                  <!--Table-->
-                  <table class="table table-striped">
-                      <!--Table head-->
-                      <thead>
-                          <tr>
 
-                              <th>Course Name</th>
-                              <th>Course Start date</th>
-                              <th>Course End date</th>
-                          </tr>
-                      </thead>
-                      <!--Table head-->
-                      <!--Table body-->
-                      <tbody>
-                          <tr *ngFor="let course of CourseNames">
-                              <td>{{course.ngoCourseName}}</td>
-                              <td>{{course.startDate}}</td>
-                              <td>{{course.endDate}}</td>
-                              <td> <button (click) = "enrollCourse()" class="btn btn-success">Enroll</button></td>
-                              <!--<td> <button (click) = "approveNgo(ngo.organisationId)" class="btn btn-success">Approve</button></td>
-                <td> <button (click) = "deleteNgo(ngo.organisationId)" class="btn btn-danger">Decline</button></td>-->
-                          </tr>
-                      </tbody>
-                      <!--Table body-->
-                  </table>
-                  <!--Table-->
-              </div>
-          </div>
-          </div>
-  </main>
+<h4>Choose one of the following courses to enroll.</h4>
+<select (change)="changeValue()" [(ngModel)]="courseName.ngoCourseName"> 
+<option *ngFor="let course of CourseNames">{{course.ngoCourseName}}</option>
+</select>
 
-</body>
+<div>
+You have selected <strong>{{courseName.ngoCourseName}}</strong> course to enroll.
+</div>
 
+<button class="btn btn-success" (click) = "enroll()">Enroll</button>
