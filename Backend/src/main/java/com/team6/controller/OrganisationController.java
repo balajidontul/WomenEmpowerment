@@ -45,9 +45,9 @@ public class OrganisationController {
 		return organisationRepository.save(organisationsInfo);
 	}
 	
-	@GetMapping("/Organisation/{organisationId}")
-	public String getNgoStatus(@PathVariable("organisationId") int organisationId) {
-		return organisationRepository.findNgoStatusById(organisationId);
+	@GetMapping("/Organisation/{pan}")
+	public String getNgoStatus(@PathVariable("pan") String pan) {
+		return organisationRepository.findNgoStatusById(pan);
 	}
 	
 	/*
