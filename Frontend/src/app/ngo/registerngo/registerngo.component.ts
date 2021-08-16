@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Ngo } from '../ngo';
 import { NgoService } from '../ngo.service';
 import { Project } from '../project';
@@ -15,7 +16,7 @@ export class RegisterngoComponent implements OnInit {
 
   loc:String
 
-  constructor (private ngoService:NgoService) 
+  constructor (private ngoService:NgoService, private router:Router) 
   {
     this.OrganisationReg=new Ngo();
     this.ProjectDet=new Project();
@@ -37,5 +38,9 @@ export class RegisterngoComponent implements OnInit {
       }
     ) 
     this.ngoService.addProj(this.ProjectDet,1).subscribe();
+  }
+
+  onRegister() {
+    this.router.navigate(['/ngologin']);
   }
 }

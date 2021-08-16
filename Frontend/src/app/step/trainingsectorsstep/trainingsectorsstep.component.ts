@@ -24,4 +24,8 @@ export class TrainingsectorsstepComponent implements OnInit {
     })
   }
 
+  public enrollCourse(){
+    window.alert("Course enrolled, please wait for approval from NGO.");
+  }
+
 }
