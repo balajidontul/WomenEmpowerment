@@ -48,7 +48,7 @@ export class StepService {
   }
 
   getAllNgocourses(): Observable<NgoCourseDetails[]> {
-    return this.httpClient.get<NgoCourseDetails[]>(`${this.baseURL}ngo-courses`)
+    return this.httpClient.get<NgoCourseDetails[]>(`${this.baseURL}show-ngo-course`)
   }
 
 
