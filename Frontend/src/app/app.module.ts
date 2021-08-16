@@ -36,12 +36,12 @@ import { AboutushomeComponent } from './home/aboutushome/aboutushome.component';
 import { PolicyhomeComponent } from './home/policyhome/policyhome.component';
 import { FaqhomeComponent } from './home/faqhome/faqhome.component';
 
-import { StephomeComponent } from './step/stephome/stephome.component';
 
 
 import { ChartsModule } from 'ng2-charts';
 import { BasehomeComponent } from './basehome/basehome.component';
 import { ContacthomeComponent } from './contacthome/contacthome.component';
+import { StephomeComponent } from './stephome/stephome.component';
 
 
 
@@ -81,12 +81,9 @@ import { ContacthomeComponent } from './contacthome/contacthome.component';
     AboutushomeComponent,
     PolicyhomeComponent,
     FaqhomeComponent,
-
-    StephomeComponent,
-
     BasehomeComponent,
     ContacthomeComponent,
-
+    StephomeComponent
 
 
 
