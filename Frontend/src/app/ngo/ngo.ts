@@ -6,4 +6,5 @@ export class Ngo {
     organisationPhone:number
     location:string
     status:string
+    password: string
 }

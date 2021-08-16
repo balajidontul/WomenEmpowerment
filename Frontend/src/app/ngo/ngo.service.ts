@@ -45,9 +45,9 @@ export class NgoService {
   }
 
 
-  getStatusofNGO(pan:String):Observable<String>{
+  getStatusofNGO(pan:String):Observable<Ngo>{
 
-    return this.httpClient.get<String>(`http://localhost:9000/rest/api/Organisation/${pan}`);
+    return this.httpClient.get<Ngo>(`http://localhost:9000/rest/api/Organisation/${pan}` );
   }
 
 }
