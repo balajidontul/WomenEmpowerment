@@ -12,7 +12,7 @@ export class NgologinComponent implements OnInit {
 
   panid:string='';
   password:string='';
-  backendpanid:String='dummy';
+  backendpanid:String='ABC1234567';
   backendpassword:String='1234';
   organisation:Ngo;
   ngoserv:NgoService;

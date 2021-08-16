@@ -31,7 +31,6 @@ import { StatusstepComponent } from './step/statusstep/statusstep.component';
 import { StepComponent } from './step/step.component';
 import { StephomeComponent } from './stephome/stephome.component'; 
 import { TrainingsectorsstepComponent } from './step/trainingsectorsstep/trainingsectorsstep.component';
-import { BasehomeComponent } from './basehome/basehome.component';
 
 const routes: Routes = [
   {path:'steppath', component:StepComponent, children: [
