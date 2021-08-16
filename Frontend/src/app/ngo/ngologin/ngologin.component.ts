@@ -12,8 +12,8 @@ export class NgologinComponent implements OnInit {
 
   panid:string='';
   password:string='';
-  backendpanid:String='';
-  backendpassword:String='';
+  backendpanid:String='temp';
+  backendpassword:String='1234';
   organisation:Ngo;
 
   
