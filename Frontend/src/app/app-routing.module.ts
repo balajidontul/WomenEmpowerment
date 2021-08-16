@@ -31,6 +31,9 @@ import { StatusstepComponent } from './step/statusstep/statusstep.component';
 import { StepComponent } from './step/step.component';
 import { StephomeComponent } from './stephome/stephome.component'; 
 import { TrainingsectorsstepComponent } from './step/trainingsectorsstep/trainingsectorsstep.component';
+import { BasehomeComponent } from './basehome/basehome.component';
+import { AboutushomeComponent } from './home/aboutushome/aboutushome.component';
+import { PolicyhomeComponent } from './home/policyhome/policyhome.component';
 
 const routes: Routes = [
   {path:'steppath', component:StepComponent, children: [
@@ -45,11 +48,20 @@ const routes: Routes = [
   ] },
 
 
+  {path:'', component:BasehomeComponent },
+
+  {path:'basehome',component:HomeComponent, children :[
+    {path : 'homeaboutus', component :AboutushomeComponent, outlet: 'homesub'},
+    {path :'policy', component :PolicyhomeComponent,outlet:'homesub'}
+  ] },
+
+
 
 
   // NGO ROUTING DONT DELETE
 
-  {path:'', component:HomeComponent },
+
+
   { path: 'ngohome', component: NgohomeComponent},
   { path: 'ngoregister', component: RegisterngoComponent},
   {path: 'show-ngo-course', component: ShowcourseComponent},
