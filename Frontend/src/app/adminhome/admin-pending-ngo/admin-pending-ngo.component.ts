@@ -26,11 +26,13 @@ export class AdminPendingNgoComponent implements OnInit {
   approveNgo(organisationId:number) {
     this.ngoService.approvePendingNgo(organisationId).subscribe(data => {
       data = organisationId;
+      window.alert("NGO request approved.");
       window.location.reload();
     });
   }
 
   deleteNgo(organisationId:number) {
+    window.alert("NGO request declined.");
     this.ngoService.deletePendingNgo(organisationId).subscribe(data => {
       data = organisationId;
       window.location.reload();

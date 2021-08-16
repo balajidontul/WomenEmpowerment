@@ -27,6 +27,7 @@ export class AdminApprovedNgoComponent implements OnInit {
    deleteNgo(organisationId:number) {
     this.ngoService.deleteNgo(organisationId).subscribe(data => {
       data = organisationId;
+      window.alert("NGO deleted.");
       window.location.reload();
     })
   }

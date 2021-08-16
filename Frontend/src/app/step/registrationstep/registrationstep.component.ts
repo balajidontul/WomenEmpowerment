@@ -12,11 +12,17 @@ import { StepService } from '../step.service';
 })
 export class RegistrationstepComponent implements OnInit {
 
+
+  emailPattern = "^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$";
   personaldetail : Personaldetails;
   familydetail : Familydetails;
   coursedetail : Coursedetails;
 
-  constructor( private stepservice : StepService, private router : Router) { }
+  constructor( private stepservice : StepService, private router : Router) {
+    this.personaldetail = new Personaldetails();
+    this.familydetail = new Familydetails();
+    this.coursedetail = new Coursedetails();
+   }
 
   ngOnInit(): void {
   }

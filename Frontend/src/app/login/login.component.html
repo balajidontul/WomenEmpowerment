@@ -1,0 +1,26 @@
+<div>
+    <form class="text-center border border-light p-5" #loginForm = ngForm>
+      <p class="h4 mb-4">Sign in</p>
+  
+      <input type="email" name="uemail" #ue="ngModel" class="form-control mb-4" placeholder = "Enter email" 
+      pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" required [(ngModel)] = "email" name = "email">
+        <div *ngIf = "ue.invalid && (ue.dirty||ue.touched)" style="color: red;">
+            <div *ngIf="ue.errors?.required">Email is required.</div>
+            <div *ngIf="ue.errors?.pattern">Invalid email address.</div>
+        </div>
+  
+        <input type="password" #up="ngModel" class="form-control mb-4" id="password" class="form-control mb-4" placeholder="Password" 
+        required [(ngModel)] = "password" name="password">
+        <div *ngIf = "up.invalid && (up.dirty||up.touched)" style="color: red;">
+          <div *ngIf="up.errors?.required">Password is required.</div>
+      </div>
+  
+      <button (click) ="checkLogin()" [disabled] = "loginForm.invalid" type="submit">Login</button>
+      
+      <br><br>
+      <div>
+       Don't have an account yet? Register here.
+      </div>
+      <button (click) ="register()" type="submit">Register</button>
+    </form>
+  </div>  

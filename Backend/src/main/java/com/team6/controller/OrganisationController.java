@@ -30,12 +30,12 @@ public class OrganisationController {
 		return organisationRepository.findAll();
 	}
 	
-	@GetMapping("/pending-ngo")
+	@GetMapping("/adminhome/(adminsub:adminpending)")
 	public List<OrganisationsInfo>getPendingNgo() {
 		return organisationRepository.findPendingNgo();
 	}
 	
-	@GetMapping("/approved-ngo")
+	@GetMapping("/adminhome/(adminsub:adminapproved)")
 	public List<OrganisationsInfo>getApprovedNgo() {
 		return organisationRepository.findApprovedNgo();
 	}
@@ -55,14 +55,14 @@ public class OrganisationController {
 	}
 	
 	@Transactional
-	@PutMapping("/pending-ngo/{organisationId}")
+	@PutMapping("/adminhome/(adminsub:adminpending)/{organisationId}")
 	public void approvePendingNgo(@PathVariable(value = "organisationId") int organisationId) {
 		organisationRepository.approveNgoRequest(organisationId);
 		
 	}
 	
 	@Transactional
-	@DeleteMapping("/approved-ngo/{organisationId}")
+	@DeleteMapping("/adminhome/(adminsub:adminapproved)/{organisationId}")
 	public void delete(@PathVariable(value = "organisationId") int organisationId) {
 		organisationRepository.deleteNgo(organisationId);
 	
@@ -70,7 +70,7 @@ public class OrganisationController {
 	}
 	
 	@Transactional
-	@DeleteMapping("/pending-ngo/{organisationId}")
+	@DeleteMapping("/adminhome/(adminsub:adminpending)/{organisationId}")
 	public void deletePendingNgo(@PathVariable(value = "organisationId") int organisationId) {
 		organisationRepository.deleteNgo(organisationId);
 	

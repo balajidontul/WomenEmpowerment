@@ -4,8 +4,10 @@ import { AdminApprovedNgoComponent } from './adminhome/admin-approved-ngo/admin-
 import { AdminDashboardComponent } from './adminhome/admin-dashboard/admin-dashboard.component';
 import { AdminPendingNgoComponent } from './adminhome/admin-pending-ngo/admin-pending-ngo.component';
 import { AdminhomeComponent } from './adminhome/adminhome.component';
+import { AdminloginComponent } from './adminhome/adminlogin/adminlogin.component';
 
 import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './login/login.component';
 import { AddcourseComponent } from './ngo/addcourse/addcourse.component';
 import { CriteriaComponent } from './ngo/criteria/criteria.component';
 import { FaqngoComponent } from './ngo/faqngo/faqngo.component';
@@ -62,7 +64,8 @@ const routes: Routes = [
   ] },
 //NGO ROUTING DONT
  
-{ path: 'adminhome', component: AdminhomeComponent, children: [
+  {path: 'adminlogin', component:AdminloginComponent},
+  { path: 'adminhome', component: AdminhomeComponent, children: [
   {path : 'admindashboard', component : AdminDashboardComponent, outlet: 'adminsub'},
   {path : 'adminapproved', component : AdminApprovedNgoComponent, outlet: 'adminsub'},
   {path : 'adminpending', component : AdminPendingNgoComponent, outlet: 'adminsub'}
@@ -70,8 +73,8 @@ const routes: Routes = [
 ]},
 
 
-
-  {path: 'user-register', component:RegisterComponent}
+  {path: 'userlogin', component:LoginComponent},
+  {path: 'userregister', component:RegisterComponent}
 
   
 ];

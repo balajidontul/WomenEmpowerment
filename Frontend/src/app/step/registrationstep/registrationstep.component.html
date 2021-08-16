@@ -1,25 +1,24 @@
 <div class="container">
     <h2>Register here!</h2>
     
-    <form (ngSubmit) = "onSubmit()">
+    <form #stepregform="ngForm" (ngSubmit) = "onSubmit()">
 
         <h4>Personal and Document details: </h4>
-        
         <div class="form-group">
             <label for="firstname">First Name: </label>
-            <input type="text" class="form-control" id="firstname" placeholder="Enter first name" name="firstname" />
+            <input type="text" class="form-control" id="firstname" placeholder="Enter first name" name="firstname" required minlength="4" />
         </div>
 
 
         <div class="form-group">
             <label for="lastname">Last Name: </label>
-            <input type="text" class="form-control" id="lastname" placeholder="Enter last name" name="lastname"  />
+            <input type="text" class="form-control" id="lastname" placeholder="Enter last name" name="lastname" required minlength="4" />
         </div>
 
 
         <div class="form-group">
             <label for="dob">Date of birth: </label>
-            <input type="date" class="form-control" id="dob" placeholder="Enter date of birth" name="dob" />
+            <input type="date" class="form-control" id="dob" placeholder="Enter date of birth" name="dob" max="2005-12-31"  />
         </div>
 
         <div class="form-group">
@@ -47,49 +46,48 @@
 
             <div class="form-group">
             <label for="aadhar">Aadharcard Number: </label>
-            <input type="number" class="form-control" id="aadhar" placeholder="Enter aadharcard number" name="aadhar" [(ngModel)] = "personaldetail.aadharno"/>
+            <input type="text" class="form-control" id="aadhar" placeholder="Enter aadharcard number" name="aadhar" pattern="\d*" minlength="12" maxlength="12" required [(ngModel)] = "personaldetail.aadharNo"/>
             </div>
         
             <div class="form-group">
             <label for="pan">Pan card Number: </label>
-            <input type="text" class="form-control" id="pan" placeholder="Enter pan card number" name="pan" [(ngModel)] = "personaldetail.panno"/>
+            <input type="text" class="form-control" id="pan" placeholder="Enter pan card number" name="pan" required minlength="8" maxlength ="8" [(ngModel)] = "personaldetail.pan"/>
             </div>
         
             <div class="form-group">
             <label for="age">Age: </label>
-            <input type="number" class="form-control" id="age" placeholder="Enter age" name="age" />        
+            <input type="number" class="form-control" id="age" placeholder="Enter age" name="age" required/>        
             </div>
         
             <h4>Family Details: </h4>
         
             <div class="form-group">
-            <label for="familyfname">First Name:</label>
-            <input type="text" class="form-control" id="familyfname" placeholder="Enter first name" name="familyfname" [(ngModel)]="familydetail.firstName">
+            <label for="familyfname">First Name:</label> 
+            <input type="text" class="form-control" id="familyfname" placeholder="Enter first name" name="familyfname" required minlength = "4" [(ngModel)]="familydetail.firstName">
             </div>
 
         <div class="form-group">
             <label for="familylname">Last Name:</label>
-            <input type="text" class="form-control" id="familylname" placeholder="Enter last name" name="familylname" [(ngModel)]="familydetail.lastName">
+            <input type="text" class="form-control" id="familylname" placeholder="Enter last name" name="familylname" required minlength ="4" [(ngModel)]="familydetail.lastName">
          </div>
 
     <div class="form-group">
             <label for="relation">Relationship:</label>
-            <input type="text" class="form-control" id="relation" placeholder="Enter relation" name="relation" [(ngModel)]="familydetail.relationship">
+            <input type="text" class="form-control" id="relation" placeholder="Enter relation" name="relation" required [(ngModel)]="familydetail.relationship">
         </div>
     
         <h4>Contact Details: </h4>
         <div class="form-group">
             <label for="email">Email:</label>
-            <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+            <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" [pattern]="emailPattern">
         </div>
 
         <div class="form-group">
             <label for="phone">Mobile number:</label>
-            <input type="number" class="form-control" id="phone" placeholder="Enter mobile number" name="phone">
+            <input type="text" class="form-control" id="phone" placeholder="Enter mobile number" name="phone" pattern="\d*" minlength="10" maxlength="10" required    [(ngModel)]="personaldetail.phone">
         </div>
 
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" [disabled] = "!stepregform.valid" class="btn btn-primary">Submit</button>
 </form>
     
 </div>
-    

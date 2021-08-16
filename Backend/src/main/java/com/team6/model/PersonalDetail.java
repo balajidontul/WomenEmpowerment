@@ -86,7 +86,7 @@ public class PersonalDetail {
 	@Override
 	public String toString() {
 		return "PersonalDetail [regId=" + regId + ", maritalStatus=" + maritalStatus + ", aadharNo=" + aadharNo
-				+ ", pan=" + pan + ", phone=" + phone + "]";
+				+ ", pan=" + pan + ", phone=" + phone +  "]";
 	}
 
 }

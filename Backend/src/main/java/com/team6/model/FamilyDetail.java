@@ -1,12 +1,14 @@
 package com.team6.model;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
-
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
 
 @Entity
 @Table(name = "family_detail")
@@ -15,30 +17,34 @@ public class FamilyDetail {
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "family_generator")
 	@SequenceGenerator(name="family_generator", sequenceName = "family_seq", allocationSize=1)
-	private int regId;
+	private int registrationId;
 	private String firstName;
 	private String lastName;
 	private String relationship;
+
+	@OneToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name="regId")
+	private PersonalDetail personaldetail;
 
 	public FamilyDetail() {
 		super();
 
 	}
 
-	public FamilyDetail(int regId, String firstName, String lastName, String relationship) {
+	public FamilyDetail(int registrationId, String firstName, String lastName, String relationship) {
 		super();
-		this.regId = regId;
+		this.registrationId = registrationId;
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.relationship = relationship;
 	}
 
-	public int getRegId() {
-		return regId;
+	public int getRegistrationId() {
+		return registrationId;
 	}
 
-	public void setRegId(int regId) {
-		this.regId = regId;
+	public void setRegistrationId(int registrationId) {
+		this.registrationId = registrationId;
 	}
 
 	public String getFirstName() {
@@ -65,10 +71,14 @@ public class FamilyDetail {
 		this.relationship = relationship;
 	}
 
-	@Override
-	public String toString() {
-		return "FamilyDetail [regId=" + regId + ", firstName=" + firstName + ", lastName=" + lastName
-				+ ", relationship=" + relationship + "]";
+	public PersonalDetail getPersonaldetail() {
+		return personaldetail;
 	}
 
+	public void setPersonaldetail(PersonalDetail personaldetail) {
+		this.personaldetail = personaldetail;
+	}
+	
+	
+	
 }

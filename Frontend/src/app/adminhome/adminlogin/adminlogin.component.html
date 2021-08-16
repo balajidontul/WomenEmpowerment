@@ -1,0 +1,23 @@
+<div>
+  <form class="text-center border border-light p-5" #loginForm = ngForm>
+    <p class="h4 mb-4">Sign in</p>
+
+    <input type="text" name="uname" #un="ngModel" class="form-control mb-4" placeholder = "Enter username" 
+      minlength="4" required [(ngModel)] = "userName" name = "userName">
+      <div *ngIf = "un.invalid && (un.dirty||un.touched)" style="color: red;">
+          <div *ngIf="un.errors?.required">Username is required.</div>
+      </div>
+
+      <input type="password" #up="ngModel" class="form-control mb-4" id="password" class="form-control mb-4" placeholder="Password" 
+      required [(ngModel)] = "password" name="password">
+      <div *ngIf = "up.invalid && (up.dirty||up.touched)" style="color: red;">
+        <div *ngIf="up.errors?.required">Password is required.</div>
+    </div>
+
+    <button (click) ="checkLogin()" [disabled] = "loginForm.invalid" type="submit">Login</button>
+
+  </form>
+</div>
+
+
+

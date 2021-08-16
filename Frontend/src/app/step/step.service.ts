@@ -18,14 +18,14 @@ export class StepService {
   private baseURL = "http://localhost:9000/rest/api/";
   constructor(private httpClient:HttpClient) {}
 
-  PushallPersonalDetails(personaldetails : Personaldetails):Observable<Object>{
-    return this.httpClient.post(`${this.baseURL}personaldetail` , personaldetails);
-    console.log(personaldetails);
+  PushallPersonalDetails(personaldetail : Personaldetails):Observable<Object>{
+    return this.httpClient.post(`${this.baseURL}personaldetail/1` , personaldetail);
+    console.log(personaldetail);
   }
 
-  PushallFamilyDetails(familydetails : Familydetails):Observable<Object>{
-    return this.httpClient.post(`${this.baseURL}familydetail` , familydetails);
-    console.log(familydetails);
+  PushallFamilyDetails(familydetail : Familydetails):Observable<Object>{
+    return this.httpClient.post(`${this.baseURL}familydetail/1` , familydetail);
+    console.log(familydetail);
 
   }
   // PushallCourseDetails(coursedetails : Coursedetails):Observable<Object>{

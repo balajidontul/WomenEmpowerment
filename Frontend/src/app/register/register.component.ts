@@ -33,5 +33,10 @@ export class RegisterComponent implements OnInit {
     this.saveUser();
   }
 
+  
+  login() {
+    this.router.navigate(['/userlogin']);
+  }
+
 
 }
