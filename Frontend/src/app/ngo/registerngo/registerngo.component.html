@@ -1,55 +1,114 @@
 <div class="container" style="margin-top: 30px;" >
-
-<form #regForm="ngForm" (ngSubmit)="formSubmit(regForm)" class="form-group" style="max-width: 500px;
-margin: auto;" >
-   
+    
+    <form #regForm="ngForm" (ngSubmit)="formSubmit(regForm)" class="form-group" 
+    style="max-width: 500px; margin: auto;">
+        
         <div class="form-group">
             <label for="orgname">Enter Organisation Name</label>
-            <input type="text" #orgname = "ngModel" name="oname" [(ngModel)]="OrganisationReg.organisationName" reqired ngModel class="form-control"
-            pattern="[a-zA-Z ]*" >
-            <div *ngIf = "orgname.invalid && (orgname.dirty||orgname.touched)" style="color: red;">
-                <div *ngIf="orgname.errors?.required">Organisation name is required.</div>
-                <div *ngIf="orgname.errors?.pattern">First name should only contain alphabetical characters.</div>
+            <input type="text" name="oname" pattern="[a-zA-Z ]*" required minlength="3"
+            [(ngModel)]="OrganisationReg.organisationName" reqired #on="ngModel" class="form-control" >
+            <div *ngIf = "on.invalid && (on.dirty||on.touched)" style="color: red;">
+                <div *ngIf="on.errors?.required">Name is required.</div>
+                <div *ngIf="on.errors?.minlength">First name should be minimum 3 characters.</div>
+                <div *ngIf="on.errors?.pattern">First name should only contain alphabetical characters.</div>
             </div>
+        </div>
 
-        </div>
         <div class="form-group">
-            <label for="orgloc">Enter Location</label>
-            <input type="text" name="olocation" [(ngModel)]="OrganisationReg.location" required ngModel class="form-control" >
-            
+            <label for="orgloc">Enter City</label>
+            <input type="text" name="olocation" minlength="3"
+            [(ngModel)]="OrganisationReg.location" required #loc="ngModel" class="form-control" > 
+            <div *ngIf = "loc.invalid && (loc.dirty||loc.touched)" style="color: red;">
+                <div *ngIf="loc.errors?.required">City name is required.</div>
+                <div *ngIf="loc.errors?.minlength">City name should be minimum of 3 characters.</div>
+            </div>
         </div>
+
         <div class="form-group">
             <label for="orgemail">E-mail</label>
-            <input type="email" name="oemail" [(ngModel)]="OrganisationReg.organisationMail"required email ngModel class="form-control">
-            
+            <input type="email" name="oemail" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"
+            [(ngModel)]="OrganisationReg.organisationMail"required #mail="ngModel" class="form-control">  
+            <div *ngIf = "mail.invalid && (mail.dirty||mail.touched)" style="color: red;">
+                <div *ngIf="mail.errors?.required">Email is required.</div>
+                <div *ngIf="mail.errors?.pattern">Invalid email address.</div>
+            </div>
         </div>
+        
         <div class="form-group">
             <label for="orgphnum">Phone number (+91)</label>
-            <input type="tel" type="number" name="ophone" [(ngModel)]="OrganisationReg.organisationPhone" required minlength="10" maxlength="10" ngModel class="form-control">
-           
+            <input type="tel" type="number" name="ophone" pattern = "^[6-9][0-9]{9}$"
+            [(ngModel)]="OrganisationReg.organisationPhone" required minlength="10" maxlength="10" #ph="ngModel" class="form-control">
+            <div *ngIf = "ph.invalid && (ph.dirty||ph.touched)" style="color: red;">
+                <div *ngIf="ph.errors?.required">Mobile number is required.</div>
+                <div *ngIf="ph.errors?.pattern">Invalid mobile number.</div>
+            </div>
         </div>
+        
         <div class="form-group">
-            <label for="orgpan">PAN</label>
-            <input type="text" name="opan" [(ngModel)]="OrganisationReg.pan" required minlength="10" maxlength="10" ngModel class="form-control">
+            <label for="orgpan">Enter PAN</label>
+            <input type="text" name="opan" minlength="10" maxlength="10"
+            [(ngModel)]="OrganisationReg.pan" required #pan="ngModel" class="form-control">
+            <div *ngIf = "pan.invalid && (pan.dirty||pan.touched)" style="color: red;">
+                <div *ngIf="pan.errors?.required">PAN is required.</div>
+                <div *ngIf="pan.invalid">(10-characters)</div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="orgpass">Enter Password</label>
+            <input type="password" name="opassword" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
+            [(ngModel)]="dummypass" required #op="ngModel" class="form-control">
+            <div *ngIf = "op.invalid && (op.dirty||op.touched)" style="color: red;">
+                <div *ngIf="op.errors?.required">Password is required.</div>
+                <div *ngIf="op.errors?.pattern">Password should be minimum 8 characters and contain at least one uppercase, one lowercase, one digit and one special characters.</div>
+            </div>
             
+        </div>
+
+        <div class="form-group">
+            <label for="orgconfirmpass">Confirm Password</label>
+            <input type="password" name = "cpassword" pattern="{{ dummypass }}" required
+            [(ngModel)] = "OrganisationReg.password" #cp = "ngModel"  class="form-control">
+            <div *ngIf = "cp.invalid && (cp.dirty||cp.touched)" style="color: red;">
+                <div *ngIf="cp.errors?.required">Confirm your password.</div>
+                <div *ngIf="cp.errors?.pattern">Passwords do not match.</div>
+            </div>
         </div>
 
         <div class="form-group">
             <label for="orgproj">Enter Project Name</label>
-            <input type="text" name="oproject" [(ngModel)]="ProjectDet.projectName" required ngModel class="form-control">
-
+            <input type="text" name="oproject" 
+            [(ngModel)]="ProjectDet.projectName" required #pn="ngModel" class="form-control">
+            <div *ngIf = "pn.invalid && (pn.dirty||pn.touched)" style="color: red;">
+                <div *ngIf="pn.errors?.required">Project name is required.</div>
+                <div *ngIf="pn.errors?.minlength">Project name should be minimum 3 characters.</div>
+                <div *ngIf="pn.errors?.pattern">Project name should only contain alphabetical characters.</div>
+            </div>
         </div>
 
         <div class="form-group">
-            <label for="orgprojmen">Enter Project Mentor</label>
-            <input type="text" name="oprojmentor" [(ngModel)]="ProjectDet.projectMentor" required ngModel class="form-control">
-            
+            <label for="orgprojmen">Enter Project Mentor Name</label>
+            <input type="text" name="oprojmentor" 
+            [(ngModel)]="ProjectDet.projectMentor" required #pmn="ngModel" class="form-control">
+            <div *ngIf = "pmn.invalid && (pmn.dirty||pmn.touched)" style="color: red;">
+                <div *ngIf="pmn.errors?.required">Mentor name is required.</div>
+                <div *ngIf="pmn.errors?.minlength">Mentor name should be minimum 3 characters.</div>
+                <div *ngIf="pmn.errors?.pattern">Mentor name should only contain alphabetical characters.</div>
+            </div>            
         </div>
         
         <div class="form-group" style="align-items: center;">
-           <button type="reset" class="btn btn-danger" style="margin: 10px;">Reset</button>
-            <button (click) = "onRegister()" type="submit" [disabled]="!regForm.valid" class="btn btn-primary">Register</button>
+            <button type="reset" class="btn btn-danger" style="margin: 10px;">Reset</button>
+            <button type="submit" [disabled]="!regForm.valid" class="btn btn-primary">Register</button>
         </div>
+
+        <div>
+            NGO already regitered ?
+            <button (click)="login()" class="btn btn-primary">Back to Login page</button>
+        </div>
+
+        <br>
+        <br>
   
     <!--
     <pre>Values: {{regForm.value | json}}</pre>
@@ -57,5 +116,5 @@ margin: auto;" >
     <pre>Is touched: {{regForm.touched}}</pre>
     <pre>Is Submitted: {{regForm.submitted}}</pre>
     -->
-</form>
+    </form>
 </div>
