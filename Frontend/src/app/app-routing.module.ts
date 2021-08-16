@@ -34,6 +34,7 @@ import { TrainingsectorsstepComponent } from './step/trainingsectorsstep/trainin
 import { BasehomeComponent } from './basehome/basehome.component';
 import { AboutushomeComponent } from './home/aboutushome/aboutushome.component';
 import { PolicyhomeComponent } from './home/policyhome/policyhome.component';
+import { LogoutngoComponent } from './ngo/logoutngo/logoutngo.component';
 
 const routes: Routes = [
   {path:'steppath', component:StepComponent, children: [
@@ -66,6 +67,7 @@ const routes: Routes = [
   { path: 'ngoregister', component: RegisterngoComponent},
   {path: 'show-ngo-course', component: ShowcourseComponent},
   {path:'ngologin',component:NgologinComponent},
+  { path: 'logoutngo', component: LogoutngoComponent},
 { path: 'ngopath', component: NGOComponent, children: [
     { path: 'ngoorganisation', component: OrganisationComponent, outlet: 'ngosub' },
     { path: 'ngocriteria', component: CriteriaComponent, outlet: 'ngosub' },
@@ -74,8 +76,8 @@ const routes: Routes = [
     { path: 'ngostatus', component: StatusngoComponent, outlet: 'ngosub' },
     { path: 'ngofaq', component: FaqngoComponent, outlet: 'ngosub' },
     { path: 'ngoaddcourse', component: AddcourseComponent, outlet:'ngosub'},
-    { path: 'ngoshowcourse', component: ShowcourseComponent, outlet:'ngosub'}  
-     
+    { path: 'ngoshowcourse', component: ShowcourseComponent, outlet:'ngosub'}
+   
   ] },
 //NGO ROUTING DONT
  
