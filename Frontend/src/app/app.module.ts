@@ -46,6 +46,7 @@ import { ContacthomeComponent } from './contacthome/contacthome.component';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -81,11 +82,9 @@ import { ContacthomeComponent } from './contacthome/contacthome.component';
     AboutushomeComponent,
     PolicyhomeComponent,
     FaqhomeComponent,
-
-
     BasehomeComponent,
     ContacthomeComponent,
-
+    StephomeComponent
 
 
 
