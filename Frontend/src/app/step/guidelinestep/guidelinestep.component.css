@@ -1,4 +1,7 @@
-.col-sm-6
+.col-sm
 {
-    max-width: 320px;
+    
+    font-size: 20px;
+    color: black;
+    background-color: darkgray;
 }
