@@ -1,0 +1,37 @@
+
+<body>
+
+
+<!-- Modal HTML -->
+<div class="csmt">
+	<div class="modal-dialog modal-login">
+		<div class="modal-content">
+			<div class="modal-header">				
+				<h4 class="modal-title">Organisation Login</h4>
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true" [routerLink]="['/']" routerLinkActive="router-link-active" >&times;</button>
+			</div>
+			<div class="modal-body">
+				<form action="" method="post">
+					<div class="form-group">
+						<i class="fa fa-user"></i>
+						<input type="text" class="form-control" placeholder="Organisation ID" required="required">
+					</div>
+					<div class="form-group">
+						<i class="fa fa-lock"></i>
+						<input type="password" class="form-control" placeholder="Password" required="required">					
+					</div>
+					<div class="form-group">
+						
+                        <button class="btn btn-primary btn-block btn-lg" [routerLink]="['/ngohome']" routerLinkActive="router-link-active" >Login</button>
+					</div>
+				</form>
+			</div>
+          
+                <h5 style="font-family: sans-serif; margin-top: 10px;">New Organisation sign up here</h5>
+                <button class="btn-dark" style="height: 40px; border-radius: 5px;" [routerLink]="['/ngoregister']" routerLinkActive="router-link-active" >Register</button>
+           
+           
+		</div>
+	</div>
+</div>     
+</body>
