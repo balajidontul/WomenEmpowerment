@@ -1,23 +1,36 @@
-<div>
-  <form class="text-center border border-light p-5" #loginForm = ngForm>
-    <p class="h4 mb-4">Sign in</p>
-
-    <input type="text" name="uname" #un="ngModel" class="form-control mb-4" placeholder = "Enter username" 
-      minlength="4" required [(ngModel)] = "userName" name = "userName">
-      <div *ngIf = "un.invalid && (un.dirty||un.touched)" style="color: red;">
-          <div *ngIf="un.errors?.required">Username is required.</div>
-      </div>
-
-      <input type="password" #up="ngModel" class="form-control mb-4" id="password" class="form-control mb-4" placeholder="Password" 
-      required [(ngModel)] = "password" name="password">
-      <div *ngIf = "up.invalid && (up.dirty||up.touched)" style="color: red;">
-        <div *ngIf="up.errors?.required">Password is required.</div>
-    </div>
-
-    <button (click) ="checkLogin()" [disabled] = "loginForm.invalid" type="submit">Login</button>
-
-  </form>
+<div class="sidenav">
+  <div class="login-main-text">
+     <h2>Admin<br> Login Page</h2>
+     <p>Login from here to get access.</p>
+  </div>
 </div>
+<div class="main" style="margin-top: -100px;">
+  <div class="col-md-6 col-sm-12">
+     <div class="login-form">
+        <form #loginForm = ngForm>
+           <div class="form-group">
+              <label>User Name</label>
+              <input type="text" name="uname" #un="ngModel" class="form-control" placeholder = "User Name" 
+              minlength="4" required [(ngModel)] = "userName" name = "userName">
+              <div *ngIf = "un.invalid && (un.dirty||un.touched)" style="color: red;">
+                  <div *ngIf="un.errors?.required">Username is required.</div>
+              </div>
+            </div>
+           <div class="form-group">
+              <label>Password</label>
+              <input type="password" #up="ngModel" class="form-control" id="password" class="form-control mb-4" placeholder="Password" 
+              required [(ngModel)] = "password" name="password">
+              <div *ngIf = "up.invalid && (up.dirty||up.touched)" style="color: red;">
+                <div *ngIf="up.errors?.required">Password is required.</div>
+            </div>
+           </div>
+           <button (click) ="checkLogin()" [disabled] = "loginForm.invalid" type="submit" class="btn btn-black">Login</button>
+        </form>
+     </div>
+  </div>
+</div>
+
+
 
 
 

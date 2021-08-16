@@ -1,0 +1,9 @@
+
+  ul.aboutuslist {
+    list-style-type: circle;
+  }
+
+  a {
+    text-decoration: none;
+    color: #000;
+  }
