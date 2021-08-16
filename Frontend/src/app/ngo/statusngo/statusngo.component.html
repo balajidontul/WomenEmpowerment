@@ -3,6 +3,9 @@
     <div class="input-group-prepend">
       <span class="input-group-text" id="">Organisation PAN</span>
     </div>
-    <input type="text" class="form-control">
+    <input type="text" class="form-control" [(ngModel)]="panid">
+    <div style="margin-left: 5px;"><button class="btn btn-success" (click)="send(panid)" >Get Status</button></div>
+    
    
   </div>
+  <div class="container" style="display: flex ; justify-content: center;margin: auto;"><h4 style="font-family: sans-serif; margin: 20px;" >Status : {{output}}</h4></div>

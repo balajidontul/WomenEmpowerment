@@ -44,4 +44,10 @@ export class NgoService {
     return this.httpClient.post(`${this.baseURL}project-incharge/${orgId}`,newProj);
   }
 
+
+  getStatusofNGO(pan:String):Observable<String>{
+
+    return this.httpClient.get<String>(`http://localhost:9000/rest/api/Organisation/${pan}`);
+  }
+
 }
