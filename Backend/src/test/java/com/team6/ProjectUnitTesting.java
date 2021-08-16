@@ -9,10 +9,13 @@ import org.springframework.boot.test.context.SpringBootTest;
 import com.team6.model.OrganisationsInfo;
 import com.team6.model.PersonalDetail;
 import com.team6.model.ProjectInCharge;
+import com.team6.model.UserRegistration;
 import com.team6.repository.OrganisationRepository;
+import com.team6.repository.UserRegistrationRepository;
 import com.team6.service.OrganisationService;
 import com.team6.service.PersonalDetailService;
 import com.team6.service.ProjectInchargeService;
+import com.team6.service.UserRegistrationService;
 
 @SpringBootTest
 class ProjectUnitTesting {
@@ -26,9 +29,28 @@ class ProjectUnitTesting {
 	@Autowired
 	PersonalDetailService personalDetailService;
 
+	@Autowired
+	UserRegistrationService userRegistrationService;
+	
 	@Test
 	void test() {
 		assertEquals(true, true);
+	}
+	
+	@Test
+	void UserRegistrationTest() {
+		
+		UserRegistration user = new UserRegistration();
+		user.setUserId(1);
+		user.setFirstName("Nitin");
+		user.setLastName("Tiwari");
+		user.setEmail("nitins.tiwari@lntinfotech.com");
+		user.setDob("21-08-1999");
+		user.setPassword("password@123");
+		user.setContactNo("9000080000");
+		
+		boolean result=userRegistrationService.addUser(user);
+		assertEquals(true, result);
 	}
 	
 	@Test
@@ -59,7 +81,7 @@ class ProjectUnitTesting {
 		
 		boolean response=projectInchargeService.addIncharge(proj, 1);
 		
-		assertEquals(true,response);
+		assertEquals(false,response);
 	}
 	
 	@Test
