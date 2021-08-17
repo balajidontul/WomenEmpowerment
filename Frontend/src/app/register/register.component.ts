@@ -22,15 +22,14 @@ export class RegisterComponent implements OnInit {
       console.log(data);
     }, error => console.log(error));
     window.alert("User registered successfully");
-    //this.goToEmployeeList();
+    
   }
 
-  //goToEmployeeList() {
-    //this.router.navigate(['/users']);
-  //}
+  
   onSubmit() {
     console.log(this.userRegistration);
     this.saveUser();
+    this.router.navigate(['/userlogin']);
   }
 
   
