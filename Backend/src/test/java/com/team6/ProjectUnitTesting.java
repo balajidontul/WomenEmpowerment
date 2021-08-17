@@ -6,12 +6,13 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import com.team6.model.FamilyDetail;
 import com.team6.model.OrganisationsInfo;
 import com.team6.model.PersonalDetail;
 import com.team6.model.ProjectInCharge;
 import com.team6.model.UserRegistration;
 import com.team6.repository.OrganisationRepository;
-import com.team6.repository.UserRegistrationRepository;
+import com.team6.service.FamilyDetailService;
 import com.team6.service.OrganisationService;
 import com.team6.service.PersonalDetailService;
 import com.team6.service.ProjectInchargeService;
@@ -28,6 +29,9 @@ class ProjectUnitTesting {
 	
 	@Autowired
 	PersonalDetailService personalDetailService;
+	
+	@Autowired
+	FamilyDetailService familyService;
 
 	@Autowired
 	UserRegistrationService userRegistrationService;
@@ -99,18 +103,18 @@ class ProjectUnitTesting {
 		assertEquals(true, response);
 	}
 	
-	/*@Test
+	@Test
 	void FamilyDetailTest()
 	{
 		FamilyDetail family = new FamilyDetail();
-		family.setFirstName("Rahul");
-		family.setLastName("RK");
+		family.setFirstName("Flarance");
+		family.setLastName("Raju");
 		family.setRegistrationId(1);
-		family.setRelationship("Husband");
+		family.setRelationship("Father");
 		
 		boolean response = familyService.saveRecords(family, 1);
 		assertEquals(true, response);
-	}*/
+	}
 
 
 }
