@@ -1,7 +1,7 @@
-<div class="row justify-content-center" style="background-color: #0D0401;
+<div class="row justify-content-center" style="background-color: #F5F5F5;
 width: 15cm; margin: auto; margin-top:3cm; margin-bottom: auto;">
     <form class="text-center border border-light p-5" #loginForm = ngForm>
-      <p style="color: #F5F5F5;" class="h4 mb-4">Sign in</p>
+      <p style="color: #000000;" class="h4 mb-4">Sign in</p>
   
       <input type="email" name="uemail" #ue="ngModel" class="form-control mb-4" placeholder = "Enter email" 
       pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" required [(ngModel)] = "email" name = "email">
@@ -19,7 +19,7 @@ width: 15cm; margin: auto; margin-top:3cm; margin-bottom: auto;">
       <button style="background-color: seagreen;" class="btn btn-primary" (click) ="checkLogin()" [disabled] = "loginForm.invalid" type="submit">Login</button>
       
       <br><br>
-      <div style="color: #F5F5F5;">
+      <div style="color: #000000;">
        Don't have an account yet? Register here.
       </div>
       <button class="btn btn-primary" (click) ="register()" type="submit">Register</button>

@@ -1,11 +1,11 @@
-<div class="row justify-content-center" style="background-color: #0D0401; 
+<div class="row justify-content-center" style="background-color: #F5F5F5; 
 padding-top: 0.3cm; padding-bottom: 0.3cm; margin: auto;">
-    <h3 class="text-center" style="color: #F5F5F5;">User Registration Form</h3>
+    <h3 class="text-center" style="color: #000000;">User Registration Form</h3>
     <form (ngSubmit) = "onSubmit()" class="col-lg-6 offset-lg-3" #registerForm = ngForm>
 
     
         <div class="form-group">
-            <label style="color: #F5F5F5;">First Name</label>
+            <label style="color: #000000;">First Name</label>
             <input type="text" #fn ="ngModel" class="form-control" id = "firstName" 
             pattern="[a-zA-Z ]*" required minlength="3" [(ngModel)] = "userRegistration.firstName" name = "firstName">
             <div *ngIf = "fn.invalid && (fn.dirty||fn.touched)" style="color: red;">
@@ -16,7 +16,7 @@ padding-top: 0.3cm; padding-bottom: 0.3cm; margin: auto;">
         </div>
     
         <div class="form-group">
-            <label style="color: #F5F5F5;">Last Name</label>
+            <label style="color: #000000;">Last Name</label>
             <input type="text" #ln = "ngModel" class="form-control" id = "lastName"  pattern="[a-zA-Z ]*" 
             [(ngModel)] = "userRegistration.lastName" name = "lastName">
             <div *ngIf = "ln.invalid && (ln.dirty||ln.touched)" style="color: red;">
@@ -26,7 +26,7 @@ padding-top: 0.3cm; padding-bottom: 0.3cm; margin: auto;">
         </div>
     
         <div class="form-group">
-            <label style="color: #F5F5F5;">Email</label>
+            <label style="color: #000000;">Email</label>
             <input type="email" #ue ="ngModel" class="form-control" id = "email" 
             [(ngModel)] = "userRegistration.email" name = "email"
             pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" required>
@@ -39,13 +39,13 @@ padding-top: 0.3cm; padding-bottom: 0.3cm; margin: auto;">
         </div>
     
         <div class="form-group">
-            <label style="color: #F5F5F5;">Date of Birth</label>
+            <label style="color: #000000;">Date of Birth</label>
             <input type="date" class="form-control" id = "dob" 
             [(ngModel)] = "userRegistration.dob" name = "dob">
         </div>
     
         <div class="form-group">
-            <label style="color: #F5F5F5;">Password</label>
+            <label style="color: #000000;">Password</label>
             <input type="password" #up = "ngModel" class="form-control" id = "password" 
             pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" required 
             [(ngModel)] = "userRegistration.password" name = "password">
@@ -56,7 +56,7 @@ padding-top: 0.3cm; padding-bottom: 0.3cm; margin: auto;">
         </div>
     
         <div class="form-group">
-            <label style="color: #F5F5F5;">Confirm Password</label>
+            <label style="color: #000000;">Confirm Password</label>
             <input type="password" #cp = "ngModel" class="form-control" id = "confirmPassword" 
             pattern="{{ userRegistration.password}}" required
             [(ngModel)] = "userRegistration.confirmPassword" name = "confirmPassword">
@@ -67,7 +67,7 @@ padding-top: 0.3cm; padding-bottom: 0.3cm; margin: auto;">
         </div>
     
         <div class="form-group">
-            <label style="color: #F5F5F5;">Contact No (+91-)</label>
+            <label style="color: #000000;">Contact No (+91-)</label>
             <input type="tel" #ph = "ngModel" class="form-control" id = "contactNo" required
             pattern = "^[6-9][0-9]{9}$"
             [(ngModel)] = "userRegistration.contactNo" name = "contactNo">
@@ -78,12 +78,13 @@ padding-top: 0.3cm; padding-bottom: 0.3cm; margin: auto;">
         </div>
     
     
-        <button [disabled] = "registerForm.invalid" class = "btn btn-success" type="submit">Register</button> 
+        <button class="btn btn-success btn-lg btn-block" [disabled] = "registerForm.invalid" type="submit">Register</button> 
         
         <br><br>
-      <div style="color: #F5F5F5;">
-       Already have an account? Login.
+      <div class="text-center" style="color: #000000;">
+       <b>Already have an account? Login.</b>
       </div>
-      <button class="btn btn-primary" (click) ="login()" type="submit">Login</button>
+      
+      <button class="btn btn-primary btn-lg btn-block" (click) ="login()" type="submit">Login</button>
     </form>
   </div>
