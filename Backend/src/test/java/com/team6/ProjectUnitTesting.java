@@ -98,5 +98,19 @@ class ProjectUnitTesting {
 		
 		assertEquals(true, response);
 	}
+	
+	@Test
+	void FamilyDetailTest()
+	{
+		FamilyDetail family = new FamilyDetail();
+		family.setFirstName("Rahul");
+		family.setLastName("RK");
+		family.setRegistrationId(1);
+		family.setRelationship("Husband");
+		
+		boolean response = familyService.saveRecords(family, 1);
+		assertEquals(true, response);
+	}
+
 
 }
