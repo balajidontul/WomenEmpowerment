@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Ngo } from '../ngo';
 import { NgoService } from '../ngo.service';
+import { Ngologinmanagement } from '../ngologinmanagement';
 
 @Component({
   selector: 'app-ngologin',
@@ -15,7 +16,7 @@ export class NgologinComponent implements OnInit {
   backendpanid:String='temp';
   backendpassword:String='1234';
   organisation:Ngo;
-
+  loginmanagement:Ngologinmanagement;
   
 
 
@@ -42,9 +43,13 @@ export class NgologinComponent implements OnInit {
         console.log(data);
         this.organisation=data;
         this.backendpanid = this.organisation.pan;
+        
+       
+
         this.backendpassword = this.organisation.password;
         if (this.panid ==this.backendpanid && this.password == this.backendpassword) {
           alert("Logged in");
+          
           this.router.navigate(['ngohome']);
           
         } else {

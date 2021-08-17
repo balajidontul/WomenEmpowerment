@@ -8,6 +8,7 @@ import { NavigationExtras } from '@angular/router';
 })
 export class NGOComponent implements OnInit {
 
+  
   constructor(private router:Router) { }
 
   ngOnInit(): void {
