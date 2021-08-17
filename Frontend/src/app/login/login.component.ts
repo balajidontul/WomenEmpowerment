@@ -18,7 +18,7 @@ export class LoginComponent implements OnInit {
   }
 
   checkLogin() {
-    if(this.email=="balajidontul7271@gmail.com" && this.password=="Pass@1234") {
+    if(this.email=="mithaliraj@gmail.com" && this.password=="Pass@123") {
       this.router.navigate(['']);
       sessionStorage.setItem("uemail", this.email);
     }
