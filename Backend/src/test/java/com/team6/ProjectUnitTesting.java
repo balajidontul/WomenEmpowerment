@@ -85,7 +85,7 @@ class ProjectUnitTesting {
 		
 		boolean response=projectInchargeService.addIncharge(proj, 1);
 		
-		assertEquals(false,response);
+		assertEquals(true,response);
 	}
 	
 	@Test
