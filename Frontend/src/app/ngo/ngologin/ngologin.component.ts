@@ -43,17 +43,18 @@ export class NgologinComponent implements OnInit {
         this.organisation=data;
         this.backendpanid = this.organisation.pan;
         this.backendpassword = this.organisation.password;
+        if (this.panid ==this.backendpanid && this.password == this.backendpassword) {
+          alert("Logged in");
+          this.router.navigate(['ngohome']);
+          
+        } else {
+          alert("Wrong Crediential");
+        }
         
   } ,error=> console.error(error));
     }
 
-    if (this.panid ==this.backendpanid && this.password == this.backendpassword) {
-      alert("Logged in");
-      this.router.navigate(['ngohome']);
-      
-    } else {
-      alert("Wrong Crediential");
-    }
+   
       
 
 }
